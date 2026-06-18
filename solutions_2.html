@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE DA 2027 | 2025 & 2026 Solutions Database</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    },
+                    colors: {
+                        base: '#0A0A0A',
+                        surface: '#171717',
+                        border: '#333333',
+                        accent: {
+                            blue: '#2563EB',
+                            cyan: '#06B6D4',
+                            rose: '#E11D48',
+                            emerald: '#10B981',
+                            amber: '#F59E0B',
+                            purple: '#8B5CF6'
+                        }
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px var(--tw-shadow-color)',
+                        'neo-hover': '2px 2px 0px 0px var(--tw-shadow-color)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for LaTeX Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #D4D4D4;
+            font-family: 'Inter', sans-serif;
+        }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; border-left: 1px solid #333333; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #8B5CF6; }
+
+        .neo-card {
+            background-color: #171717;
+            border: 2px solid #333333;
+            box-shadow: 6px 6px 0px 0px #333333;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .neo-card:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px 0px #333333;
+        }
+
+        .neo-card-purple { box-shadow: 6px 6px 0px 0px #8B5CF6; }
+        .neo-card-purple:hover { box-shadow: 4px 4px 0px 0px #8B5CF6; }
+
+        .neo-card-emerald { box-shadow: 6px 6px 0px 0px #10B981; }
+        .neo-card-emerald:hover { box-shadow: 4px 4px 0px 0px #10B981; }
+        
+        .neo-card-rose { box-shadow: 6px 6px 0px 0px #E11D48; border-color: #E11D48; }
+        .neo-card-rose:hover { box-shadow: 4px 4px 0px 0px #E11D48; }
+
+        .callout-box {
+            background-color: rgba(139, 92, 246, 0.1);
+            border-left: 4px solid #8B5CF6;
+            padding: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #C4B5FD;
+        }
+
+        /* Dense Data Table Styling */
+        .data-table-container {
+            width: 100%;
+            overflow-x: auto;
+            border: 2px solid #333333;
+            background: #171717;
+            margin-bottom: 3rem;
+        }
+        .data-table { width: 100%; border-collapse: collapse; text-align: left; }
+        .data-table th, .data-table td { 
+            padding: 0.75rem 1rem; 
+            border-bottom: 1px solid #333333; 
+            border-right: 1px solid #333333;
+            white-space: nowrap;
+        }
+        .data-table th { 
+            background: #000000; 
+            color: #FFFFFF; 
+            font-family: 'Space Grotesk', sans-serif; 
+            font-size: 0.75rem;
+            text-transform: uppercase; 
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .data-table tbody tr:hover { background: #262626; }
+        .data-table td:last-child, .data-table th:last-child { border-right: none; }
+        .data-table .col-wrap { white-space: normal; min-width: 250px; }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-accent-purple selection:text-white">
+
+    <nav class="sticky top-0 z-50 bg-base/90 backdrop-blur-md border-b-2 border-border">
+        <div class="max-w-[90rem] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-accent-purple border-2 border-white flex items-center justify-center font-heading font-bold text-white text-xl shadow-[4px_4px_0px_0px_#FFFFFF]">DA</div>
+                <span class="font-heading font-bold text-xl text-white tracking-tight">GATE 2027<span class="text-accent-purple">.INTEL</span></span>
+            </div>
+            <div class="hidden md:flex gap-6 font-mono text-sm font-medium">
+                <a href="index.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">01. Home & DNA</a>
+                <a href="solutions_1.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">02. 2026 Intel & 24 Sol</a>
+                <a href="solutions_2.html" class="text-white border-b-2 border-accent-purple px-1 py-2 transition-colors">03. 25-26 Sol</a>
+                <a href="strategy.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">04. Strategy</a>
+                <a href="battle_plan.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">05. Battle Plan</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-[90rem] mx-auto px-6 py-12 md:py-20">
+        
+        <!-- Header -->
+        <header class="mb-16 border-b-4 border-accent-purple pb-8 inline-block">
+            <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white tracking-tighter uppercase">
+                Document 03: <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-purple to-accent-rose">2025 & 2026 Databases</span>
+            </h1>
+        </header>
+
+        <section class="mb-24">
+            <header class="mb-12">
+                <h2 class="font-heading text-4xl md:text-5xl font-black uppercase text-white bg-accent-purple inline-block px-4 py-2 border-4 border-white shadow-[6px_6px_0px_0px_#FFFFFF] mb-4">2025 Solutions DB</h2>
+                <p class="font-mono text-xl text-gray-400">IIT Roorkee — 55 Questions, 100 Marks. The formalization of math-heavy Machine Learning.</p>
+            </header>
+
+            <h3 class="font-heading text-3xl font-bold text-white mb-8 border-b-2 border-border pb-2">Most Important Questions with Detailed Solutions</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                
+                <div class="neo-card p-6 border-l-4 border-l-accent-cyan">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q11 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Tower Property</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> E[E[X|Y]] = ?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Answer:</strong> (C) E[X] — Law of Iterated Expectations / Tower Property.<br>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2"><strong>Time:</strong> 10 seconds. Free mark.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-amber">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q13 | 1 Mark | MCQ ⚠️ CLEVER</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Linear Algebra — Row-Sum Matrix</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Row sums of A ∈ ℝⁿˣⁿ = 1. B = A³-2A²+A. Does Bx=0 have solutions?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - Row sums = 1 means A[1,1,...,1]^T = [1,1,...,1]^T, so λ=1 is eigenvalue of A.<br>
+                        - If λ=1 is eigenvalue of A, then B's eigenvalue = 1³-2(1²)+1 = 0<br>
+                        - B has eigenvalue 0 → det(B)=0 → Bx=0 has <strong>infinitely many solutions</strong><br>
+                        <span class="text-accent-emerald font-bold">Answer: (C) infinitely many solutions</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Not connecting "row sum = 1" to "eigenvalue = 1". This is a disguised eigenvalue question.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-purple">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q20 | 1 Mark | MCQ ⚠️ MULTI-CONCEPT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Linear Transform</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> X = aZ+b, Z ~ N(0,1). E[X]=1, E[(X-E[X])Z]=-2, Var(X)=4. Find a,b.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - E[X] = aE[Z]+b = b = 1 → <strong>b = 1</strong><br>
+                        - Var(X) = a²Var(Z) = a² = 4 → a = ±2<br>
+                        - E[(X-E[X])Z] = E[aZZ] = aE[Z²] = a×1 = a = -2 → <strong>a = -2</strong><br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) a=-2, b=1</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Not recognizing that E[(X-E[X])Z] = Cov(X,Z) = a×Var(Z) = a.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-cyan">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q28 | 1 Mark | MSQ ⚠️ MULTI-SELECT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Linear Algebra — I + xx^T</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> A = Iₙ + xx^T where x^Tx = 1. Which are correct?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - Eigenvalues of xx^T: one eigenvalue = x^Tx = 1, rest are 0<br>
+                        - Eigenvalues of A = I + xx^T: one eigenvalue = 1+1 = 2, rest are 1+0 = 1<br>
+                        - (A) Rank = n: YES ✓ (all eigenvalues non-zero)<br>
+                        - (B) Invertible: YES ✓ (determinant = 2×1^(n-1) = 2 ≠ 0)<br>
+                        - (C) 0 is eigenvalue: NO ✗<br>
+                        - (D) A^(-1) has negative eigenvalue: NO ✗ (eigenvalues of A^(-1) are 1/2 and 1, all positive)<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A, B)</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Thinking xx^T adds rank (it doesn't change the rank of I, which is already full rank).</p>
+                </div>
+
+                <div class="neo-card neo-card-rose p-6 border-l-4 border-l-accent-rose bg-accent-rose/5">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q42 | 2 Marks | MCQ ⚠️ OVER-SPECIFICATION TRAP</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Neural Network Backprop</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> u=2, v=3, weights a=1,b=1,c=1,d=-1,e=4,f=-1. ReLU activation. Find ∂y/∂a and ∂y/∂f.</p>
+                    <div class="bg-[#1A1A1A] p-4 text-sm font-mono text-gray-300 mb-3 border border-accent-rose/30">
+                        <strong>Solution:</strong><br>
+                        Trace the network forward:<br>
+                        - Node 1 input: au + bv = 1(2) + 1(3) = 5. ReLU(5) = 5.<br>
+                        - Node 2 input: cu + dv = 1(2) + (-1)(3) = -1. ReLU(-1) = <strong>0</strong>. ← DEAD NEURON!<br>
+                        - Output y = e×ReLU(node1) + f×ReLU(node2) = 4(5) + (-1)(0) = 20.<br>
+                        - ∂y/∂a: Chain rule through node 1: ∂y/∂(node1 output) × ∂(ReLU)/∂(node1 input) × ∂(node1 input)/∂a = e × 1 × u = 4×1×2 = <strong>8</strong><br>
+                        - ∂y/∂f: = ReLU(node2 output) = 0 → ∂y/∂f = <strong>0</strong><br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) ∂y/∂a = 8, ∂y/∂f = 0</span>
+                    </div>
+                    <p class="text-sm text-accent-rose font-bold">Trap: Computing the full backprop through node 2 without noticing it's dead (ReLU output = 0). Once ReLU kills the neuron, EVERYTHING downstream of it is zero.</p>
+                    <p class="text-sm text-accent-cyan mt-1"><strong>Fastest Path:</strong> Identify dead neurons FIRST. Node 2 is dead → ∂y/∂f = 0 immediately.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-blue">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q53 | 2 Marks | MSQ ⚠️ EXAM SEPARATOR</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">ML — SVM from Data</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Class-1: (2,0),(0,2),(2,2). Class-2: (0,0). Hard-margin SVM.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        Plot the points!<br>
+                        - Class 1 forms an "L" shape at top-right. Class 2 is at origin.<br>
+                        - The separating hyperplane: x₁+x₂ = 2 (passes between (0,0) and the nearest class-1 points)<br>
+                        - w = [1,1], b: w^Tx + b = 0 → x₁+x₂+b = 0. For margin: (2,0) gives 2+b = 1 → b=-1. Check (0,0): 0+0-1 = -1 ✓<br>
+                        - <strong>w = [1,1], b = -1</strong> (or scaled version w=[4,4], b differs)<br>
+                        - Support vectors: (2,0), (0,2), (0,0) → <strong>3 support vectors</strong><br>
+                        - Margin = 2/‖w‖ = 2/√2 = <strong>√2</strong><br>
+                        - Training accuracy: all 4 points correctly classified → <strong>100%</strong> (not 98%)<br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) 3 support vectors, (C) margin = √2</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> (A) is incorrect because w=[4,4] with b=1 doesn't satisfy KKT. (D) is wrong — accuracy is 100%, not 98%.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q59 | 2 Marks | NAT ⚠️ PROOF QUESTION</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Calculus — Lipschitz Condition</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> |f(x)-f(y)| ≤ (x-y)². Find f(1)-f(0).</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        Partition [0,1] into n equal parts: 0 = x₀ < x₁ < ... < xₙ = 1, each width 1/n.<br>
+                        - |f(1)-f(0)| ≤ Σ|f(xᵢ)-f(xᵢ₋₁)| ≤ Σ(1/n)² = n × (1/n²) = 1/n<br>
+                        - As n→∞, |f(1)-f(0)| ≤ 0 → f(1)-f(0) = <strong>0</strong><br>
+                        <span class="text-accent-emerald font-bold">Answer: 0</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Directly substituting x=1, y=0 gives |f(1)-f(0)| ≤ 1, which is true but not tight. The subdivision trick gives the tight bound of 0.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-cyan">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q60 | 2 Marks | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">ML — PCA Max Variance</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> n observations in ℝ¹⁰⁰, zero-mean. Covariance eigenvalues λᵢ = 100^(2-i). u = max variance direction. Find (1/n)Σ(u^Tx⁽ⁱ⁾)².</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - Direction of max variance = eigenvector of largest eigenvalue<br>
+                        - Largest eigenvalue = λ₁ = 100^(2-1) = 100¹ = <strong>100</strong><br>
+                        - (1/n)Σ(u^Tx⁽ⁱ⁾)² = variance along u = λ₁ = <strong>100</strong><br>
+                        <span class="text-accent-emerald font-bold">Answer: 100</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Confusing which eigenvalue is largest. λ₁ = 100^1 = 100, λ₂ = 100^0 = 1, λ₃ = 100^(-1) = 0.01, etc.</p>
+                </div>
+            </div>
+
+            <h3 class="font-heading text-3xl font-bold text-white mb-6 border-b-2 border-border pb-2">Complete 2025 Forensic Database (All 65 Questions)</h3>
+            <div class="data-table-container">
+                <table class="data-table font-mono text-sm">
+                    <thead>
+                        <tr>
+                            <th class="w-12">Q#</th>
+                            <th class="w-12">Mks</th>
+                            <th class="w-16">Type</th>
+                            <th>Subject</th>
+                            <th>Topic</th>
+                            <th>Subtopic</th>
+                            <th class="w-12">Diff</th>
+                            <th class="col-wrap">Concept Tested</th>
+                            <th class="col-wrap">Hidden Concept</th>
+                            <th>Thinking Type</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <!-- GA Questions -->
+                        <tr><td>1</td><td>1</td><td>MCQ</td><td>GA</td><td>Verbal</td><td>Analogy</td><td>2</td><td class="col-wrap">Synonym matching</td><td class="col-wrap">Direct vocabulary</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>2</td><td>1</td><td>MCQ</td><td>GA</td><td>Verbal</td><td>Grammar (Tense)</td><td>2</td><td class="col-wrap">Past perfect continuous</td><td class="col-wrap">Temporal clause matching</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>3</td><td>1</td><td>MCQ</td><td>GA</td><td>Data Interpretation</td><td>Pixel Counting</td><td>3</td><td class="col-wrap">Count pixels ≤ 4 in grid</td><td class="col-wrap">Systematic enumeration</td><td>Numerical</td><td>Easy Marks</td></tr>
+                        <tr><td>4</td><td>1</td><td>MCQ</td><td>GA</td><td>Spatial</td><td>Venn Diagram Numbers</td><td>4</td><td class="col-wrap">Region intersection values</td><td class="col-wrap">Set intersection arithmetic</td><td>Logical Reasoning</td><td>Conceptual</td></tr>
+                        <tr><td>5</td><td>1</td><td>MCQ</td><td>GA</td><td>Quantitative</td><td>Rectangle Property</td><td>3</td><td class="col-wrap">Width +10% → area +10%</td><td class="col-wrap">Percentage change in product</td><td>Conceptual</td><td>Easy Marks</td></tr>
+                        <tr><td>6</td><td>2</td><td>MCQ</td><td>GA</td><td>Verbal</td><td>Column Matching</td><td>4</td><td class="col-wrap">Phrasal verb matching</td><td class="col-wrap">Contextual idiom understanding</td><td>Logical Reasoning</td><td>Conceptual</td></tr>
+                        <tr><td>7</td><td>2</td><td>MCQ</td><td>GA</td><td>Quantitative</td><td>Function Properties</td><td>5</td><td class="col-wrap">Same weight at a1<50<a2</td><td class="col-wrap">Monotonicity + symmetry argument</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>8</td><td>2</td><td>MCQ</td><td>GA</td><td>Quantitative</td><td>Geometry (Dodecagon)</td><td>6</td><td class="col-wrap">Triangles to squares from inscribed polygon</td><td class="col-wrap">Area calculation + tiling</td><td>Multi Concept</td><td>Numerical</td></tr>
+                        <tr><td>9</td><td>2</td><td>MCQ</td><td>GA</td><td>Quantitative</td><td>Exponential Equations</td><td>5</td><td class="col-wrap">3^(x²) = 27 × 9^x → solve</td><td class="col-wrap">Exponent manipulation</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>10</td><td>2</td><td>MCQ</td><td>GA</td><td>Data Interpretation</td><td>Expected Earnings</td><td>4</td><td class="col-wrap">Weighted average from histogram</td><td class="col-wrap">E[1000(X-0.2)]</td><td>Formula Based</td><td>Numerical</td></tr>
+                        
+                        <!-- Core 1-Mark -->
+                        <tr><td>11</td><td>1</td><td>MCQ</td><td>Probability</td><td>Expectation</td><td>Law of Iterated Expectations</td><td>3</td><td class="col-wrap">E[E[X|Y]] = E[X]</td><td class="col-wrap">Tower property of expectation</td><td>Conceptual</td><td>Easy Marks</td></tr>
+                        <tr><td>12</td><td>1</td><td>MCQ</td><td>Linear Algebra</td><td>Gaussian Elim.</td><td>Upper Triangular Complexity</td><td>3</td><td class="col-wrap">Already upper triangular → O(n²)</td><td class="col-wrap">No elimination needed, just back-sub</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>13</td><td>1</td><td>MCQ</td><td>Linear Algebra</td><td>Eigenvalues</td><td>Row-Sum=1 Matrix Properties</td><td>7</td><td class="col-wrap">B=A³-2A²+A, A has eigenvalue 1</td><td class="col-wrap">λ=1 → B eigenvalue = 0 → infinite solutions</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>14</td><td>1</td><td>MCQ</td><td>Calculus</td><td>Derivatives</td><td>10th Derivative of sinh(x)</td><td>4</td><td class="col-wrap">f(x)=(e^x - e^-x)/2 = sinh(x)</td><td class="col-wrap">Even derivatives of sinh at 0 = 0</td><td>Formula Based</td><td>Conceptual</td></tr>
+                        <tr><td>15</td><td>1</td><td>MCQ</td><td>Discrete Math</td><td>Propositional Logic</td><td>Logical Equivalence</td><td>4</td><td class="col-wrap">p→q ≡ ¬p∨q</td><td class="col-wrap">Material implication equivalence</td><td>Conceptual</td><td>Easy Marks</td></tr>
+                        <tr><td>16</td><td>1</td><td>MCQ</td><td>DBMS</td><td>Normalization</td><td>Dependency Preservation</td><td>4</td><td class="col-wrap">Non-dep-preserving → more Joins</td><td class="col-wrap">Join operator for cross-table FD verification</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>17</td><td>1</td><td>MCQ</td><td>DBMS</td><td>Relational Algebra</td><td>Natural Join + Select + Project</td><td>5</td><td class="col-wrap">Find owners of red cars by maker ABC</td><td class="col-wrap">Inside-out relational algebra reading</td><td>Logical Reasoning</td><td>Conceptual</td></tr>
+                        <tr><td>18</td><td>1</td><td>MCQ</td><td>DSA</td><td>Hashing</td><td>Linear Probing Positions</td><td>5</td><td class="col-wrap">h(x)=3x mod 10, insert sequence</td><td class="col-wrap">Collision chain tracing</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>19</td><td>1</td><td>MCQ</td><td>Probability</td><td>CDF</td><td>Median from CDF</td><td>4</td><td class="col-wrap">F_X(3) = 0.5, solve for t</td><td class="col-wrap">CDF inversion for median</td><td>Formula Based</td><td>Formula Based</td></tr>
+                        <tr><td>20</td><td>1</td><td>MCQ</td><td>Probability</td><td>Normal Distribution</td><td>Linear Transform of Standard Normal</td><td>5</td><td class="col-wrap">X=aZ+b, given E[X], Var(X), E[(X-E[X])Z]</td><td class="col-wrap">Covariance manipulation: Cov(X,Z)=a</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>21</td><td>1</td><td>MCQ</td><td>Probability</td><td>Exponential</td><td>P(X≥2)=0.25 → find λ</td><td>4</td><td class="col-wrap">e^(-2λ)=0.25 → λ=ln(4)/2=ln2</td><td class="col-wrap">Exponential survival function</td><td>Formula Based</td><td>Formula Based</td></tr>
+                        <tr><td>22</td><td>1</td><td>MCQ</td><td>ML</td><td>Perceptron</td><td>Update Rule Effect</td><td>5</td><td class="col-wrap">f(x_n; w_new) > f(x_n; w_old)</td><td class="col-wrap">w_new·x + b_new increases for misclassified +</td><td>Multi Concept</td><td>Conceptual</td></tr>
+                        <tr><td>23</td><td>1</td><td>MCQ</td><td>Programming</td><td>Python</td><td>List extend vs append</td><td>2</td><td class="col-wrap">A.extend(B) → A = [1,2,3,4,5,6]</td><td class="col-wrap">Python list method semantics</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>24</td><td>1</td><td>MSQ</td><td>Calculus</td><td>Differentiability</td><td>Differentiable Function Combinations</td><td>5</td><td class="col-wrap">f±g, f·g, f/g (g>1), f∘g+g∘f all diff?</td><td class="col-wrap">g range (1,∞) ensures g≠0 for quotient</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>25</td><td>1</td><td>MSQ</td><td>Linear Algebra</td><td>Orthonormal Bases</td><td>Uniqueness & Independence</td><td>4</td><td class="col-wrap">Not unique set; orthonormal ⇒ linearly indep</td><td class="col-wrap">Converse not true: LI ≠ orthonormal</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>26</td><td>1</td><td>MSQ</td><td>AI</td><td>Bayesian Networks</td><td>Inference Algorithms</td><td>5</td><td class="col-wrap">Var Elim = exact + cond prob; Rejection = approx</td><td class="col-wrap">Gibbs ≠ exact, Var Elim ≠ approximate</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>27</td><td>1</td><td>MSQ</td><td>DSA</td><td>Binary Search</td><td>Input Requirements</td><td>3</td><td class="col-wrap">Sorted array for O(log n)</td><td class="col-wrap">Linked list = O(n) access, unsorted = can't bisect</td><td>Conceptual</td><td>Easy Marks</td></tr>
+                        <tr><td>28</td><td>1</td><td>MSQ</td><td>Linear Algebra</td><td>Matrices</td><td>A = I + xx^T Properties</td><td>6</td><td class="col-wrap">Rank n, invertible, eigenvalues 1 and 2</td><td class="col-wrap">Sherman-Morrison: eigenvalue = 1+x^Tx = 2</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>29</td><td>1</td><td>MSQ</td><td>DSA</td><td>Sorting</td><td>Insertion Sort Swap Count</td><td>5</td><td class="col-wrap">[1,3,5,7,9,11,x,15,13] → exactly 2 swaps</td><td class="col-wrap">Trace insertion sort for each x value</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>30</td><td>1</td><td>MSQ</td><td>ML</td><td>Clustering</td><td>Single vs Complete Linkage</td><td>3</td><td class="col-wrap">Single=MIN distance, Complete=MAX distance</td><td class="col-wrap">Direct definition recall</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>31</td><td>1</td><td>NAT</td><td>Probability</td><td>Bayes Theorem</td><td>Posterior from 3 Boxes</td><td>5</td><td class="col-wrap">P(Box2|White) via Bayes</td><td class="col-wrap">Total probability denominator</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>32</td><td>1</td><td>NAT</td><td>Calculus</td><td>Limits</td><td>lim √(t²+t) - t as t→∞</td><td>4</td><td class="col-wrap">Rationalize: multiply by conjugate → 0.5</td><td class="col-wrap">Conjugate multiplication technique</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>33</td><td>1</td><td>NAT</td><td>DBMS</td><td>SQL</td><td>Nested Subquery Count</td><td>5</td><td class="col-wrap">MAX(amount) WHERE branch='SR Nagar'</td><td class="col-wrap">Correlated subquery execution</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>34</td><td>1</td><td>NAT</td><td>ML</td><td>Linear Regression</td><td>Least-Squares w from 3 points</td><td>4</td><td class="col-wrap">y=wx, minimize Σ(yi-wxi)² → w=Σxiyi/Σxi²</td><td class="col-wrap">No intercept regression formula</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>35</td><td>1</td><td>NAT</td><td>ML</td><td>Naive Bayes</td><td>Misclassification Probability</td><td>5</td><td class="col-wrap">P(error) = min(P(y1|x), P(y2|x))</td><td class="col-wrap">Posterior comparison + error = minority class</td><td>Multi Concept</td><td>Numerical</td></tr>
+
+                        <!-- Core 2-Mark -->
+                        <tr><td>36</td><td>2</td><td>MCQ</td><td>Probability</td><td>Chi-Square</td><td>Variance of Z² where Z~N(0,1)</td><td>5</td><td class="col-wrap">Y=Z², Var(Y) = E[Z⁴]-E[Z²]² = 3-1 = 2</td><td class="col-wrap">Fourth moment of standard normal = 3</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>37</td><td>2</td><td>MCQ</td><td>Linear Algebra</td><td>Matrix Properties</td><td>A³=A → rank properties</td><td>6</td><td class="col-wrap">Eigenvalues ∈ {-1,0,1}, rank(A)=rank(A²)</td><td class="col-wrap">Spectral properties from polynomial</td><td>Multi Concept</td><td>Proof Based</td></tr>
+                        <tr><td>38</td><td>2</td><td>MCQ</td><td>Linear Algebra</td><td>Gram Matrix</td><td>Aij=xi^T xj, LI vectors → A invertible</td><td>7</td><td class="col-wrap">Gram matrix of LI vectors is positive definite</td><td class="col-wrap">z^TAz = ‖Xz‖² > 0 for z≠0</td><td>Proof Based</td><td>Proof Based</td></tr>
+                        <tr><td>39</td><td>2</td><td>MCQ</td><td>Probability</td><td>CDF</td><td>P(X²≤0.25) from piecewise CDF</td><td>5</td><td class="col-wrap">P(-0.5≤X≤0.5) = F(0.5)-F(-0.5)</td><td class="col-wrap">Squaring requires two-sided interval</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>40</td><td>2</td><td>MCQ</td><td>Probability</td><td>CLT</td><td>Bernoulli Sum → Normal Approx</td><td>5</td><td class="col-wrap">Y=ΣXi, Xi~Bern(0.25), n=300 → Z=(Y-75)/√56.25</td><td class="col-wrap">Standardization + CLT application</td><td>Formula Based</td><td>Formula Based</td></tr>
+                        <tr><td>41</td><td>2</td><td>MCQ</td><td>Probability</td><td>Geometric</td><td>Floor of Exponential RV</td><td>7</td><td class="col-wrap">Y=⌊X⌋, X~Exp(ln10), P(Y=ℓ) = q^ℓ(1-q)</td><td class="col-wrap">Memoryless property + geometric connection</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr class="bg-accent-rose/10 border-l-2 border-l-accent-rose"><td>42</td><td>2</td><td>MCQ</td><td>ML</td><td>Neural Networks</td><td>Backpropagation Gradients</td><td>7</td><td class="col-wrap">∂y/∂a and ∂y/∂f with ReLU</td><td class="col-wrap">Dead neuron identification (ReLU=0 path)</td><td>Multi Concept</td><td>Time Trap</td></tr>
+                        <tr><td>43</td><td>2</td><td>MCQ</td><td>AI</td><td>Game Theory</td><td>Alpha-Beta Pruning Ranges</td><td>7</td><td class="col-wrap">Ranges of x,y for pruning in game tree</td><td class="col-wrap">Symbolic inequality from α-β bounds</td><td>Multi Concept</td><td>Logical Reasoning</td></tr>
+                        <tr><td>44</td><td>2</td><td>MCQ</td><td>AI</td><td>Search</td><td>A* Expansion Order</td><td>6</td><td class="col-wrap">State graph with heuristics → expansion sequence</td><td class="col-wrap">f(n)=g(n)+h(n) priority computation</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>45</td><td>2</td><td>MCQ</td><td>Probability</td><td>Combinatorics</td><td>At Least One '1' in 100 Dice</td><td>3</td><td class="col-wrap">P(A) = 1-(5/6)^100</td><td class="col-wrap">Complement counting</td><td>Formula Based</td><td>Easy Marks</td></tr>
+                        <tr><td>46</td><td>2</td><td>MCQ</td><td>DBMS</td><td>SQL</td><td>GROUP BY CUBE Tuple Count</td><td>6</td><td class="col-wrap">3×2 fact table + CUBE → (3+1)(2+1)=12</td><td class="col-wrap">CUBE generates all subsets of GROUP BY</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>47</td><td>2</td><td>MCQ</td><td>Programming</td><td>Python</td><td>Set Operations Loop</td><td>7</td><td class="col-wrap">A,B,C set operations in while loop</td><td class="col-wrap">Python set difference, union tracking</td><td>Logical Reasoning</td><td>Time Trap</td></tr>
+                        <tr><td>48</td><td>2</td><td>MSQ</td><td>ML</td><td>Neural Networks</td><td>ReLU Properties</td><td>4</td><td class="col-wrap">Continuous everywhere, not diff at x=0</td><td class="col-wrap">ReLU(x)≠ReLU(ax) for a≠1</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>49</td><td>2</td><td>MSQ</td><td>Calculus</td><td>Optimization</td><td>f(x) on closed interval extrema</td><td>6</td><td class="col-wrap">Critical points + endpoint evaluation</td><td class="col-wrap">Closed interval theorem: check boundaries</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>50</td><td>2</td><td>MSQ</td><td>Linear Algebra</td><td>SVD</td><td>Projection Matrix from Orthonormal Vectors</td><td>7</td><td class="col-wrap">A = Σxi xi^T, singular values 0 or 1</td><td class="col-wrap">Projection matrix: A²=A, eigenvalues 0 or 1</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>51</td><td>2</td><td>MSQ</td><td>Calculus</td><td>Convexity</td><td>f''(x)>0 ∀x → properties</td><td>6</td><td class="col-wrap">At most one global/local min, f' strictly increasing</td><td class="col-wrap">f'' > 0 doesn't guarantee minimum exists</td><td>Proof Based</td><td>Proof Based</td></tr>
+                        <tr><td>52</td><td>2</td><td>MSQ</td><td>Linear Algebra</td><td>Orthogonal Matrices</td><td>‖Ax‖=‖x‖ → properties</td><td>6</td><td class="col-wrap">Orthogonal, full rank, eigenvalues ±1</td><td class="col-wrap">Not necessarily identity matrix</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr class="bg-accent-cyan/10 border-l-2 border-l-accent-cyan"><td>53</td><td>2</td><td>MSQ</td><td>ML</td><td>SVM</td><td>Hard-Margin SVM Properties</td><td>7</td><td class="col-wrap">Support vectors, margin, weight from data</td><td class="col-wrap">Geometric solution: plot points, find hyperplane</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>54</td><td>2</td><td>MSQ</td><td>Probability</td><td>Estimation</td><td>Unbiased Estimator Properties</td><td>5</td><td class="col-wrap">p̂ = ΣXi/n, E[p̂]=p, Var decreases with n</td><td class="col-wrap">Sample mean is unbiased, variance = p(1-p)/n</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>55</td><td>2</td><td>MSQ</td><td>ML</td><td>Nearest Centroid</td><td>Squared Distance Classifier</td><td>6</td><td class="col-wrap">f(x) = ‖μ_red-x‖²-‖μ_green-x‖² is linear</td><td class="col-wrap">Cross terms cancel: f is linear in x</td><td>Multi Concept</td><td>Proof Based</td></tr>
+                        <tr><td>56</td><td>2</td><td>MSQ</td><td>DBMS</td><td>Schema Design</td><td>Foreign Key Constraints</td><td>5</td><td class="col-wrap">aadhaar: PK in Person, FK in Customer</td><td class="col-wrap">PK cannot be NULL, FK allows duplicates</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>57</td><td>2</td><td>MSQ</td><td>DBMS</td><td>Normalization</td><td>Candidate Keys + BCNF</td><td>7</td><td class="col-wrap">A→BCEF, E→DG, BC→A → keys: A, BC</td><td class="col-wrap">Not BCNF because E→DG and E not superkey</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>58</td><td>2</td><td>MSQ</td><td>DSA</td><td>Graphs</td><td>Shortest Path Edge Exclusion</td><td>7</td><td class="col-wrap">Which edges NOT in graph given shortest paths</td><td class="col-wrap">Edge existence contradicts shortest path lengths</td><td>Logical Reasoning</td><td>Logical Reasoning</td></tr>
+                        <tr><td>59</td><td>2</td><td>NAT</td><td>Calculus</td><td>Lipschitz</td><td>|f(x)-f(y)|≤(x-y)² → f(1)-f(0)</td><td>7</td><td class="col-wrap">Partition [0,1] into n parts → |f(1)-f(0)| ≤ 1/n → 0</td><td class="col-wrap">Squeeze theorem via subdivisions</td><td>Proof Based</td><td>Proof Based</td></tr>
+                        <tr><td>60</td><td>2</td><td>NAT</td><td>ML</td><td>PCA</td><td>Max Variance Direction Value</td><td>5</td><td class="col-wrap">1/n Σ(u^Tx(i))² = largest eigenvalue = 100</td><td class="col-wrap">PCA: max projection = λ_max = 100^(2-1)</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>61</td><td>2</td><td>NAT</td><td>Probability</td><td>Binomial</td><td>E[S_100] balls with replacement</td><td>3</td><td class="col-wrap">E[S_100] = 100 × 10/15 = 66.7</td><td class="col-wrap">Bernoulli trials with p=2/3</td><td>Formula Based</td><td>Easy Marks</td></tr>
+                        <tr><td>62</td><td>2</td><td>NAT</td><td>DBMS</td><td>Relational Algebra</td><td>Division Operation Count</td><td>7</td><td class="col-wrap">π(Loan⋈Borrower) ÷ π(Loan) → customers at ALL branches</td><td class="col-wrap">Division = universal quantification</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>63</td><td>2</td><td>NAT</td><td>Programming</td><td>Python</td><td>Recursive Function Tracing</td><td>6</td><td class="col-wrap">f(15,10) with mixed recursion</td><td class="col-wrap">Build recursion tree carefully</td><td>Numerical</td><td>Time Trap</td></tr>
+                        <tr><td>64</td><td>2</td><td>NAT</td><td>DSA</td><td>Stacks</td><td>Pseudocode Stack Manipulation</td><td>7</td><td class="col-wrap">Push/pop with flag, sum odd values</td><td class="col-wrap">Precise state tracking through flag transitions</td><td>Logical Reasoning</td><td>Time Trap</td></tr>
+                        <tr><td>65</td><td>2</td><td>NAT</td><td>DSA</td><td>Graphs</td><td>DFS Discovery Count</td><td>6</td><td class="col-wrap">Directed graph V={0..100}, E={(i,j): 0<j-i≤2}</td><td class="col-wrap">Adjacency list in decreasing order affects DFS</td><td>Logical Reasoning</td><td>Numerical</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <header class="mb-12">
+                <h2 class="font-heading text-4xl md:text-5xl font-black uppercase text-black bg-accent-emerald inline-block px-4 py-2 border-4 border-black shadow-[6px_6px_0px_0px_#10B981] mb-4">2026 Solutions DB</h2>
+                <p class="font-mono text-xl text-gray-400">IIT Guwahati — 55 Questions, 100 Marks. The apex of theoretical traps and notation panic.</p>
+            </header>
+
+            <h3 class="font-heading text-3xl font-bold text-white mb-8 border-b-2 border-border pb-2">Most Important Questions with Detailed Solutions</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                
+                <div class="neo-card p-6 border-l-4 border-l-accent-cyan">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q16 | 1 Mark | MCQ ⚠️ CLASSIC TRAP</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Python — Mutable Defaults</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong></p>
+                    <pre class="bg-[#111111] p-3 text-sm text-gray-300 font-mono mb-3 border border-[#333333] rounded">def append_to_lst(val, lst=[]):
+    lst.append(val)
+    return lst
+print(append_to_lst(1))   # ?
+print(append_to_lst(2))   # ?
+print(append_to_lst(3, []))  # ?</pre>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - Call 1: No lst argument → uses default []. Appends 1. Returns [1]. Default is now [1].<br>
+                        - Call 2: No lst argument → uses SAME default [1]. Appends 2. Returns [1,2].<br>
+                        - Call 3: Explicit [] passed → new list. Appends 3. Returns [3].<br>
+                        - Output: [1], [1,2], [3]<br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) [1], [1,2], [3]</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Thinking the default [] resets each call. In Python, <strong>default mutable arguments are evaluated ONCE at function definition time</strong> and persist across calls.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-purple">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q21 | 1 Mark | MCQ ⚠️ CLEVER</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Linear Algebra — Rotation Powers</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> M = rotation matrix with θ = 2π/5. Find M^2026.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - M^5 = rotation by 5×(2π/5) = 2π = I (full rotation)<br>
+                        - 2026 = 5×405 + 1 → M^2026 = (M^5)^405 × M¹ = I^405 × M = <strong>M</strong><br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) M</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Trying to compute M^2026 by repeated multiplication. Recognizing the periodicity (M^5=I) instantly reduces this to M^(2026 mod 5) = M^1 = M.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-emerald">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q34 | 1 Mark | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Memoryless Property</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> X ~ Exponential. P(X>5) = 0.35. Find P(X>10|X>5).</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> By memoryless property: P(X > s+t | X > s) = P(X > t). So P(X>10|X>5) = P(X>5) = <strong>0.35</strong><br>
+                        <span class="text-accent-emerald font-bold">Answer: 0.35</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Computing P(X>10)/P(X>5) from scratch. While correct, the memoryless property gives the answer instantly.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-gray-400">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q52 | 2 Marks | MSQ ⚠️ NOTATION PANIC</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Linear Algebra — Centering Matrix</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> M = Iₙ - (1/n)11^T. Which are correct? (A) M^T=M (B) M²=I (C) Trace(M)=n (D) M is projection</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        Recognize: M = I - (1/n)11^T is the <strong>centering matrix</strong> (subtracts the mean).<br>
+                        - (A) M^T = (I - (1/n)11^T)^T = I - (1/n)11^T = M ✓ <strong>SYMMETRIC</strong><br>
+                        - (B) M² = M × M. Since M is a projection, M²=M ≠ I ✗<br>
+                        - (C) Trace(M) = Trace(I) - (1/n)Trace(11^T) = n - (1/n)×n = n-1 ≠ n ✗<br>
+                        - (D) M²=M (idempotent) → M is a <strong>projection matrix</strong> ✓<br><br>
+                        Verify M²=M: M² = (I-P)(I-P) = I-2P+P² where P=(1/n)11^T. P²=(1/n)²11^T11^T = (1/n)²×n×11^T = (1/n)11^T = P. So M² = I-2P+P = I-P = M ✓<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A, D)</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> (C) looks obviously true (Trace(I)=n) but forgets to subtract (1/n)×Trace(11^T) = 1. (B) confuses projection (M²=M) with involution (M²=I).</p>
+                </div>
+
+                <div class="neo-card neo-card-rose p-6 border-l-4 border-l-accent-rose bg-accent-rose/5">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q55 | 2 Marks | NAT ⚠️ THE DEADLIEST TRAP</h4>
+                        <span class="text-xs font-mono bg-accent-rose text-white px-2 py-1 font-bold border border-white">ML — Ridge Regression with MAE</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Ridge Regression with <span class="text-accent-amber font-bold">MAE loss</span>. w=[-3,4]^T, x=[1,2]^T, y_true = x₁+x₂ = 3. Find total regularized loss.</p>
+                    <div class="bg-[#1A1A1A] p-4 text-sm font-mono text-gray-300 mb-3 border border-accent-rose/30">
+                        <strong>Solution:</strong><br>
+                        - Predicted: y_pred = w^Tx = (-3)(1) + (4)(2) = -3+8 = 5<br>
+                        - y_true = 1+2 = 3<br>
+                        - MAE loss = |y_true - y_pred| = |3-5| = <strong>2</strong> (NOT (3-5)² = 4!)<br>
+                        - Regularizer = 0.20 × ‖w‖² = 0.20 × ((-3)²+4²) = 0.20 × 25 = <strong>5.00</strong><br>
+                        - Total loss = 2 + 5.00 = <strong>7.00</strong><br>
+                        <span class="text-accent-emerald font-bold text-xl">Answer: 7.00</span>
+                    </div>
+                    <p class="text-sm text-accent-rose font-bold">THE #1 TRAP IN GATE DA 2026. The question says MAE (Mean Absolute Error), NOT MSE. Students reflexively square the error because "Ridge Regression = squared error." But the question EXPLICITLY states MAE. Loss = |error|, not error².</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-cyan">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q57 | 2 Marks | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Bayes (Medical Testing)</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> P(+|D)=0.80, P(-|D)=0.20, P(+|D̄)=0.10, P(-|D̄)=0.90. P(D)=0.30. Find P(D|+).</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - P(+) = P(+|D)P(D) + P(+|D̄)P(D̄) = 0.80×0.30 + 0.10×0.70 = 0.24+0.07 = 0.31<br>
+                        - P(D|+) = P(+|D)P(D)/P(+) = 0.24/0.31 = <strong>0.77</strong> (rounded to 2 decimal places)<br>
+                        <span class="text-accent-emerald font-bold">Answer: 0.77</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-blue">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q65 | 2 Marks | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Linear Algebra — Rayleigh Quotient</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> A = I - (1/n)11^T. Find max x^TAx where x^Tx = 1.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - max x^TAx / x^Tx = largest eigenvalue of A (Rayleigh quotient)<br>
+                        - A = I - (1/n)11^T is the centering matrix<br>
+                        - Eigenvalues: one eigenvalue = 0 (for x = [1,...,1]^T/√n), rest = <strong>1</strong><br>
+                        - max eigenvalue = <strong>1</strong><br>
+                        <span class="text-accent-emerald font-bold">Answer: 1</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Not recognizing this as a Rayleigh quotient problem. The constrained optimization max x^TAx s.t. x^Tx=1 = max eigenvalue.</p>
+                </div>
+            </div>
+
+            <h3 class="font-heading text-3xl font-bold text-white mb-6 border-b-2 border-border pb-2">Complete 2026 Forensic Database (All 65 Questions)</h3>
+            <div class="data-table-container">
+                <table class="data-table font-mono text-sm">
+                    <thead>
+                        <tr>
+                            <th class="w-12">Q#</th>
+                            <th class="w-12">Mks</th>
+                            <th class="w-16">Type</th>
+                            <th>Subject</th>
+                            <th>Topic</th>
+                            <th>Subtopic</th>
+                            <th class="w-12">Diff</th>
+                            <th class="col-wrap">Concept Tested</th>
+                            <th class="col-wrap">Hidden Concept</th>
+                            <th>Thinking Type</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <!-- GA Questions -->
+                        <tr><td>1</td><td>1</td><td>MCQ</td><td>GA</td><td>Verbal</td><td>Analogy (Antonym)</td><td>2</td><td class="col-wrap">Verbosity:Brevity :: Insolence:Respect</td><td class="col-wrap">Antonym-pair analogy</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>2</td><td>1</td><td>MCQ</td><td>GA</td><td>Quantitative</td><td>Number Theory</td><td>4</td><td class="col-wrap">Product of digits = 70, find sum</td><td class="col-wrap">Factor 70 = 2×5×7, sum = 14</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>3</td><td>1</td><td>MCQ</td><td>GA</td><td>Spatial</td><td>Puzzle Assembly</td><td>4</td><td class="col-wrap">Fit 4 pieces into target shape</td><td class="col-wrap">Spatial rotation + fitting</td><td>Logical Reasoning</td><td>Logical Reasoning</td></tr>
+                        <tr><td>4</td><td>1</td><td>MCQ</td><td>GA</td><td>Quantitative</td><td>Logarithms</td><td>5</td><td class="col-wrap">x=n^log(m), y=m^log(n) → x=y</td><td class="col-wrap">a^log_b(c) = c^log_b(a) identity</td><td>Multi Concept</td><td>Conceptual</td></tr>
+                        <tr><td>5</td><td>1</td><td>MCQ</td><td>GA</td><td>Verbal</td><td>Conditional Reasoning</td><td>3</td><td class="col-wrap">Counterfactual → movie was NOT successful</td><td class="col-wrap">"Had been" = contrary to fact</td><td>Conceptual</td><td>Easy Marks</td></tr>
+                        <tr><td>6</td><td>2</td><td>MCQ</td><td>GA</td><td>Verbal</td><td>Prepositions</td><td>3</td><td class="col-wrap">"parted at the door of the cabin for the night"</td><td class="col-wrap">Contextual preposition usage</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>7</td><td>2</td><td>MCQ</td><td>GA</td><td>Quantitative</td><td>Combinatorics + Stats</td><td>7</td><td class="col-wrap">Mean=12, median=18, mode=20 → how many ways?</td><td class="col-wrap">Constraint satisfaction with integers</td><td>Multi Concept</td><td>Numerical</td></tr>
+                        <tr><td>8</td><td>2</td><td>MCQ</td><td>GA</td><td>Logical Reasoning</td><td>Logic Puzzle</td><td>6</td><td class="col-wrap">Chess tournament: who didn't lose?</td><td class="col-wrap">Multi-constraint deduction</td><td>Logical Reasoning</td><td>Logical Reasoning</td></tr>
+                        <tr><td>9</td><td>2</td><td>MCQ</td><td>GA</td><td>Quantitative</td><td>Number Squares</td><td>6</td><td class="col-wrap">PQ²+RS²=XYP, consecutive numbers</td><td class="col-wrap">Trial-and-error with constraints</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>10</td><td>2</td><td>MCQ</td><td>GA</td><td>Geometry</td><td>Circle Area</td><td>5</td><td class="col-wrap">Area of region PQRO with inscribed angle 45°</td><td class="col-wrap">Circle geometry + area calculation</td><td>Formula Based</td><td>Numerical</td></tr>
+                        
+                        <!-- Core 1-Mark -->
+                        <tr><td>11</td><td>1</td><td>MCQ</td><td>ML</td><td>PCA</td><td>Orthogonality of Components</td><td>2</td><td class="col-wrap">θ between PC1 and PC10 = 90°</td><td class="col-wrap">PCs are eigenvectors of symmetric matrix → orthogonal</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>12</td><td>1</td><td>MCQ</td><td>ML</td><td>Validation</td><td>LOOCV Split Count</td><td>3</td><td class="col-wrap">900 training → 900 LOOCV splits</td><td class="col-wrap">LOOCV = n splits on training set</td><td>Conceptual</td><td>Easy Marks</td></tr>
+                        <tr><td>13</td><td>1</td><td>MCQ</td><td>AI</td><td>Search</td><td>Uninformed vs Informed</td><td>2</td><td class="col-wrap">A* is NOT uninformed</td><td class="col-wrap">Definition: A* uses heuristic = informed</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>14</td><td>1</td><td>MCQ</td><td>AI</td><td>Logic</td><td>Predicate Logic NOT True</td><td>5</td><td class="col-wrap">"Each king is person" ≠ ∀x IsKing(x) ∧ IsPerson(x)</td><td class="col-wrap">∧ vs ⇒ in universal quantification</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>15</td><td>1</td><td>MCQ</td><td>DSA</td><td>Sorting</td><td>Quicksort Expected Time Recurrence</td><td>6</td><td class="col-wrap">Random pivot, first element → T(n) = 1/n Σ[T(k)+T(n-k-1)] + O(n)</td><td class="col-wrap">Expected case over all pivot positions</td><td>Multi Concept</td><td>Conceptual</td></tr>
+                        <tr class="bg-accent-cyan/10 border-l-2 border-l-accent-cyan"><td>16</td><td>1</td><td>MCQ</td><td>Programming</td><td>Python</td><td>Mutable Default Argument</td><td>5</td><td class="col-wrap">lst=[] persists across calls</td><td class="col-wrap">Python default argument mutation trap</td><td>Conceptual</td><td>Time Trap</td></tr>
+                        <tr><td>17</td><td>1</td><td>MCQ</td><td>DBMS</td><td>Normalization</td><td>Candidate Keys from FDs</td><td>5</td><td class="col-wrap">F={AB→C, CD→E, E→A} → keys AD, ED, CD</td><td class="col-wrap">Closure computation for key candidates</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>18</td><td>1</td><td>MCQ</td><td>DBMS</td><td>OLAP</td><td>Drill-Down Operation</td><td>3</td><td class="col-wrap">Country → State = increasing granularity</td><td class="col-wrap">OLAP hierarchy traversal</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>19</td><td>1</td><td>MCQ</td><td>Probability</td><td>Combinatorics</td><td>Probability of Even Product</td><td>6</td><td class="col-wrap">Non-empty subset of {1..2026}, product even</td><td class="col-wrap">Complement: all odd elements subset</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>20</td><td>1</td><td>MCQ</td><td>Probability</td><td>Combinatorics</td><td>Stars and Bars</td><td>5</td><td class="col-wrap">n1+n2+n3+n4=20, all positive → C(19,3)/C(23,3)</td><td class="col-wrap">Transform ni≥1 to mi≥0, then count</td><td>Formula Based</td><td>Formula Based</td></tr>
+                        <tr><td>21</td><td>1</td><td>MCQ</td><td>Linear Algebra</td><td>Matrices</td><td>Rotation Matrix Powers</td><td>6</td><td class="col-wrap">M^2026 where θ=2π/5 → M^(5k+1) = M</td><td class="col-wrap">Rotation periodicity: M^5 = I</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>22</td><td>1</td><td>MCQ</td><td>Linear Algebra</td><td>Subspaces</td><td>Intersection S1∩S2 Area</td><td>5</td><td class="col-wrap">Ball ∩ 2D subspace = disk of radius 4</td><td class="col-wrap">Sphere cross-section through origin</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>23</td><td>1</td><td>MCQ</td><td>ML</td><td>Classification</td><td>Algorithm-Task Matching</td><td>3</td><td class="col-wrap">Clustering:K-Medoid, Class:NB, Sampling:MCMC, FE:LDA</td><td class="col-wrap">Taxonomy matching</td><td>Memory</td><td>Easy Marks</td></tr>
+                        <tr><td>24</td><td>1</td><td>MSQ</td><td>AI</td><td>Logic</td><td>Entailment Properties</td><td>5</td><td class="col-wrap">X entails Y → X⇒Y, X∧¬Y=FALSE, if X then Y</td><td class="col-wrap">Y does NOT entail X (converse)</td><td>Conceptual</td><td>Multi Concept</td></tr>
+                        <tr><td>25</td><td>1</td><td>MSQ</td><td>DSA</td><td>Trees</td><td>Binary Tree from Traversals</td><td>6</td><td class="col-wrap">Pre+In → construct tree, verify post-order</td><td class="col-wrap">Systematic tree construction algorithm</td><td>Logical Reasoning</td><td>Multi Concept</td></tr>
+                        <tr><td>26</td><td>1</td><td>MSQ</td><td>DBMS</td><td>Constraints</td><td>Foreign Key Violation</td><td>4</td><td class="col-wrap">Insert into r or Delete from s = NEVER violates FK</td><td class="col-wrap">FK constraint on insert to s, delete from r</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>27</td><td>1</td><td>MSQ</td><td>Calculus</td><td>Optimization</td><td>f(x)=x³-3x²+2 on (-1,3]</td><td>6</td><td class="col-wrap">Root at 1, min at 2, max at 0</td><td class="col-wrap">Critical points + boundary evaluation</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>28</td><td>1</td><td>MSQ</td><td>Probability</td><td>Distributions</td><td>Normal vs t-distribution</td><td>6</td><td class="col-wrap">G(0)=H(0)=0.5, G(c)<H(c) at crossing</td><td class="col-wrap">Heavier tails of t₁ vs N(0,1)</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>29</td><td>1</td><td>NAT</td><td>ML</td><td>Gradient Descent</td><td>SGD Weight Update</td><td>4</td><td class="col-wrap">w_new = w - η × ∂f/∂w = 10 - 0.1×10 = 9.00</td><td class="col-wrap">Chain rule: ∂(wx)/∂w = x</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>30</td><td>1</td><td>NAT</td><td>AI</td><td>Game Theory</td><td>Minimax Optimal Strategy</td><td>4</td><td class="col-wrap">Best strategy for MAX from 3×3 game tree</td><td class="col-wrap">Trace minimax backwards from leaves</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>31</td><td>1</td><td>NAT</td><td>DSA</td><td>Binary Search</td><td>Max Comparisons for n=1000</td><td>3</td><td class="col-wrap">⌈log₂(1000)⌉ = 10</td><td class="col-wrap">Binary search comparison bound</td><td>Formula Based</td><td>Easy Marks</td></tr>
+                        <tr><td>32</td><td>1</td><td>NAT</td><td>DBMS</td><td>B+ Tree</td><td>Max Node Pointers</td><td>4</td><td class="col-wrap">Node size, pointer sizes → capacity calc</td><td class="col-wrap">B+ tree order calculation from byte sizes</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>33</td><td>1</td><td>NAT</td><td>Discrete Math</td><td>Combinatorics</td><td>Involutions Count</td><td>5</td><td class="col-wrap">Bijections f:S→S with f(f(n))=n, |S|=4</td><td class="col-wrap">Count involutions: id + C(4,2) swaps = 1+3+6? → 10</td><td>Multi Concept</td><td>Numerical</td></tr>
+                        <tr><td>34</td><td>1</td><td>NAT</td><td>Probability</td><td>Exponential</td><td>Memoryless Property</td><td>4</td><td class="col-wrap">P(X>10|X>5) = P(X>5) = 0.35</td><td class="col-wrap">Memoryless: P(X>s+t|X>s)=P(X>t)</td><td>Conceptual</td><td>Easy Marks</td></tr>
+                        <tr><td>35</td><td>1</td><td>NAT</td><td>Calculus</td><td>Series</td><td>Double Geometric Sum</td><td>4</td><td class="col-wrap">Σ_i Σ_j 2^(-i) × 3^(-j)</td><td class="col-wrap">Product of two geometric series</td><td>Formula Based</td><td>Numerical</td></tr>
+
+                        <!-- Core 2-Mark -->
+                        <tr><td>36</td><td>2</td><td>MCQ</td><td>ML</td><td>Clustering</td><td>Hierarchical + Manhattan Distance</td><td>4</td><td class="col-wrap">Merge pair with minimum Manhattan distance</td><td class="col-wrap">Pairwise distance computation</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>37</td><td>2</td><td>MCQ</td><td>ML</td><td>Ridge Regression</td><td>Regularizer Effect</td><td>4</td><td class="col-wrap">L2 regularizer: increases bias, reduces variance</td><td class="col-wrap">Bias-variance tradeoff understanding</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>38</td><td>2</td><td>MCQ</td><td>AI</td><td>Logic</td><td>Propositional Logic Equivalence</td><td>7</td><td class="col-wrap">"Creative + Disciplined → Succeed" formalization</td><td class="col-wrap">Biconditional under antecedent scope</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>39</td><td>2</td><td>MCQ</td><td>Programming</td><td>Python</td><td>Recursive Call Count</td><td>5</td><td class="col-wrap">mystery(4) → count stack activations</td><td class="col-wrap">Fibonacci-like recursion tree counting</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>40</td><td>2</td><td>MCQ</td><td>DSA</td><td>Graphs</td><td>BFS/DFS on Reversed Graph</td><td>7</td><td class="col-wrap">If u reachable from v in DFS(G), then v reachable from u in BFS(G^R)</td><td class="col-wrap">Directed reachability = reverse reachability</td><td>Multi Concept</td><td>Proof Based</td></tr>
+                        <tr><td>41</td><td>2</td><td>MCQ</td><td>DBMS</td><td>B+ Tree</td><td>Root After Insertion</td><td>5</td><td class="col-wrap">Insert key 3, track B+ tree splits</td><td class="col-wrap">B+ tree split propagation</td><td>Logical Reasoning</td><td>Numerical</td></tr>
+                        <tr><td>42</td><td>2</td><td>MCQ</td><td>DBMS</td><td>Relational Algebra</td><td>Complex Join + Select Query</td><td>7</td><td class="col-wrap">∏_PRS of nested natural joins with selection</td><td class="col-wrap">Push selections down before joins</td><td>Multi Concept</td><td>Time Trap</td></tr>
+                        <tr><td>43</td><td>2</td><td>MCQ</td><td>DBMS</td><td>OLAP</td><td>Number of Cuboids</td><td>5</td><td class="col-wrap">Product of (levels+1) for each dimension</td><td class="col-wrap">Data cube lattice structure</td><td>Formula Based</td><td>Formula Based</td></tr>
+                        <tr><td>44</td><td>2</td><td>MCQ</td><td>Probability</td><td>Variance</td><td>Var((2X-1)Y) independent</td><td>7</td><td class="col-wrap">E[(2X-1)²]×E[Y²] since indep + E[Y]=0</td><td class="col-wrap">Product of independent: Var requires E[·²] decomp</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>45</td><td>2</td><td>MCQ</td><td>Probability</td><td>Limits</td><td>Poisson CDF limit at mean</td><td>6</td><td class="col-wrap">lim Σ e^(-n)n^k/k! for k=0..n as n→∞</td><td class="col-wrap">CDF of Poisson at mean → 0.5 by CLT</td><td>Multi Concept</td><td>Conceptual</td></tr>
+                        <tr><td>46</td><td>2</td><td>MCQ</td><td>Linear Algebra</td><td>Eigenvalues</td><td>Block Rotation Matrix Eigenvalues</td><td>6</td><td class="col-wrap">diag(1, Rot(t)) → eigenvalues 1, e^(±it)</td><td class="col-wrap">Sum = 1+2cos(t) = 1+√2 → t=±π/4</td><td>Multi Concept</td><td>Numerical</td></tr>
+                        <tr><td>47</td><td>2</td><td>MSQ</td><td>ML</td><td>Classification</td><td>Precision/Recall/Accuracy</td><td>5</td><td class="col-wrap">Confusion matrix → accuracy, precision, recall per class</td><td class="col-wrap">Correct computation from TP/FP/FN/TN</td><td>Numerical</td><td>Multi Concept</td></tr>
+                        <tr><td>48</td><td>2</td><td>MSQ</td><td>AI</td><td>Logic</td><td>First-Order Logic Validity</td><td>6</td><td class="col-wrap">∃x P(x) ⇒ ∀x P(x) NOT valid</td><td class="col-wrap">Universal from existential fails</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr><td>49</td><td>2</td><td>MSQ</td><td>DSA</td><td>Sorting</td><td>Bubble vs Insertion Sort Comparisons</td><td>5</td><td class="col-wrap">[1,2,3,5,4]: count comparisons for each</td><td class="col-wrap">Trace both algorithms precisely</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>50</td><td>2</td><td>MSQ</td><td>Programming</td><td>Python</td><td>Closure Behavior</td><td>6</td><td class="col-wrap">f1=outer(), f2=outer() → separate lists</td><td class="col-wrap">Python closure captures mutable variable</td><td>Conceptual</td><td>Multi Concept</td></tr>
+                        <tr><td>51</td><td>2</td><td>MSQ</td><td>DBMS</td><td>SQL</td><td>Window/Subquery for Team Size</td><td>6</td><td class="col-wrap">Correct SQL to get team size per employee</td><td class="col-wrap">Subquery vs self-join vs window function</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>52</td><td>2</td><td>MSQ</td><td>Linear Algebra</td><td>Projection</td><td>Centering Matrix Properties</td><td>7</td><td class="col-wrap">M = I - (1/n)11^T: symmetric, idempotent, trace=n-1</td><td class="col-wrap">Recognition of centering/projection matrix</td><td>Multi Concept</td><td>Conceptual</td></tr>
+                        <tr><td>53</td><td>2</td><td>MSQ</td><td>Probability</td><td>Chi-Square</td><td>Sum of Normal² Distributions</td><td>6</td><td class="col-wrap">ΣXi² ~ χ²(n), Σ(Xi-X̄)² ~ χ²(n-1)</td><td class="col-wrap">Degrees of freedom with centering</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                        <tr><td>54</td><td>2</td><td>MSQ</td><td>Probability</td><td>CDF Properties</td><td>Discrete CDF Properties</td><td>4</td><td class="col-wrap">Non-decreasing, jump discontinuity, RIGHT continuous</td><td class="col-wrap">Discrete CDF is right-continuous, NOT left</td><td>Conceptual</td><td>Conceptual</td></tr>
+                        <tr class="bg-accent-rose/10 border-l-2 border-l-accent-rose"><td>55</td><td>2</td><td>NAT</td><td>ML</td><td>Ridge Regression</td><td>Regularized Loss with MAE</td><td>7</td><td class="col-wrap">MAE loss + L2 penalty: |y_true - y_pred| + 0.2×‖w‖²</td><td class="col-wrap">DO NOT square the error (MAE ≠ MSE)</td><td>Multi Concept</td><td>Time Trap</td></tr>
+                        <tr><td>56</td><td>2</td><td>NAT</td><td>ML</td><td>Neural Networks</td><td>MLP Parameter Count</td><td>3</td><td class="col-wrap">30→4→3→1, no bias → 30×4+4×3+3×1=135</td><td class="col-wrap">Layer-by-layer multiplication</td><td>Formula Based</td><td>Easy Marks</td></tr>
+                        <tr><td>57</td><td>2</td><td>NAT</td><td>Probability</td><td>Bayes Theorem</td><td>Disease Testing (Bayes)</td><td>5</td><td class="col-wrap">P(D|+) = P(+|D)P(D)/P(+)</td><td class="col-wrap">Standard medical Bayes</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>58</td><td>2</td><td>NAT</td><td>Programming</td><td>Python</td><td>Recursive Bubble Sort Counter</td><td>6</td><td class="col-wrap">Count swaps across 5 iterations of bubble-sort-like function</td><td class="col-wrap">Track array state through recursion</td><td>Numerical</td><td>Numerical</td></tr>
+                        <tr><td>59</td><td>2</td><td>NAT</td><td>DBMS</td><td>Relational Calculus</td><td>Tuple Relational Calculus Count</td><td>7</td><td class="col-wrap">Count tuples satisfying complex TRC expression</td><td class="col-wrap">Evaluate each quantifier systematically</td><td>Multi Concept</td><td>Numerical</td></tr>
+                        <tr><td>60</td><td>2</td><td>NAT</td><td>DBMS</td><td>SQL</td><td>Correlated Subquery Count</td><td>7</td><td class="col-wrap">WHERE count(larger) >= count(smaller)</td><td class="col-wrap">Median-like computation</td><td>Multi Concept</td><td>Numerical</td></tr>
+                        <tr><td>61</td><td>2</td><td>NAT</td><td>DBMS</td><td>ER Model</td><td>Min Relations for ER→Relational</td><td>5</td><td class="col-wrap">Many-to-many + multi-valued attribute → 4 tables</td><td class="col-wrap">Multi-valued attribute = separate table</td><td>Formula Based</td><td>Numerical</td></tr>
+                        <tr><td>62</td><td>2</td><td>NAT</td><td>Statistics</td><td>Variance</td><td>Pairwise Difference to Variance</td><td>6</td><td class="col-wrap">1/2000 ΣΣ(xi-xj)² = 99 → sample variance</td><td class="col-wrap">Expand: ΣΣ(xi-xj)² = 2nΣ(xi-x̄)²</td><td>Multi Concept</td><td>Numerical</td></tr>
+                        <tr><td>63</td><td>2</td><td>NAT</td><td>Probability</td><td>Correlation</td><td>Corr(X,Y) where Y|X ~ Uniform(x²±0.1)</td><td>7</td><td class="col-wrap">E[Y|X] = x², Cov(X,Y) = E[XY]-E[X]E[Y]</td><td class="col-wrap">Law of total covariance/expectation</td><td>Multi Concept</td><td>Numerical</td></tr>
+                        <tr><td>64</td><td>2</td><td>NAT</td><td>Probability</td><td>Joint Distribution</td><td>Row-sum and Col-sum probability</td><td>7</td><td class="col-wrap">Bernoulli matrix: P(row₂ sum=3 ∧ col₃ sum=3)</td><td class="col-wrap">Overlapping cell requires inclusion-exclusion</td><td>Multi Concept</td><td>Numerical</td></tr>
+                        <tr><td>65</td><td>2</td><td>NAT</td><td>Linear Algebra</td><td>Optimization</td><td>Max x^TAx over unit sphere</td><td>6</td><td class="col-wrap">A = I - (1/n)11^T, max eigenvalue = 1</td><td class="col-wrap">Rayleigh quotient = max eigenvalue</td><td>Multi Concept</td><td>Multi Concept</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="border-t-2 border-border pt-12 pb-20 flex justify-between items-center">
+            <div>
+                <a href="solutions_1.html" class="text-gray-500 hover:text-white uppercase tracking-widest text-sm font-mono flex items-center gap-2 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg> Previous: 2026 Intel & 24 Sol
+                </a>
+            </div>
+            <div>
+                <p class="font-mono text-sm text-gray-500 uppercase tracking-widest mb-2 text-right">Document 3 of 5</p>
+                <a href="strategy.html" class="inline-flex items-center gap-4 bg-accent-purple text-white px-8 py-4 font-heading font-bold text-xl uppercase tracking-wider shadow-[6px_6px_0px_0px_#FFFFFF] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#FFFFFF] transition-all">
+                    Next: The Strategy <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

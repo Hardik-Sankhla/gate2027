@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE DA 2027 | Execution & Battle Plan</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    },
+                    colors: {
+                        base: '#0A0A0A',
+                        surface: '#171717',
+                        border: '#333333',
+                        accent: {
+                            blue: '#2563EB',
+                            cyan: '#06B6D4',
+                            rose: '#E11D48',
+                            emerald: '#10B981',
+                            amber: '#F59E0B',
+                            purple: '#8B5CF6'
+                        }
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px var(--tw-shadow-color)',
+                        'neo-hover': '2px 2px 0px 0px var(--tw-shadow-color)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- MathJax for LaTeX Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #D4D4D4;
+            font-family: 'Inter', sans-serif;
+        }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; border-left: 1px solid #333333; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #10B981; }
+
+        .neo-card {
+            background-color: #171717;
+            border: 2px solid #333333;
+            box-shadow: 6px 6px 0px 0px #333333;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .neo-card:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px 0px #333333;
+        }
+
+        .neo-card-emerald { box-shadow: 6px 6px 0px 0px #10B981; }
+        .neo-card-emerald:hover { box-shadow: 4px 4px 0px 0px #10B981; }
+
+        .callout-box {
+            background-color: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10B981;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .data-table-container {
+            width: 100%;
+            overflow-x: auto;
+            border: 2px solid #333333;
+            background: #171717;
+            margin-bottom: 2rem;
+        }
+        .data-table { width: 100%; border-collapse: collapse; text-align: left; }
+        .data-table th, .data-table td { 
+            padding: 1rem 1.25rem; 
+            border-bottom: 1px solid #333333; 
+            border-right: 1px solid #333333;
+        }
+        .data-table th { 
+            background: #000000; 
+            color: #FFFFFF; 
+            font-family: 'Space Grotesk', sans-serif; 
+            font-size: 0.85rem;
+            text-transform: uppercase; 
+        }
+        .data-table tbody tr:hover { background: #262626; }
+        .data-table td:last-child, .data-table th:last-child { border-right: none; }
+
+        .hl-text { color: #FFFFFF; font-weight: 600; }
+        
+        /* Custom Checkbox for Mastery List */
+        .mastery-checkbox {
+            appearance: none;
+            background-color: #171717;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 2px solid #333333;
+            border-radius: 0.15em;
+            display: grid;
+            place-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .mastery-checkbox::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em #10B981;
+            background-color: #10B981;
+            transform-origin: bottom left;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        }
+        .mastery-checkbox:checked::before { transform: scale(1); }
+        .mastery-checkbox:checked { border-color: #10B981; }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-accent-emerald selection:text-black">
+
+    <nav class="sticky top-0 z-50 bg-base/90 backdrop-blur-md border-b-2 border-border">
+        <div class="max-w-[90rem] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-accent-emerald border-2 border-white flex items-center justify-center font-heading font-bold text-black text-xl shadow-[4px_4px_0px_0px_#FFFFFF]">DA</div>
+                <span class="font-heading font-bold text-xl text-white tracking-tight">GATE 2027<span class="text-accent-emerald">.INTEL</span></span>
+            </div>
+            <div class="hidden md:flex gap-6 font-mono text-sm font-medium">
+                <a href="index.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">01. Home & DNA</a>
+                <a href="solutions_1.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">02. Sol (24-25)</a>
+                <a href="solutions_2.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">03. Sol (26)</a>
+                <a href="strategy.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">04. Strategy</a>
+                <a href="battle_plan.html" class="text-white border-b-2 border-accent-emerald px-1 py-2 transition-colors">05. Battle Plan</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-[90rem] mx-auto px-6 py-12 md:py-20">
+        
+        <header class="mb-16 border-b-4 border-accent-emerald pb-8 inline-block">
+            <h1 class="font-heading text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
+                Document 05: <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-emerald to-accent-cyan">Execution & Battle Plan</span>
+            </h1>
+            <p class="font-mono text-xl text-gray-400 mt-6 border-l-4 border-accent-emerald pl-4 max-w-4xl">
+                Rank Target Strategies, The 180-Minute War Plan, 34-Week Timetable, and Critical Formulas.
+            </p>
+        </header>
+
+        <!-- RANK TARGET STRATEGIES -->
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#10B981]">1</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Rank Target Strategies</h2>
+                </div>
+                <p class="text-xl text-gray-400">Depending on baseline proficiency and available preparation time, candidates must adopt specific, ruthlessly prioritized strategies to target distinct mark thresholds. Attempting to master the entire syllabus with limited time results in catastrophic failure on MSQs.</p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="neo-card p-8 border-t-4 border-t-gray-500">
+                    <h3 class="font-heading font-bold text-2xl text-white mb-4">The 40-Mark Strategy <br><span class="text-sm text-gray-400">(Qualifying / Lower PSUs)</span></h3>
+                    <p class="text-sm text-gray-300 mb-4 border-b border-border pb-4"><strong class="text-white">Objective:</strong> Survive, qualify, and secure a baseline score.</p>
+                    <ul class="space-y-3 text-sm text-gray-400 mb-4">
+                        <li><strong class="text-accent-emerald">Focus Areas:</strong> General Aptitude (must target 12/15 marks), Python output prediction, SQL queries, basic Probability (Bayes Theorem, Binomial), and basic Matrix operations (Determinants, basic Eigenvalues).</li>
+                        <li><strong class="text-accent-rose">Ignore:</strong> Machine Learning algorithms, A* Search proofs, Continuous Distributions, Multivariable Calculus.</li>
+                    </ul>
+                    <div class="bg-surface p-3 font-mono text-xs text-gray-500">Risk Level: Low. High reliance on simple, deterministic topics without complex math notation.</div>
+                </div>
+
+                <div class="neo-card p-8 border-t-4 border-t-accent-blue">
+                    <h3 class="font-heading font-bold text-2xl text-white mb-4">The 60-Mark Strategy <br><span class="text-sm text-gray-400">(Top 1000 / Mid-Tier IITs)</span></h3>
+                    <p class="text-sm text-gray-300 mb-4 border-b border-border pb-4"><strong class="text-white">Objective:</strong> Secure a respectable rank for M.Tech admissions.</p>
+                    <ul class="space-y-3 text-sm text-gray-400 mb-4">
+                        <li><strong class="text-accent-emerald">Focus Areas:</strong> All 40-mark topics plus Supervised Learning (Linear/Log Reg, Naive Bayes), Continuous Probability, SVD, Clustering, and basic Search Algorithms (BFS/DFS).</li>
+                        <li><strong class="text-accent-amber">Delay/Skim:</strong> Advanced Bayesian Networks, complex Hypothesis Testing, rigorous Optimization proofs, and SVM Kernel tricks.</li>
+                    </ul>
+                    <div class="bg-surface p-3 font-mono text-xs text-gray-500">Risk Level: Moderate. Requires solid execution on NATs without negative marking penalties.</div>
+                </div>
+
+                <div class="neo-card p-8 border-t-4 border-t-accent-rose shadow-[6px_6px_0px_0px_#E11D48]">
+                    <h3 class="font-heading font-bold text-2xl text-white mb-4">The 80+ Mark Strategy <br><span class="text-sm text-gray-400">(AIR < 100 / Premium)</span></h3>
+                    <p class="text-sm text-gray-300 mb-4 border-b border-border pb-4"><strong class="text-white">Objective:</strong> Absolute dominance and rank dictation.</p>
+                    <ul class="space-y-3 text-sm text-gray-400 mb-4">
+                        <li><strong class="text-accent-emerald">Focus Areas:</strong> The entire syllabus. Absolute mastery over MSQ formulation. Deep mathematical understanding of the dual formulation of SVMs, geometric implications of $L_1/L_2$ regularization, and variable elimination in AI.</li>
+                        <li><strong class="text-white">Execution Profile:</strong> Flawless accuracy on NATs. Ability to spot "Hidden Concepts" and avoid psychometric traps. Mastery of proofs, not just application.</li>
+                    </ul>
+                    <div class="bg-surface p-3 font-mono text-xs text-gray-500">Risk Level: Extreme. Depends entirely on MSQ execution.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERSONALIZED STRATEGY FRAMEWORK -->
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#10B981]">2</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Personalized Strategy Framework</h2>
+                </div>
+            </header>
+
+            <div class="neo-card p-8 md:p-10 mb-8 border-l-4 border-l-accent-blue">
+                <h3 class="font-heading text-2xl font-bold text-white mb-4">Student Profile: B.Tech Data Science (Targeting 2027)</h3>
+                <p class="text-gray-300 mb-6">Given the academic background of a typical Indian B.Tech Data Science student, certain psychological and academic profiles emerge consistently:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-mono font-bold text-accent-emerald mb-2">✓ Likely Strengths</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                            <li>Python programming fluency</li>
+                            <li>SQL querying</li>
+                            <li>High-level conceptual understanding of ML workflows (classification vs regression, train/test splits).</li>
+                            <li>Familiarity with libraries (sklearn, pandas, numpy).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-mono font-bold text-accent-rose mb-2">✗ Likely Weaknesses</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                            <li>Pure mathematical rigor (proofs, derivations).</li>
+                            <li>Theoretical foundations of Linear Algebra (positive definiteness, orthogonal projections).</li>
+                            <li>Calculus underlying optimization (Hessian matrices, convex geometry).</li>
+                            <li>Accustomed to calling `.fit()` rather than writing gradient descent analytically.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="neo-card p-6">
+                    <h4 class="font-heading font-bold text-xl text-white mb-3 border-b border-border pb-2">Diagnostic Test Plan</h4>
+                    <p class="text-sm text-gray-400 mb-4">The student must immediately undergo a diagnostic test consisting exclusively of the 2025 and 2026 GATE DA mathematical questions (Statistics, Linear Algebra, Calculus).</p>
+                    <div class="bg-surface p-4 border border-accent-rose">
+                        <strong class="text-accent-rose font-mono text-sm block mb-1">Diagnostic Trigger:</strong>
+                        <span class="text-sm text-gray-300">If the student attempts to solve ML questions using intuition or pseudo-code rather than setting up the mathematical objective function, a fundamental, critical gap exists.</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h4 class="font-heading font-bold text-xl text-white mb-3 border-b border-border pb-2">Personalized Roadmap Interventions</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><strong class="text-white">Deconstruct the API Mindset:</strong> Stop coding immediately. Begin calculating. For one full month, implement basic ML algorithms (Gradient Descent, Naive Bayes) entirely on a blank sheet of paper using matrices and calculus. No Python allowed.</li>
+                        <li><strong class="text-white">Mathematics First:</strong> Before touching ML/AI, complete a rigorous review of Vector Spaces, Projections, SVD, and Joint Probability. This builds the engine.</li>
+                        <li><strong class="text-white">Algorithmic Logic over Syntax:</strong> Transition to tracing Python and DSA. Emphasize complexity analysis (Big-O proofs) and building recursion trees.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXAM DAY WAR PLAN -->
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#10B981]">3</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">The 180-Minute War Plan</h2>
+                </div>
+                <p class="text-xl text-gray-400">The 180 minutes of the GATE DA examination must be managed with absolute surgical precision to mitigate cognitive fatigue, manage the negative marking penalty, and avoid time-sinks.</p>
+            </header>
+
+            <div class="space-y-4 font-mono text-sm">
+                <div class="neo-card p-6 border-l-4 border-l-accent-blue">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <strong class="text-white text-xl uppercase">0 - 20 Minutes: The Sweep (Momentum Building)</strong>
+                    </div>
+                    <p class="text-gray-400 mb-2"><strong class="text-accent-blue">Action:</strong> Scan the entire paper. Target 1-mark MCQs in General Aptitude, basic Python tracing, and simple SQL/DBMS questions.</p>
+                    <p class="text-gray-500"><strong class="text-gray-300">Psychology:</strong> Build early momentum and secure 10-15 safe marks rapidly. Do not look at complex probability integrals or lengthy NATs during this phase.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-emerald">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <strong class="text-white text-xl uppercase">20 - 60 Minutes: The Core (High ROI MCQs)</strong>
+                    </div>
+                    <p class="text-gray-400 mb-2"><strong class="text-accent-emerald">Action:</strong> Attack the 2-mark MCQs. Focus on Linear Algebra, standard Machine Learning classification questions, and Search Algorithms.</p>
+                    <p class="text-gray-500"><strong class="text-gray-300">Trap Avoidance:</strong> If a 2-mark MCQ requires more than 3 minutes of calculation, mark it for review and immediately skip. The examiner is actively testing the candidate's ability to let go of sunk costs.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-rose">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <strong class="text-white text-xl uppercase">60 - 120 Minutes: The Crucible (NATs and MSQs)</strong>
+                    </div>
+                    <p class="text-gray-400 mb-2"><strong class="text-accent-rose">Action:</strong> Transition to Numerical Answer Types (NATs) and Multiple Select Questions (MSQs). Cognitive energy is highest here.</p>
+                    <p class="text-gray-500 mb-1"><strong class="text-gray-300">NAT Strategy:</strong> Calculate twice on the scribble pad. Zero negative marking but requires absolute numerical precision. Pay extreme attention to rounding instructions (e.g., "rounded off to two decimal places").</p>
+                    <p class="text-gray-500"><strong class="text-gray-300">MSQ Strategy:</strong> Treat every single option in an MSQ as an independent True/False question. Prove or disprove each option independently.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-purple">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <strong class="text-white text-xl uppercase">120 - 160 Minutes: The Heavy Lifting</strong>
+                    </div>
+                    <p class="text-gray-400 mb-2"><strong class="text-accent-purple">Action:</strong> Return to the skipped, calculation-heavy questions (e.g., complex joint probabilities, SVD calculations, neural network backpropagation limits).</p>
+                    <p class="text-gray-500"><strong class="text-gray-300">Psychology:</strong> Cognitive load is high, so execute steps systematically and legibly on the scribble pad to prevent arithmetic cascading errors.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-amber shadow-[6px_6px_0px_0px_#F59E0B]">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <strong class="text-white text-xl uppercase">160 - 180 Minutes: Defensive Review</strong>
+                    </div>
+                    <p class="text-gray-400 mb-2"><strong class="text-accent-amber">Action:</strong> Stop solving new problems entirely. Review all marked answers.</p>
+                    <p class="text-gray-500"><strong class="text-gray-300">Checklist:</strong> Ensure NAT inputs do not contain sign errors or decimal misplacements. Verify that no "NOT" clauses were missed in the question stems. A defensive review often yields 4-6 recovered marks, equating to hundreds of ranks.</p>
+                </div>
+            </div>
+
+            <div class="data-table-container mt-8">
+                <table class="data-table font-mono text-sm">
+                    <thead>
+                        <tr>
+                            <th>Question Type</th>
+                            <th>Strategy</th>
+                            <th>Risk Management</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr><td class="font-bold text-white">MCQ (1-mark)</td><td>Attempt all you're ≥70% confident about. Skip low-confidence ones.</td><td class="text-accent-rose">-⅓ penalty. Don't guess blindly.</td></tr>
+                        <tr><td class="font-bold text-white">MCQ (2-mark)</td><td>Attempt if ≥60% confident. Use elimination to boost confidence.</td><td class="text-accent-rose">-⅔ penalty. Higher risk.</td></tr>
+                        <tr><td class="font-bold text-white">MSQ</td><td>Treat EACH option independently. Only select options you can PROVE.</td><td class="text-accent-emerald">No negative marking, but all-or-nothing.</td></tr>
+                        <tr><td class="font-bold text-white">NAT</td><td>Calculate twice. Verify units. Follow rounding EXACTLY.</td><td class="text-accent-emerald">No negative marking. Always attempt.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TOPPER BLUEPRINT -->
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#10B981]">4</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">The AIR-1 Topper Blueprint</h2>
+                </div>
+                <p class="text-xl text-gray-400">To achieve an All India Rank (AIR) of 1 within an 8-month timeframe, the candidate must discard conventional tutoring advice, reject surface-level studying, and adopt an elite, mathematically rigorous training regimen.</p>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+                <div class="neo-card p-8">
+                    <h3 class="font-heading font-bold text-2xl text-white mb-6 border-b border-border pb-2">What Would AIR 1 Study?</h3>
+                    <ul class="space-y-4 font-mono text-sm text-gray-300">
+                        <li class="flex justify-between border-b border-border pb-2"><span class="text-white">1. Linear Algebra (proofs + computation)</span> <span class="text-accent-emerald">8 Hrs/Wk</span></li>
+                        <li class="flex justify-between border-b border-border pb-2"><span class="text-white">2. Probability & Statistics</span> <span class="text-accent-emerald">8 Hrs/Wk</span></li>
+                        <li class="flex justify-between border-b border-border pb-2"><span class="text-white">3. Machine Learning (mathematical)</span> <span class="text-accent-emerald">8 Hrs/Wk</span></li>
+                        <li class="flex justify-between border-b border-border pb-2"><span class="text-white">4. DBMS + SQL</span> <span class="text-accent-emerald">4 Hrs/Wk</span></li>
+                        <li class="flex justify-between border-b border-border pb-2"><span class="text-white">5. AI (Search + Logic)</span> <span class="text-accent-emerald">4 Hrs/Wk</span></li>
+                        <li class="flex justify-between border-b border-border pb-2"><span class="text-white">6. Python + DSA</span> <span class="text-accent-amber">3 Hrs/Wk</span></li>
+                        <li class="flex justify-between"><span class="text-white">7. Calculus (Embedded in ML)</span> <span class="text-accent-amber">3 Hrs/Wk</span></li>
+                    </ul>
+                </div>
+
+                <div class="neo-card p-8 border-t-4 border-t-accent-rose bg-surface/50">
+                    <h3 class="font-heading font-bold text-2xl text-accent-rose mb-6 border-b border-border pb-2">What Would AIR 1 IGNORE?</h3>
+                    <ul class="space-y-3 font-mono text-sm text-gray-400">
+                        <li><span class="text-accent-rose mr-2">❌</span> Advanced Dynamic Programming</li>
+                        <li><span class="text-accent-rose mr-2">❌</span> AVL/Red-Black tree rotations</li>
+                        <li><span class="text-accent-rose mr-2">❌</span> Complex graph algorithms (Max Flow, Bellman-Ford)</li>
+                        <li><span class="text-accent-rose mr-2">❌</span> Coding in any language (Python for output prediction ONLY)</li>
+                        <li><span class="text-accent-rose mr-2">❌</span> sklearn/pandas/numpy — completely irrelevant</li>
+                        <li><span class="text-accent-rose mr-2">❌</span> Deep learning frameworks</li>
+                        <li><span class="text-accent-rose mr-2">❌</span> Complex concurrency control in DBMS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="neo-card p-8 mb-10">
+                <h3 class="font-heading font-bold text-2xl text-white mb-6 border-b border-border pb-2">Daily Practice Schedule (10 Hrs/Day)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 font-mono text-sm text-gray-300">
+                    <div class="flex justify-between"><span class="text-white">6:00 - 8:00 AM</span> <span>Theory study (new concept)</span></div>
+                    <div class="flex justify-between"><span class="text-white">8:00 - 8:30 AM</span> <span class="text-gray-500">Break + light exercise</span></div>
+                    <div class="flex justify-between"><span class="text-white">8:30 - 10:30 AM</span> <span>Problem solving (focused)</span></div>
+                    <div class="flex justify-between"><span class="text-white">10:30 - 11:00 AM</span> <span class="text-gray-500">Break</span></div>
+                    <div class="flex justify-between"><span class="text-white">11:00 - 1:00 PM</span> <span class="text-accent-cyan">PYQ practice (cross-topic)</span></div>
+                    <div class="flex justify-between"><span class="text-white">1:00 - 2:00 PM</span> <span class="text-gray-500">Lunch break</span></div>
+                    <div class="flex justify-between"><span class="text-white">2:00 - 3:30 PM</span> <span>Weak area revision</span></div>
+                    <div class="flex justify-between"><span class="text-white">3:30 - 4:00 PM</span> <span class="text-gray-500">Break</span></div>
+                    <div class="flex justify-between"><span class="text-white">4:00 - 5:30 PM</span> <span class="text-accent-rose">Mock test section (timed)</span></div>
+                    <div class="flex justify-between"><span class="text-white">5:30 - 6:00 PM</span> <span class="text-accent-amber">Error log review</span></div>
+                    <div class="flex justify-between"><span class="text-white">6:00 - 7:00 PM</span> <span>Formula/property revision</span></div>
+                    <div class="flex justify-between"><span class="text-white">Sunday</span> <span class="text-accent-emerald font-bold">3-HOUR FULL MOCK + ANALYSIS</span></div>
+                </div>
+            </div>
+
+            <div class="callout-box border-accent-amber bg-accent-amber/10 text-accent-amber">
+                <h4 class="font-heading font-bold text-xl uppercase mb-2 text-white">The Error Log Mandate</h4>
+                <p class="text-sm mb-4">Never review a mock without updating your Error Log. Categorize every error forensically. There are no "silly mistakes".</p>
+                <ul class="font-mono text-sm space-y-1">
+                    <li><strong class="text-white">C = Conceptual Gap</strong> (need to relearn)</li>
+                    <li><strong class="text-white">A = Arithmetic Error</strong> (need to use scribble pad, calculate twice)</li>
+                    <li><strong class="text-white">T = Psychometric Trap</strong> (need to recognize pattern / muscle memory)</li>
+                    <li><strong class="text-white">S = Strategy Error</strong> (should have attempted / should have skipped)</li>
+                </ul>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                <div class="neo-card p-4 text-center">
+                    <div class="text-3xl font-heading font-black text-white">13/15</div>
+                    <div class="text-xs font-mono text-gray-400 mt-2 uppercase">Gen Aptitude Target</div>
+                </div>
+                <div class="neo-card p-4 text-center">
+                    <div class="text-3xl font-heading font-black text-white">18/20</div>
+                    <div class="text-xs font-mono text-gray-400 mt-2 uppercase">Prob & Stats Target</div>
+                </div>
+                <div class="neo-card p-4 text-center">
+                    <div class="text-3xl font-heading font-black text-white">20/25</div>
+                    <div class="text-xs font-mono text-gray-400 mt-2 uppercase">Machine Learning Target</div>
+                </div>
+                <div class="neo-card p-4 text-center bg-accent-emerald text-black shadow-[4px_4px_0px_0px_#FFFFFF]">
+                    <div class="text-3xl font-heading font-black">~85/100</div>
+                    <div class="text-xs font-mono mt-2 uppercase font-bold">AIR < 50 Target</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOPIC-WISE MASTERY CHECKLIST -->
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#10B981]">5</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Topic-Wise Mastery Checklist</h2>
+                </div>
+                <p class="text-xl text-gray-400">Level 0 = "I've heard of it". Level 4 = "I can solve any GATE variant in 2 minutes." You need Level 3+ in all Tier-A topics and Level 2+ in Tier-B topics.</p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Probability & Stats -->
+                <div class="neo-card p-6 border-t-4 border-t-accent-rose">
+                    <h3 class="font-heading font-bold text-xl text-white mb-4">1. Probability & Stats (18-20 Mks)</h3>
+                    <div class="space-y-3 font-mono text-sm text-gray-300">
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Bayes Theorem & Conditional Prob (Total Prob Theorem)</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Poisson Dist (Mean=Variance=λ)</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Exponential/Geometric (Memoryless Property)</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Joint PDF 2D geometric integration (0 < y < x)</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Law of Iterated Expectations E[E[X|Y]] = E[X]</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Linear Algebra -->
+                <div class="neo-card p-6 border-t-4 border-t-accent-blue">
+                    <h3 class="font-heading font-bold text-xl text-white mb-4">2. Linear Algebra (12-15 Mks)</h3>
+                    <div class="space-y-3 font-mono text-sm text-gray-300">
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Eigenvalue Trace/Det shortcuts & Characteristic Poly</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">SVD and Rank-1 outer products (uu^T properties)</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">PCA maximum variance projections</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Centering Matrix $I - (1/n)11^T$ properties</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Rotation Matrix periodicity ($M^k$)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="neo-card p-6 border-t-4 border-t-accent-emerald">
+                    <h3 class="font-heading font-bold text-xl text-white mb-4">3. Machine Learning (20-25 Mks)</h3>
+                    <div class="space-y-3 font-mono text-sm text-gray-300">
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">SVM geometric margin plotting (2/‖w‖)</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Ridge (L2 shrinkage) vs Lasso (L1 sparsity) geometry</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Neural Net dead ReLU backpropagation tracking</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Decision Tree Information Gain/Entropy calculation</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Naive Bayes parameter counting (2K+1)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- DSA, AI, DBMS -->
+                <div class="neo-card p-6 border-t-4 border-t-accent-amber">
+                    <h3 class="font-heading font-bold text-xl text-white mb-4">4. DSA, AI, DBMS (20 Mks)</h3>
+                    <div class="space-y-3 font-mono text-sm text-gray-300">
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Python mutable default argument trap resolution</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">SQL correlated subqueries & Relational Algebra execution</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">A* Admissibility / Minimax bounds tracing</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Bayesian Networks D-separation & v-structures</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" class="mastery-checkbox mt-1">
+                            <span class="group-hover:text-white transition-colors">Normalization to BCNF and Candidate Key Closure</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 34-WEEK BATTLE PLAN -->
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#10B981]">6</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">34-Week Battle Plan</h2>
+                </div>
+                <p class="text-xl text-gray-400">Execution is non-negotiable. This plan assumes ~10 hours/day, 6 days/week. The candidate must discard conventional, linear syllabus coverage and exploit the Directed Acyclic Graph (DAG) dependencies of the DA examination.</p>
+            </header>
+
+            <div class="data-table-container">
+                <table class="data-table font-mono text-sm">
+                    <thead>
+                        <tr>
+                            <th class="w-32">Period</th>
+                            <th>Focus Area</th>
+                            <th>Execution Deliverable</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr>
+                            <td class="font-bold text-white whitespace-nowrap">Weeks 1-8</td>
+                            <td><strong class="text-accent-cyan">Math Foundation:</strong> Linear Algebra (Vectors, SVD, Projections) + Calculus + Probability Theory Axioms.</td>
+                            <td>Solve 2024 Q11-Q35 math questions cold. Draw 2D integration limits flawlessly before integration. Prove orthogonal eigenvectors.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white whitespace-nowrap">Weeks 9-16</td>
+                            <td><strong class="text-accent-rose">Stats & ML Core:</strong> Estimation, Ridge/Lasso, Gradient Descent, SVM, NNs, Clustering.</td>
+                            <td>Derive all ML algorithms on paper without code. Calculate gradients from absolute first principles. Solve 2025 ML sections.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white whitespace-nowrap">Weeks 17-22</td>
+                            <td><strong class="text-gray-400">Python + DSA + DBMS:</strong> Tracing scope/recursion, SQL, FDs, Normalization (BCNF).</td>
+                            <td>Trace 20+ recursive functions explicitly on paper (memory allocation tables). Solve 2026 DBMS questions pushing $\sigma$ down.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white whitespace-nowrap">Weeks 23-26</td>
+                            <td><strong class="text-accent-purple">AI + Adv Topics:</strong> Search (A*, Minimax), Logic (FOL), Bayesian Networks.</td>
+                            <td>Translate complex natural language constraints into strict propositional logic flawlessly. Compute D-separation correctly.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white whitespace-nowrap">Weeks 27-32</td>
+                            <td><strong class="text-accent-amber">Mock Testing:</strong> Full-length mocks, Error Elimination.</td>
+                            <td>Engage exclusively in timed testing. Maintain Error Log. Full 3h mocks every 3 days. Categorize traps forensically.</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/10 border-l-4 border-l-accent-emerald">
+                            <td class="font-bold text-accent-emerald whitespace-nowrap">Weeks 33-34</td>
+                            <td><strong class="text-white">Final Calibration:</strong> Formula sprint, PYQ resolve, Exam execution.</td>
+                            <td>Consistently score 80+ in mocks. Execute the 180-Minute 3-sweep strategy.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- CRITICAL FORMULAS -->
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#10B981]">7</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Critical Formula Sheet</h2>
+                </div>
+                <p class="text-xl text-gray-400">Print and carry. Memorize the derivations, not just the symbols.</p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Probability & Stats -->
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-accent-blue mb-4 border-b border-border pb-2">Probability & Statistics</h3>
+                    <div class="space-y-4 font-mono text-sm text-gray-300">
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Bayes Theorem</span> <span>$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Expectation</span> <span>$E[X] = \sum xP(x)$ or $\int xf(x)dx$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Variance</span> <span>$Var(X) = E[X^2] - (E[X])^2$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Covariance</span> <span>$Cov(X,Y) = E[XY] - E[X]E[Y]$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Correlation</span> <span>$Corr(X,Y) = \frac{Cov(X,Y)}{\sigma_X \sigma_Y}$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Law Total Exp</span> <span>$E[E[X|Y]] = E[X]$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Law Total Var</span> <span>$Var(X) = E[Var(X|Y)] + Var(E[X|Y])$</span></div>
+                    </div>
+                </div>
+
+                <!-- Linear Algebra -->
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-accent-emerald mb-4 border-b border-border pb-2">Linear Algebra</h3>
+                    <div class="space-y-4 font-mono text-sm text-gray-300">
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Determinant Prod</span> <span>$det(AB) = det(A) \times det(B)$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Trace Property</span> <span>$trace(A) = \sum \lambda_i = \sum a_{ii}$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Det Property</span> <span>$det(A) = \prod \lambda_i$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Rank-Nullity</span> <span>$rank(A) + nullity(A) = n$</span></div>
+                        <div class="flex flex-col gap-1 mt-2">
+                            <span class="text-gray-500">Rank-1 Matrix $uu^T$:</span>
+                            <span class="bg-surface p-2 border border-border">One eigenvalue = $\|u\|^2$, rest 0</span>
+                        </div>
+                        <div class="flex flex-col gap-1 mt-2">
+                            <span class="text-gray-500">Centering Matrix $I-(1/n)11^T$:</span>
+                            <span class="bg-surface p-2 border border-border">Eigenvalues {0,1,...,1}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-accent-rose mb-4 border-b border-border pb-2">Machine Learning</h3>
+                    <div class="space-y-4 font-mono text-sm text-gray-300">
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Ridge Reg Closed Form</span> <span>$w = (X^TX + \lambda I)^{-1}X^Ty$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">SVM Margin</span> <span>$Margin = \frac{2}{\|w\|}$</span></div>
+                        <div class="flex justify-between items-center"><span class="text-gray-500">Entropy</span> <span>$H(S) = -\sum p_i \log_2(p_i)$</span></div>
+                        <div class="flex flex-col gap-1 mt-2">
+                            <span class="text-gray-500">Information Gain:</span>
+                            <span class="bg-surface p-2 border border-border">$IG = H(parent) - \sum(\frac{|child|}{|parent|})H(child)$</span>
+                        </div>
+                        <div class="flex flex-col gap-1 mt-2">
+                            <span class="text-gray-500">Sigmoid Derivative:</span>
+                            <span class="bg-surface p-2 border border-border">$\sigma'(x) = \sigma(x)(1-\sigma(x))$</span>
+                        </div>
+                        <div class="flex flex-col gap-1 mt-2">
+                            <span class="text-gray-500">MLP Params (No Bias):</span>
+                            <span class="bg-surface p-2 border border-border">$\sum (n_i \times n_{i+1})$</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Structures & Algorithms -->
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-accent-amber mb-4 border-b border-border pb-2">DSA & Extras</h3>
+                    <div class="space-y-4 font-mono text-sm text-gray-300">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-gray-500">Binary Search Max Comparisons:</span>
+                            <span class="bg-surface p-2 border border-border">$\lceil \log_2(n+1) \rceil$</span>
+                        </div>
+                        <div class="flex flex-col gap-1 mt-2">
+                            <span class="text-gray-500">Hash Probes (Unsuccessful / Insert):</span>
+                            <span class="bg-surface p-2 border border-border">$\frac{1}{1-\alpha}$</span>
+                        </div>
+                        <div class="flex flex-col gap-1 mt-2">
+                            <span class="text-gray-500">B+ Tree Order (Capacity):</span>
+                            <span class="bg-surface p-2 border border-border">$\lfloor \frac{Block Size}{Key + Pointer} \rfloor + 1$</span>
+                        </div>
+                        <div class="flex flex-col gap-1 mt-2">
+                            <span class="text-gray-500">Naive Bayes Parameters:</span>
+                            <span class="bg-surface p-2 border border-border">$2K + 1$ (K binary features, 2 classes)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Quote -->
+        <div class="callout-box bg-transparent border-l-4 border-accent-emerald text-center py-12 my-16 max-w-4xl mx-auto italic text-xl md:text-2xl font-heading text-white">
+            "I don't memorize formulas — I derive them. I don't guess on MSQs — I prove each option. I don't code algorithms — I trace them on paper. I don't panic at notation — I recognize patterns."
+        </div>
+
+        <div class="border-t-2 border-border pt-12 pb-20 flex justify-between items-center">
+            <div>
+                <a href="strategy.html" class="text-gray-500 hover:text-white uppercase tracking-widest text-sm font-mono flex items-center gap-2 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg> Previous: The Strategy
+                </a>
+            </div>
+            <div>
+                <p class="font-mono text-sm text-gray-500 uppercase tracking-widest mb-2 text-right">Document 5 of 5</p>
+                <div class="inline-flex items-center gap-4 bg-white text-black px-8 py-4 font-heading font-bold text-xl uppercase tracking-wider shadow-[6px_6px_0px_0px_#10B981]">
+                    END OF DOSSIER <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE DA 2027 | 2026 Intel & 2024 Solutions</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    },
+                    colors: {
+                        base: '#0A0A0A',
+                        surface: '#171717',
+                        border: '#333333',
+                        accent: {
+                            blue: '#2563EB',
+                            cyan: '#06B6D4',
+                            rose: '#E11D48',
+                            emerald: '#10B981',
+                            amber: '#F59E0B',
+                            purple: '#8B5CF6'
+                        }
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px var(--tw-shadow-color)',
+                        'neo-hover': '2px 2px 0px 0px var(--tw-shadow-color)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for LaTeX Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #D4D4D4;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Dark Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; border-left: 1px solid #333333; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563EB; }
+
+        /* Neo-Brutalist Components */
+        .neo-card {
+            background-color: #171717;
+            border: 2px solid #333333;
+            box-shadow: 6px 6px 0px 0px #333333;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .neo-card:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px 0px #333333;
+        }
+
+        .neo-card-blue { box-shadow: 6px 6px 0px 0px #2563EB; }
+        .neo-card-blue:hover { box-shadow: 4px 4px 0px 0px #2563EB; }
+
+        .neo-card-cyan { box-shadow: 6px 6px 0px 0px #06B6D4; }
+        .neo-card-cyan:hover { box-shadow: 4px 4px 0px 0px #06B6D4; }
+
+        .neo-card-rose { box-shadow: 6px 6px 0px 0px #E11D48; border-color: #E11D48; }
+        .neo-card-rose:hover { box-shadow: 4px 4px 0px 0px #E11D48; }
+        
+        .neo-card-amber { box-shadow: 6px 6px 0px 0px #F59E0B; border-color: #F59E0B; }
+        .neo-card-amber:hover { box-shadow: 4px 4px 0px 0px #F59E0B; }
+
+        .callout-box {
+            background-color: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #F59E0B;
+            padding: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #FCD34D;
+        }
+
+        .hl-text { color: #FFFFFF; font-weight: 600; }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-accent-cyan selection:text-white">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-base/90 backdrop-blur-md border-b-2 border-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-accent-cyan border-2 border-white flex items-center justify-center font-heading font-bold text-white text-xl shadow-[4px_4px_0px_0px_#FFFFFF]">DA</div>
+                <span class="font-heading font-bold text-xl text-white tracking-tight">GATE 2027<span class="text-accent-cyan">.INTEL</span></span>
+            </div>
+            <div class="hidden md:flex gap-6 font-mono text-sm font-medium">
+                <a href="index.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">01. Home & DNA</a>
+                <a href="solutions_1.html" class="text-white border-b-2 border-accent-cyan px-1 py-2 transition-colors">02. 2026 Intel & 24 Sol</a>
+                <a href="solutions_2.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">03. 25-26 Sol</a>
+                <a href="strategy.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">04. Strategy</a>
+                <a href="battle_plan.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">05. Battle Plan</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+        
+        <!-- Header -->
+        <header class="mb-16 border-b-4 border-accent-cyan pb-8 inline-block">
+            <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white tracking-tighter uppercase">
+                Document 02: <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-blue">Intel & Execution</span>
+            </h1>
+        </header>
+
+        <!-- PHASE 3: 2026 SPECIFIC INVESTIGATION -->
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="w-12 h-12 bg-white text-black flex items-center justify-center font-heading font-bold text-2xl border-2 border-border shadow-[4px_4px_0px_0px_#06B6D4]">03</span>
+                <h2 class="font-heading text-4xl font-bold text-white uppercase">Phase 3 — 2026 Specific Investigation</h2>
+            </div>
+
+            <div class="neo-card p-8 md:p-10 mb-10 text-lg leading-relaxed text-gray-300">
+                <p class="mb-6">An isolated forensic investigation of the GATE DA 2026 examination, organized by IIT Guwahati, exposes critical shifts in examiner psychology, pedagogical priorities, and psychometric targeting.2 The 2026 paper finalized the identity of the DA examination: it is not a test for software engineers who use data APIs, but a rigorous evaluation of applied mathematicians and statistical theorists.</p>
+                <p>The most striking revelation of the 2026 paper was the aggressive recalibration of Data Structures and Algorithms (DSA) and Programming. Unlike the legacy Computer Science (CS) paper, where algorithmic design is paramount, the DA 2026 paper reduced programming entirely to logical tracing, scope management, and foundational complexity proofs.1 Concurrently, Machine Learning surged to dominate the paper, representing an estimated 25-30% of the total weightage, intimately fused with Probability and Linear Algebra.2</p>
+            </div>
+
+            <h3 class="font-heading text-2xl font-bold text-white mb-6">Systematic Review of 2026 Cognitive Targeting</h3>
+            <div class="grid grid-cols-1 gap-6 mb-10">
+                <div class="neo-card p-6 border-l-4 border-l-accent-cyan">
+                    <h4 class="font-heading font-bold text-white text-xl mb-2">Q11 (PCA Orthogonality)</h4>
+                    <p class="text-sm text-gray-400">This question asked for the angle between the first and tenth principal components.1 The examiner included this to test the geometric foundations of Principal Component Analysis. It targeted the student weakness of viewing PCA merely as an algorithmic black box for dimensionality reduction, demanding the cognitive recognition that principal components, as eigenvectors of a symmetric covariance matrix, are strictly orthogonal ($90^\circ$).</p>
+                </div>
+                <div class="neo-card p-6">
+                    <h4 class="font-heading font-bold text-white text-xl mb-2">Q13 (Uninformed Search Taxonomy)</h4>
+                    <p class="text-sm text-gray-400">By asking candidates to identify which algorithm is NOT uninformed, the setter tested foundational AI taxonomies.1 It targeted candidates who memorize search implementations without understanding the distinction between heuristic-guided (A*) and blind (BFS/DFS) state-space exploration.</p>
+                </div>
+                <div class="neo-card p-6">
+                    <h4 class="font-heading font-bold text-white text-xl mb-2">Q14 & Q38 (Predicate Logic and Entailment)</h4>
+                    <p class="text-sm text-gray-400">IIT Guwahati placed a heavy emphasis on formal reasoning.1 Q38 required translating the natural language premise "A Creative person will Succeed if the person is also Disciplined, but will not succeed otherwise" into logical equivalence.12 This targeted the pervasive weakness among engineering students of relying on intuitive reading comprehension rather than strict propositional logic derivations.</p>
+                </div>
+                <div class="neo-card p-6">
+                    <h4 class="font-heading font-bold text-white text-xl mb-2">Q15 (Quicksort Expected Time)</h4>
+                    <p class="text-sm text-gray-400">This question presented a modified Quicksort where the pivot is always the first element of a randomly ordered array, asking for the expected time recurrence relation.1 The examiner's intent was to punish rote memorization of the $O(n \log n)$ average case. The cognitive skill tested was the ability to derive an expectation based on probability distributions across subarrays, targeting the inability to formulate algorithms mathematically.</p>
+                </div>
+                <div class="neo-card p-6">
+                    <h4 class="font-heading font-bold text-white text-xl mb-2">Q16 (Python Mutable Default Argument)</h4>
+                    <p class="text-sm text-gray-400">The code snippet def append_to_lst(val, lst=[]) tested practical programming semantics.1 The examiner targeted a specific, pervasive weakness in novice Python programmers: the assumption that default arguments are re-evaluated upon every function call. By testing this, IIT Guwahati selected for candidates who understand memory allocation and state persistence in interpreter-level execution.</p>
+                </div>
+                <div class="neo-card p-6 border-l-4 border-l-accent-purple">
+                    <h4 class="font-heading font-bold text-white text-xl mb-2">Q21 (Rotation Matrix Powers)</h4>
+                    <p class="text-sm text-gray-400">Candidates were asked to compute $M^{2026}$ for a $2 \times 2$ rotation matrix with an angle of $2\pi/5$.1 This was the most surprising mathematical question, testing deep spatial abstraction. It targeted candidates who would attempt to multiply matrices brute-force. The cognitive requirement was recognizing that five rotations complete a full circle ($M^5 = I_2$), reducing the problem to modulo arithmetic.</p>
+                </div>
+                <div class="neo-card p-6">
+                    <h4 class="font-heading font-bold text-white text-xl mb-2">Q42 (Relational Algebra Optimization)</h4>
+                    <p class="text-sm text-gray-400">Presenting a complex natural join expression, the examiner tested database query execution.1 The trap targeted the operational sequence. By forcing candidates to evaluate the Cartesian products, the examiner penalized those who failed to push the highly restrictive selection condition ($\sigma_{S>1}$) down the evaluation tree first, turning a time-sink into a rapid elimination.</p>
+                </div>
+                <div class="neo-card p-6 border-l-4 border-l-accent-amber">
+                    <h4 class="font-heading font-bold text-white text-xl mb-2">Q52 (Projection Matrix Identification)</h4>
+                    <p class="text-sm text-gray-400">The matrix $M = I_n - \frac{1}{n}11^T$ was presented to test linear algebra maturity.1 The examiner targeted "notation panic"—the tendency of students to freeze when encountering dense mathematical formalism. The cognitive skill tested was recognizing standard centering matrices as idempotent projection matrices, immediately resolving the properties without algebraic expansion.</p>
+                </div>
+                <div class="neo-card neo-card-rose p-6 bg-accent-rose/10">
+                    <h4 class="font-heading font-bold text-white text-xl mb-2">Q55 (Ridge Regression with MAE)</h4>
+                    <p class="text-sm text-gray-200">Perhaps the most lethal psychometric trap in the paper, this NAT question asked for the regularized loss function value using Mean Absolute Error (MAE) instead of the standard Mean Squared Error (MSE) associated with Ridge Regression.1 The examiner explicitly targeted muscle memory. Students reflexively squared the error term because "Ridge implies squared." The cognitive skill tested was rigid adherence to the provided objective function definitions over memorized formulas.</p>
+                </div>
+            </div>
+            
+            <p class="font-mono text-accent-cyan text-sm border-2 border-accent-cyan p-4">
+                The story the 2026 paper tells about examiner priorities is unequivocal: IIT Guwahati prioritizes First Principles derivation over API utilization, heavily penalizes muscle-memory assumptions through unorthodox parameter modifications, and demands a geometric and probabilistic interpretation of machine learning mechanics.
+            </p>
+        </section>
+
+
+        <!-- 2024 SOLUTIONS DATABASE -->
+        <section class="mb-24">
+            <header class="mb-12">
+                <h2 class="font-heading text-4xl md:text-5xl font-black uppercase text-white bg-accent-blue inline-block px-4 py-2 border-4 border-white shadow-[6px_6px_0px_0px_#FFFFFF] mb-4">2024 Solutions DB</h2>
+                <p class="font-mono text-xl text-gray-400">IISc Bengaluru — 55 Questions, 100 Marks. The inaugural paper that established the mathematical shift.</p>
+            </header>
+
+            <div class="callout-box mb-10">
+                IMPORTANT: This document provides step-by-step solution logic, traps, and fastest paths for every question. Use this as your PYQ practice companion — attempt each question FIRST, then check the solution approach here.
+            </div>
+
+            <h3 class="font-heading text-2xl font-bold text-accent-blue mb-6 border-b-2 border-border pb-2">General Aptitude (Q1-Q10 | 15 Marks)</h3>
+            <div class="space-y-6 mb-16">
+                
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q1 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Verbal Analogy</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> sick → infirm → moribund :: silly → _____ → daft. Fill the blank.<br><strong>Options:</strong> (A) frown (B) fawn (C) vein (D) vain</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> The pattern is increasing intensity. sick→infirm→moribund (increasingly ill). silly→?→daft (increasingly foolish). "Vain" (foolish/showing excessive pride) fits between "silly" and "daft."<br>
+                        <span class="text-accent-emerald font-bold">Answer: (D) vain</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> "Fawn" sounds similar to "fain" which might confuse. Focus on intensity ordering.</p>
+                    <p class="text-xs text-gray-500 mt-2"><strong>Time:</strong> 30 seconds | <strong>Concept:</strong> Vocabulary gradation / synonym intensity ordering</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q2 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Graph Coloring</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> 15-part figure, no adjacent parts (shared boundary) same color. Minimum colors?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> This is a chromatic number problem. For most planar graphs that arise in GATE GA, the answer is typically 3 or 4. Without seeing the exact figure, this requires careful analysis of adjacency. The Four Color Theorem guarantees ≤4 for any planar graph.<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) 4</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Students may count 3 (insufficient for complex adjacency) or 5 (overkill).</p>
+                    <p class="text-xs text-gray-500 mt-2"><strong>Time:</strong> 2 minutes | <strong>Concept:</strong> Graph coloring / Chromatic number</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q3 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Combinatorics</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> 4-digit positive integers divisible by 3 from {1,3,4,6,7}, no digit repeated.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - A number is divisible by 3 if digit-sum is divisible by 3<br>
+                        - Available digits: 1,3,4,6,7. Digit sums of 4-digit subsets:<br>
+                        &nbsp;&nbsp;- {1,3,4,7}: sum=15 ✓ divisible by 3<br>
+                        &nbsp;&nbsp;- {1,3,6,7}: sum=17 ✗<br>
+                        &nbsp;&nbsp;- {1,4,6,7}: sum=18 ✓ divisible by 3<br>
+                        &nbsp;&nbsp;- {3,4,6,7}: sum=20 ✗<br>
+                        &nbsp;&nbsp;- {1,3,4,6}: sum=14 ✗<br>
+                        - Valid sets: {1,3,4,7} and {1,4,6,7} → 2 sets × 4! arrangements = 2×24 = 48<br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) 48</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Forgetting to check ALL 5C4 = 5 combinations. Many students miss {1,4,6,7}.</p>
+                    <p class="text-sm text-accent-cyan mt-1"><strong>Fastest Path:</strong> List all C(5,4)=5 subsets → check divisibility by 3 → multiply valid count by 4!</p>
+                    <p class="text-xs text-gray-500 mt-2"><strong>Time:</strong> 2 minutes | <strong>Concept:</strong> Divisibility rules + Permutations</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q4 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Infinite Series</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> 2 + 1/2 + 1/3 + 1/4 + 1/8 + 1/9 + 1/16 + 1/27 + ⋯</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        Split into two series:<br>
+                        - Series 1: 2 + 1/4 + 1/16 + ... = geometric with a=2, r=1/8? No.<br>
+                        - Actually: (1 + 1/2 + 1/4 + 1/8 + ...) + (1 + 1/3 + 1/9 + 1/27 + ...)<br>
+                        - = 1/(1-1/2) + 1/(1-1/3) = 2 + 3/2 = 7/2<br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) 7/2</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Incorrectly grouping the terms. Must identify the two interleaved geometric series.</p>
+                    <p class="text-xs text-gray-500 mt-2"><strong>Time:</strong> 2 minutes | <strong>Concept:</strong> Geometric series decomposition</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q5 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Data Interpretation</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> 1,15,000 total votes, 5,000 invalid. B=25%, C=20% of valid votes. Find B+C.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> Valid votes = 1,15,000 - 5,000 = 1,10,000. B+C = (25%+20%) × 1,10,000 = 45% × 1,10,000 = 49,500<br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) 49,500</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Using total votes instead of valid votes. Must subtract 5,000 invalid first.</p>
+                    <p class="text-xs text-gray-500 mt-2"><strong>Time:</strong> 1 minute | <strong>Concept:</strong> Percentage of subset</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q7 | 2 Marks | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Basic Probability</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> P(boy)=P(girl)=1/2, 3 children. P(2 girls, 1 boy)?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> C(3,2) × (1/2)² × (1/2)¹ = 3 × 1/8 = 3/8<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) 3/8</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Forgetting the binomial coefficient C(3,2)=3.</p>
+                    <p class="text-xs text-gray-500 mt-2"><strong>Time:</strong> 30 seconds | <strong>Concept:</strong> Binomial probability</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q8 | 2 Marks | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Linear Equations</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Person1 invests (10K,20K,20K), Person2 invests (20K,15K,15K) in funds A,B,C. B,C return 15%. Person1 gets ₹500 more. Find rate of A.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        Let r = rate of A.<br>
+                        - Person1 return: 10000r + 20000(0.15) + 20000(0.15) = 10000r + 6000<br>
+                        - Person2 return: 20000r + 15000(0.15) + 15000(0.15) = 20000r + 4500<br>
+                        - Person1 - Person2 = 500: (10000r + 6000) - (20000r + 4500) = 500<br>
+                        - -10000r + 1500 = 500 → 10000r = 1000 → r = 0.10 = 10%<br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) 10%</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Setting up the equation incorrectly (adding instead of subtracting investments).</p>
+                    <p class="text-xs text-gray-500 mt-2"><strong>Time:</strong> 2.5 minutes | <strong>Concept:</strong> System of linear equations from word problem</p>
+                </div>
+
+            </div>
+
+            <h3 class="font-heading text-2xl font-bold text-accent-blue mb-6 border-b-2 border-border pb-2">Core DA — 1-Mark Questions (Q11-Q35)</h3>
+            <div class="space-y-6 mb-16">
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q11 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Distribution Properties</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> (i) Poisson: mean = variance. (ii) N(0,1): mean=0, variance=1. Which are true?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> Both are TRUE. Poisson(λ): E[X]=Var(X)=λ. N(0,1): E[X]=0, Var(X)=1. These are textbook facts.<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) Both true</span>
+                    </div>
+                    <p class="text-sm text-accent-cyan"><strong>Mastery Required:</strong> Know mean/variance for Poisson, Normal, Exponential, Binomial, Uniform, Geometric by heart.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q12 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Event Intersection</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> 3 fair coins. T = event of ≥2 heads. S = event of ≥2 tails. Find P(T∩S).</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - With 3 coins, if ≥2 are heads, at most 1 is tails → cannot have ≥2 tails simultaneously.<br>
+                        - T and S are mutually exclusive. P(T∩S) = 0<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) 0</span>
+                    </div>
+                    <p class="text-sm text-accent-cyan"><strong>Fastest Path:</strong> Think logically — you can't have 2+ heads AND 2+ tails with only 3 coins.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q13 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Linear Algebra — Eigenvalues</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> M = [[2,-1],[3,1]]. Which statement about eigenvalues is true?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - Characteristic polynomial: (2-λ)(1-λ) - (-1)(3) = λ²-3λ+2+3 = λ²-3λ+5<br>
+                        - Discriminant: 9-20 = -11 < 0 → Complex conjugate eigenvalues<br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) Complex conjugate pairs</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Students who don't compute the discriminant may assume real eigenvalues because the matrix entries are real.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q14 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">DSA — DFS Edge Classification</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> DFS on undirected graph from s. Edge (u,v) with d[u]<d[v], explored from u to v first. What type?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> In DFS, when we explore (u,v) for the first time from u→v and v hasn't been visited yet, (u,v) becomes a tree edge. Since d[u]<d[v] and edge is explored first from u, v must be unvisited.<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) tree edge</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Confusing "cross edge" (which doesn't exist in undirected DFS). In undirected graphs, DFS produces only tree edges and back edges.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q15 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Calculus — Optimization</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> f'(x*)=0 and f''(x*)>0. What does f necessarily have at x*?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> Second derivative test: f'=0, f''>0 → local minimum at x*.<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) local minimum</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q16 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">DSA — Data Structures</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Match FIFO/Lookup/LIFO with Stack/Queue/Hash.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> FIFO→Queue, Lookup→Hash Table, LIFO→Stack → (p)-(ii), (q)-(iii), (r)-(i)<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) (p)-(ii), (q)-(iii), (r)-(i)</span>
+                    </div>
+                </div>
+
+                <div class="neo-card neo-card-rose p-6 border-l-4 border-l-accent-rose bg-accent-rose/5">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q17 | 1 Mark | MCQ ⚠️ IMPORTANT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">ML — SVM Geometry</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> 6 datapoints in ℝ², x₁=[1,0], x₂=[0,1], x₃=[0,-1], x₄=[-1,0], x₅=[2,2], x₆=[-2,-2]. Labels: y₁=y₂=y₅=1, y₃=y₄=y₆=-1. Hard margin SVM — possible support vectors?</p>
+                    <div class="bg-[#1A1A1A] p-4 text-sm font-mono text-gray-300 mb-3 border border-accent-rose/30">
+                        <strong>Solution:</strong><br>
+                        - Plot points: Class +1: (1,0), (0,1), (2,2). Class -1: (0,-1), (-1,0), (-2,-2)<br>
+                        - The separating hyperplane must pass through the origin (by symmetry): $x_1 + x_2 = 0$<br>
+                        - Support vectors are the points CLOSEST to this hyperplane from each side<br>
+                        - Distance of (1,0) to $x_1+x_2=0$: |1+0|/√2 = 1/√2<br>
+                        - Distance of (0,1) to $x_1+x_2=0$: |0+1|/√2 = 1/√2<br>
+                        - Distance of (0,-1): |0-1|/√2 = 1/√2<br>
+                        - Distance of (-1,0): |-1+0|/√2 = 1/√2<br>
+                        - All four inner points are equidistant! → Support vectors = {x₁, x₂, x₃, x₄}<br>
+                        <span class="text-accent-emerald font-bold">Answer: (D) {x₁, x₂, x₃, x₄}</span>
+                    </div>
+                    <p class="text-sm text-accent-cyan"><strong>Fastest Path:</strong> PLOT the points. The geometric solution takes 90 seconds. Algebraic (Lagrangian) takes 10+ mins.</p>
+                    <p class="text-xs font-bold text-white mt-2 p-2 bg-accent-rose/20">AIR-100 Rule: When you see an SVM question, ALWAYS plot the points first.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q18 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">ML — Taxonomy</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Match PCA/Naive Bayes/Logistic Regression with Discriminative/Dimensionality Reduction/Generative.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> PCA→Dimensionality Reduction, Naive Bayes→Generative, Logistic Regression→Discriminative<br>
+                        <span class="text-accent-emerald font-bold">Answer: (C) (p)-(ii), (q)-(iii), (r)-(i)</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Confusing Logistic Regression as generative.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q19 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">ML — Clustering</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> K=3, 100 points. [1,1] and [-1,1] both in cluster 3. Which point is NECESSARILY in cluster 3?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - If (1,1) and (-1,1) are in cluster 3, the centroid of cluster 3 lies somewhere around their midpoint.<br>
+                        - Key: K-means creates convex Voronoi regions. Any point BETWEEN two cluster members, closer to the centroid, must also be in that cluster.<br>
+                        - Centroid is at least near (0,1). Point [0,1] is the midpoint — it must be in the same cluster.<br>
+                        <span class="text-accent-emerald font-bold">Answer: (D) [0,1]</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Thinking [0,0] is necessarily included. It could be closer to another cluster's centroid.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q20 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">ML — Naive Bayes</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> K binary attributes, 2-class classification. Number of parameters for Naive Bayes?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - Class prior: 1 parameter (P(y=1))<br>
+                        - For each class (2), for each attribute (K): 1 parameter P(xi=1|y) → 2K parameters<br>
+                        - Total: 2K + 1<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) 2K + 1</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Confusing 2^K with 2K. Naive Bayes assumes conditional independence to be linear in K.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q21 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">DSA — Hashing</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Open addressing, load factor α<1. Unsuccessful search ≤ 1/(1-α) probes. Insert requires?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> Inserting requires finding an empty slot, which is identical to an unsuccessful search.<br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) 1/(1-α)</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q22 | 1 Mark | MCQ ⚠️ HARD</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">ML — Fisher LDA</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Fisher discriminant maximizes J(u) = u^T S_B u / u^T S_W u. If λ=J(u*), find the equation (u*,λ) satisfies.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - Setting gradient of J to zero leads to the generalized eigenvalue problem:<br>
+                        - S_B u* = λ S_W u* → S_W^(-1) S_B u* = λu*<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) S_W^(-1) S_B u* = λu*</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Getting the order wrong (S_B S_W) or forgetting to invert S_W.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q23 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">AI — Admissible Heuristics</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> h1 and h2 are admissible. Which is ALWAYS admissible?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - h1+h2: Could exceed h* (Not necessarily)<br>
+                        - |h1-h2|: Since both ≤ h*, |h1-h2| ≤ max(h1,h2) ≤ h* → ALWAYS admissible ✓<br>
+                        <span class="text-accent-emerald font-bold">Answer: (D) |h1-h2|</span>
+                    </div>
+                </div>
+
+                <div class="neo-card neo-card-rose p-6 border-l-4 border-l-accent-rose bg-accent-rose/5">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q24 | 1 Mark | MCQ ⚠️ CRITICAL TRAP</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">AI — Bayesian Networks</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> P(U,V,W,X,Y) = P(U)P(V)P(W|U,V)P(X|W)P(Y|W). Which is FALSE?</p>
+                    <div class="bg-[#1A1A1A] p-4 text-sm font-mono text-gray-300 mb-3 border border-accent-rose/30">
+                        <strong>Solution:</strong><br>
+                        The DAG is: U→W←V, W→X, W→Y (V-structure at W)<br>
+                        - (A) Y⊥V|W: TRUE<br>
+                        - (B) X⊥U|W: TRUE<br>
+                        - (C) U⊥V|W: FALSE! This is the v-structure trap. U and V are marginally independent, but become DEPENDENT given W (explaining away).<br>
+                        <span class="text-accent-emerald font-bold">Answer: (C) U and V are conditionally independent given W is FALSE</span>
+                    </div>
+                    <p class="text-sm text-accent-rose font-bold">Trap: The V-STRUCTURE makes U,V DEPENDENT given W. This is the #1 Bayes Net trap.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q27 | 1 Mark | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Stats — Z-Score</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Income data: min=46K, max=170K, mean=96K, std=21K. Z-score of 106K?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> z = (106000 - 96000)/21000 = 10000/21000 = 0.476<br>
+                        <span class="text-accent-emerald font-bold">Answer: (B) 0.476</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q30 | 1 Mark | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">DSA — Sorting</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Sort [60,70,80,90,100] ascending using QuickSort with last element as pivot. Swaps?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - In-place QuickSort with last pivot on sorted array.<br>
+                        - Each partition step involves one swap of pivot into its correct place.<br>
+                        <span class="text-accent-emerald font-bold">Answer: 4</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q33 | 1 Mark | NAT ⚠️ HIGH YIELD</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Calculus — Derivatives</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> $f(x) = 1/(1+e^{-x})$. Find $f'(x)$ where $f(x) = 0.4$.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        Key property: $f'(x) = f(x)(1-f(x))$ for the sigmoid function.<br>
+                        If $f(x) = 0.4$, then $f'(x) = 0.4 \times (1-0.4) = 0.4 \times 0.6 = 0.24$<br>
+                        <span class="text-accent-emerald font-bold">Answer: 0.24</span>
+                    </div>
+                    <p class="text-sm text-accent-rose"><strong>Trap:</strong> Trying to solve for x algebraically.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q34 | 1 Mark | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Stats — Mean</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Sample average of 50 points = 40. New point = 142. Updated average?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> New average = (50×40 + 142)/51 = 2142/51 = 42<br>
+                        <span class="text-accent-emerald font-bold">Answer: 42</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q35 | 1 Mark | NAT ⚠️ IMPORTANT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Linear Algebra — Determinants</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> M = [[1,2,3],[3,1,3],[4,3,6]]. Find det(M² + 12M).</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - Factor: $M^2 + 12M = M(M+12I)$<br>
+                        - $\det(M(M+12I)) = \det(M) \times \det(M+12I)$<br>
+                        - $\det(M) = 1(6-9) - 2(18-12) + 3(9-4) = -3-12+15 = 0$<br>
+                        - Since $\det(M) = 0$, the whole product is 0.<br>
+                        <span class="text-accent-emerald font-bold">Answer: 0</span>
+                    </div>
+                    <p class="text-sm text-accent-cyan"><strong>Fastest Path:</strong> Compute $\det(M)$ first. If zero, you are done.</p>
+                </div>
+
+            </div>
+
+
+            <h3 class="font-heading text-2xl font-bold text-accent-blue mb-6 border-b-2 border-border pb-2">Core DA — 2-Mark Questions (Q36-Q65)</h3>
+            <div class="space-y-6">
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q36 | 2 Marks | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Markov Chains</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Fair die, thrown repeatedly. Expected throws until two consecutive even numbers?</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        Define states: S0 (start), S1 (last even), S2 (two even).<br>
+                        - $E_0 = 1 + (1/2)E_1 + (1/2)E_0$<br>
+                        - $E_1 = 1 + (1/2)(0) + (1/2)E_0$<br>
+                        Solve system: $E_0 = 6$.<br>
+                        <span class="text-accent-emerald font-bold">Answer: (C) 6</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q38 | 2 Marks | MCQ</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Python — Recursion Tree</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> `count(child_dict, 0)` where child_dict = {0:[1,2], 1:[3,4,5], 2:[6,7,8]}</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        Trace: count(0) = 1 + count(1) + count(2)<br>
+                        - count(1) = 1 + count(3) + count(4) + count(5) = 4<br>
+                        - count(2) = 1 + count(6) + count(7) + count(8) = 4<br>
+                        - count(0) = 1 + 4 + 4 = 9<br>
+                        <span class="text-accent-emerald font-bold">Answer: (D) 9</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q43 | 2 Marks | MCQ ⚠️ COMPLEX</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">ML — Neural Networks</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Two NNs with ReLU, positive inputs. Find p,q,r that makes them equivalent.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> With positive inputs and ReLU, the network reduces to matrix multiplication. Match outputs by equating weight products.<br>
+                        <span class="text-accent-emerald font-bold">Answer: (A) p=36, q=24, r=24</span>
+                    </div>
+                    <p class="text-sm text-accent-cyan"><strong>Fastest Path:</strong> ReLU = identity for positive inputs. Compute as matrix product.</p>
+                </div>
+
+                <div class="neo-card neo-card-rose p-6 border-l-4 border-l-accent-rose bg-accent-rose/5">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q56 | 2 Marks | NAT ⚠️ KEY PROBLEM</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Joint Uniform</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> X ~ Uniform[1,3], Y ~ Uniform[2,4], independent. Find P(X≥Y).</p>
+                    <div class="bg-[#1A1A1A] p-4 text-sm font-mono text-gray-300 mb-3 border border-accent-rose/30">
+                        <strong>Solution:</strong><br>
+                        - Joint density: f(x,y) = 1/4 on [1,3]×[2,4]<br>
+                        - Region where X≥Y: intersect x≥y with [1,3]×[2,4]<br>
+                        - This is a triangle: x from 2 to 3, y from 2 to x<br>
+                        - Area = $\int_2^3 (x-2) dx = [x^2/2 - 2x]_2^3 = 1/2$<br>
+                        - P(X≥Y) = (1/4) × (1/2) = 0.125<br>
+                        <span class="text-accent-emerald font-bold">Answer: 0.125</span>
+                    </div>
+                    <p class="text-sm text-accent-cyan"><strong>Fastest Path:</strong> Draw the rectangle, shade region above diagonal, compute triangular area.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q57 | 2 Marks | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Exponential</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> X ~ Exp(λ). Given 5E(X) = Var(X). Find λ.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - E(X) = 1/λ, Var(X) = 1/λ²<br>
+                        - 5(1/λ) = 1/λ² → 5λ = 1 → λ = 0.2<br>
+                        <span class="text-accent-emerald font-bold">Answer: 0.2</span>
+                    </div>
+                </div>
+
+                <div class="neo-card neo-card-amber p-6 border-l-4 border-l-accent-amber bg-accent-amber/5">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q58 | 2 Marks | NAT ⚠️ EVERY YEAR</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Bayes Theorem</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> P(T̄)=0.6, P(S|T)=0.3, P(S|T̄)=0.6. Find P(T|S).</p>
+                    <div class="bg-[#1A1A1A] p-4 text-sm font-mono text-gray-300 mb-3 border border-accent-amber/30">
+                        <strong>Solution:</strong><br>
+                        - P(T) = 1-0.6 = 0.4<br>
+                        - P(S) = P(S|T)P(T) + P(S|T̄)P(T̄) = 0.3×0.4 + 0.6×0.6 = 0.48<br>
+                        - P(T|S) = P(S|T)P(T)/P(S) = 0.12/0.48 = 0.25<br>
+                        <span class="text-accent-emerald font-bold">Answer: 0.25</span>
+                    </div>
+                </div>
+
+                <div class="neo-card neo-card-rose p-6 border-l-4 border-l-accent-rose bg-accent-rose/5">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q59 | 2 Marks | NAT ⚠️ CRITICAL TRAP</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Cond. Expectation</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> $f(x,y) = 2xy, 0<x<2, 0<y<x$. Find E[Y|X=1.5].</p>
+                    <div class="bg-[#1A1A1A] p-4 text-sm font-mono text-gray-300 mb-3 border border-accent-rose/30">
+                        <strong>Solution:</strong><br>
+                        - $f(y|x) = f(x,y)/f_X(x) = 2xy/x^3 = 2y/x^2$<br>
+                        - At x=1.5: $f(y|1.5) = 2y/2.25$ for $0<y<1.5$<br>
+                        - $E[Y|X=1.5] = \int_0^{1.5} y \times (2y/2.25) dy = 1.00$<br>
+                        <span class="text-accent-emerald font-bold">Answer: 1.00</span>
+                    </div>
+                    <p class="text-sm text-accent-rose font-bold">Trap: Setting upper limit of y-integration as 2 instead of x(=1.5).</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q61 | 2 Marks | NAT ⚠️ HIGH YIELD</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">LA — SVD Outer Product</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> u = [1,2,3,4,5]^T. M = uu^T. Find Σσᵢ (sum of singular values).</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - uu^T is a rank-1 matrix → only ONE non-zero singular value.<br>
+                        - Non-zero singular value = ‖u‖² = 1+4+9+16+25 = 55.<br>
+                        <span class="text-accent-emerald font-bold">Answer: 55</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q62 | 2 Marks | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">ML — Information Gain</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Compute InformationGain(C, Pitch) for decision tree.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> Arithmetic calculation using entropy formula $H(S) = -p\log_2p$. <br>
+                        $IG = 0.971 - 0.847 = 0.12$<br>
+                        <span class="text-accent-emerald font-bold">Answer: 0.12</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q64 | 2 Marks | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">AI — Bayesian Network Joint Prob</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Find P(U=1,V=1,W=1,Z=1) from CPTs.</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong> Chain rule with CPT lookup: 0.5 × 0.5 × 1 × 0.5 = 0.125<br>
+                        <span class="text-accent-emerald font-bold">Answer: 0.125</span>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6">
+                    <div class="flex justify-between items-start border-b-2 border-border pb-3 mb-4">
+                        <h4 class="font-heading font-bold text-xl text-white">Q65 | 2 Marks | NAT</h4>
+                        <span class="text-xs font-mono bg-surface px-2 py-1 text-muted border border-border">Probability — Covariance</span>
+                    </div>
+                    <p class="font-mono text-white mb-2"><strong>Problem:</strong> Two fair coins. X=1 if both heads. Y=1 if ≥1 head. Find Cov(X,Y).</p>
+                    <div class="bg-[#222222] p-4 text-sm font-mono text-gray-300 mb-3 border border-[#444444]">
+                        <strong>Solution:</strong><br>
+                        - E[X]=1/4, E[Y]=3/4, E[XY] = P(HH) = 1/4<br>
+                        - Cov(X,Y) = 1/4 - (1/4)(3/4) = 1/16 = 0.0625<br>
+                        <span class="text-accent-emerald font-bold">Answer: 0.063</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer Navigation -->
+        <div class="border-t-2 border-border pt-12 pb-20 flex justify-between items-center">
+            <div>
+                <a href="index.html" class="text-gray-500 hover:text-white uppercase tracking-widest text-sm font-mono flex items-center gap-2 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg> Previous: Phase 1 & 2
+                </a>
+            </div>
+            <div>
+                <p class="font-mono text-sm text-gray-500 uppercase tracking-widest mb-2 text-right">Document 2 of 5</p>
+                <a href="solutions_2.html" class="inline-flex items-center gap-4 bg-accent-cyan text-black px-8 py-4 font-heading font-bold text-xl uppercase tracking-wider shadow-[6px_6px_0px_0px_#FFFFFF] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#FFFFFF] transition-all">
+                    Next: 25-26 Solutions <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

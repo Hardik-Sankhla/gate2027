@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE DA 2027 | Forensic Intelligence Dossier</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    },
+                    colors: {
+                        base: '#0A0A0A',
+                        surface: '#171717',
+                        border: '#333333',
+                        accent: {
+                            blue: '#2563EB',
+                            cyan: '#06B6D4',
+                            rose: '#E11D48',
+                            emerald: '#10B981',
+                            amber: '#F59E0B'
+                        }
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px var(--tw-shadow-color)',
+                        'neo-hover': '2px 2px 0px 0px var(--tw-shadow-color)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for LaTeX Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #D4D4D4;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Dark Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; border-left: 1px solid #333333; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563EB; }
+
+        /* Neo-Brutalist Components */
+        .neo-card {
+            background-color: #171717;
+            border: 2px solid #333333;
+            box-shadow: 6px 6px 0px 0px #2563EB;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .neo-card:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px 0px #2563EB;
+        }
+
+        .neo-card-rose { box-shadow: 6px 6px 0px 0px #E11D48; }
+        .neo-card-rose:hover { box-shadow: 4px 4px 0px 0px #E11D48; }
+        
+        .neo-card-emerald { box-shadow: 6px 6px 0px 0px #10B981; }
+        .neo-card-emerald:hover { box-shadow: 4px 4px 0px 0px #10B981; }
+
+        /* Tables */
+        .neo-table-container {
+            border: 2px solid #333333;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #171717;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th { 
+            background: #000000; 
+            color: #FFFFFF; 
+            font-family: 'Space Grotesk', sans-serif; 
+            text-transform: uppercase; 
+            padding: 1rem; 
+            border-bottom: 2px solid #333333;
+            border-right: 2px solid #333333;
+            text-align: left;
+        }
+        td { 
+            padding: 1rem; 
+            border-bottom: 2px solid #333333; 
+            border-right: 2px solid #333333;
+            color: #D4D4D4;
+        }
+        tr:hover td { background-color: #262626; }
+
+        /* Highlighting */
+        .hl-text { color: #FFFFFF; font-weight: 600; }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-accent-blue selection:text-white">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-base/90 backdrop-blur-md border-b-2 border-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-accent-blue border-2 border-white flex items-center justify-center font-heading font-bold text-white text-xl shadow-[4px_4px_0px_0px_#FFFFFF]">DA</div>
+                <span class="font-heading font-bold text-xl text-white tracking-tight">GATE 2027<span class="text-accent-blue">.INTEL</span></span>
+            </div>
+            <div class="hidden md:flex gap-6 font-mono text-sm font-medium">
+                <a href="index.html" class="text-white border-b-2 border-accent-blue px-1 py-2 transition-colors">01. Home & DNA</a>
+                <a href="solutions_1.html" class="text-muted hover:text-white px-1 py-2 transition-colors">02. Sol (24-25)</a>
+                <a href="solutions_2.html" class="text-muted hover:text-white px-1 py-2 transition-colors">03. Sol (26)</a>
+                <a href="strategy.html" class="text-muted hover:text-white px-1 py-2 transition-colors">04. Strategy</a>
+                <a href="battle_plan.html" class="text-muted hover:text-white px-1 py-2 transition-colors">05. Battle Plan</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+        
+        <!-- Hero Section -->
+        <header class="mb-20">
+            <div class="inline-block px-3 py-1 mb-6 border-2 border-accent-blue bg-accent-blue/10 text-accent-blue font-mono text-sm font-bold uppercase tracking-widest">
+                Classified Document
+            </div>
+            <h1 class="font-heading text-5xl md:text-7xl font-extrabold text-white tracking-tighter leading-tight mb-8">
+                Forensic Reverse-Engineering <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-cyan">Investigation of GATE DA</span>
+            </h1>
+            <p class="font-mono text-xl text-gray-400 max-w-3xl leading-relaxed border-l-4 border-accent-rose pl-6">
+                Data Science and Artificial Intelligence (2024-2026). A ruthless deconstruction of examiner intent, paper architecture, and cognitive targeting.
+            </p>
+        </header>
+
+        <!-- PHASE 1: PAPER DNA ANALYSIS -->
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="w-12 h-12 bg-white text-black flex items-center justify-center font-heading font-bold text-2xl border-2 border-border shadow-[4px_4px_0px_0px_#2563EB]">01</span>
+                <h2 class="font-heading text-4xl font-bold text-white uppercase">Phase 1 — Paper DNA Analysis</h2>
+            </div>
+
+            <div class="neo-card p-8 md:p-10 mb-10">
+                <p class="text-lg leading-relaxed mb-6">
+                    The Graduate Aptitude Test in Engineering (GATE) Data Science and Artificial Intelligence (DA) examination fundamentally redefines the evaluation parameters for computational sciences in India. A forensic decomposition of the 2024, 2025, and 2026 examination papers reveals an accelerating hostility toward application-centric programming and rote memorization. The examination setter functions not to assess familiarity with high-level software engineering APIs, but to <span class="hl-text">ruthlessly evaluate a candidate's grasp of the foundational mathematics</span>—specifically Linear Algebra, Probability Theory, and Multivariable Calculus—that dictate algorithmic behavior and statistical inference.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    To deconstruct the examiner's intent, the architectural DNA of the examination must be profiled. The paper strictly maintains a 65-question, 100-mark framework, but the internal typology modulates cognitive load and psychological pressure. <span class="text-accent-cyan font-mono font-bold">Multiple Choice Questions (MCQs)</span> constitute approximately 50.7% of the paper, testing baseline conceptual execution while introducing a continuous risk-management variable via negative marking. <span class="text-accent-rose font-mono font-bold">Multiple Select Questions (MSQs)</span> comprise 21.5% of the paper, acting as the primary psychometric tool for rank separation by presenting mathematically plausible but theoretically unsound distractors, requiring absolute precision due to the all-or-nothing marking scheme. <span class="text-accent-emerald font-mono font-bold">Numerical Answer Type (NAT)</span> questions, accounting for 27.7%, eliminate reverse-engineering heuristics and strictly measure procedural stamina and numerical resilience.
+                </p>
+            </div>
+
+            <h3 class="font-heading text-2xl font-bold text-white mb-6">Cognitive Categorization of the Examination</h3>
+            <div class="neo-table-container mb-10">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="w-1/4">Cognitive Question Category</th>
+                            <th class="w-1/6">Percentage Representation</th>
+                            <th class="w-7/12">Examiner Intent and Target Skill</th>
+                        </tr>
+                    </thead>
+                    <tbody class="font-body text-sm">
+                        <tr>
+                            <td class="font-bold text-white">Mathematical questions</td>
+                            <td class="font-mono text-accent-cyan font-bold text-lg">62%</td>
+                            <td>Explicit derivation, calculus optimization, algebraic matrix manipulation, and continuous probability integrals.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white">Conceptual questions</td>
+                            <td class="font-mono text-accent-blue font-bold text-lg">18%</td>
+                            <td>Theoretical boundary conditions, orthogonal properties, and distribution characteristics without heavy calculation.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white">Logic questions</td>
+                            <td class="font-mono text-accent-emerald font-bold text-lg">12%</td>
+                            <td>Formal reasoning, predicate translations, state tracing, and algorithmic dry-runs.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white">Computational questions</td>
+                            <td class="font-mono text-accent-amber font-bold text-lg">6%</td>
+                            <td>Pure arithmetic execution, numeric substitution, and basic dataset variance calculations.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white">Memory questions</td>
+                            <td class="font-mono text-accent-rose font-bold text-lg">2%</td>
+                            <td>Direct recall of standard definitions or historical algorithmic time complexities.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="neo-card neo-card-emerald p-8">
+                <h4 class="font-mono text-accent-emerald font-bold mb-4 tracking-widest uppercase">The Pedagogical Philosophy</h4>
+                <p class="text-lg leading-relaxed">
+                    The source of the marks generated in the GATE DA examination further illustrates the setter's pedagogical philosophy. Pure Recall contributes a mere 2% of the total marks, rendering rote memorization mathematically obsolete. Formula Application accounts for 5%, penalizing candidates who memorize equations without understanding their geometric derivations. Conceptual Understanding provides 25% of the marks, rewarding those who grasp boundary behaviors. Algorithmic Thinking contributes 12%, specifically testing state-space traversal and structural data manipulation. Multi-Step Reasoning generates 18% of the marks, demanding the synthesis of concepts across domains. Finally, <span class="hl-text text-white">Mathematical Proof Thinking dominates the examination, accounting for 38% of the total marks.</span> This distribution confirms that the examination intelligence unit selects for applied mathematicians, not software developers.
+                </p>
+            </div>
+        </section>
+
+        <!-- PHASE 2: QUESTION ARCHETYPE EXTRACTION -->
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="w-12 h-12 bg-white text-black flex items-center justify-center font-heading font-bold text-2xl border-2 border-border shadow-[4px_4px_0px_0px_#E11D48]">02</span>
+                <h2 class="font-heading text-4xl font-bold text-white uppercase">Phase 2 — Question Archetype Extraction</h2>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-10">
+                The syllabus nomenclature provided by the organizing institutes serves as a generalized abstraction. The true structure of the examination is dictated by recurring, heavily disguised question templates. By stripping away the surface narratives, thirty-five distinct question archetypes emerge.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Archetype Blocks -->
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">1. Conditional Probability</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Frequently appears in medical testing or failure-rate narratives, requiring the calculation of posterior probabilities. It appears with absolute frequency across all years, producing 2 to 4 marks. The difficulty is moderate, but its AIR separation power is high due to the common error of confusing $P(A|B)$ with $P(B|A)$. The time requirement for mastery execution is approximately 2.5 minutes using probability trees.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">2. Bayesian Inference</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Extends conditional probability into Machine Learning, specifically testing Naive Bayes parameter estimation and posterior maximization. It appears with absolute frequency, yielding 4 marks annually. The difficulty is high as it requires handling continuous feature likelihoods. The AIR separation power is extreme, with an execution time requirement of 3 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">3. Expectation Computation</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Tests the derivation of $E[X]$ or $E[g(X)]$ for custom, non-standard probability mass or density functions. Appearing with absolute frequency and yielding 2 to 4 marks, its difficulty is high. It acts as a severe AIR separator because candidates often fail to apply the Law of the Unconscious Statistician (LOTUS). Execution requires roughly 3.5 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">4. Distribution Properties</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Involves matching scenarios to specific distributions (Poisson, Exponential, Normal) or utilizing their memoryless properties and variance formulas. It boasts absolute frequency, producing up to 4 marks. The difficulty is moderate, yielding low to moderate AIR separation power, as prepared candidates generally secure these marks in under 2 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">5. Hypothesis Testing Logic</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Focuses on the theoretical definitions of Type I/Type II errors, p-values, and confidence interval bounds rather than raw t-test computations. Its frequency is moderate, yielding 2 marks. The difficulty is high due to its frequent formulation as an MSQ, giving it extreme AIR separation power. It requires 2 minutes of careful logical parsing.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">6. Eigenvalue Reasoning</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Presents an arbitrary matrix and demands its eigenvalues without direct characteristic polynomial computation, often utilizing trace and determinant properties. This appears with absolute frequency, generating 2 to 4 marks. The difficulty is moderate, but its AIR separation power is high. Execution time drops to 1 minute if properties are leveraged.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">7. Rank & Null Space</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Tests the dimensions of fundamental matrix subspaces, often linking the rank to the number of linearly independent vectors in a dataset. Its frequency is high, yielding 2 marks. The difficulty is moderate, with moderate AIR separation power, requiring 2.5 minutes of row reduction or property identification.</p>
+                </div>
+
+                <div class="neo-card p-6 border-accent-rose shadow-neo-rose">
+                    <h3 class="font-heading font-bold text-xl text-accent-rose mb-2">8. Projection Matrix</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Uniquely favored by IIT Guwahati, utilizes densely notated matrices like $I_n - \frac{1}{n}11^T$ and tests idempotence or optimization bounds. Its frequency is moderate to high, producing 2 marks. The difficulty is extreme due to notation shock, granting it extreme AIR separation power. Time requirement is 30 seconds if recognized, but infinite if attempted via brute force.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">9. PCA Interpretation</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Tests the orthogonality of principal components, variance explained by singular values, or dimensionality reduction artifacts. Frequency is absolute, yielding 2 marks. Difficulty is moderate. AIR separation power is high, as it tests geometric understanding rather than code implementation. Execution takes 1.5 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">10. Distance Metric Reasoning</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Evaluates the impact of choosing Manhattan, Euclidean, or Minkowski distances on clustering outputs or nearest neighbor boundaries. Frequency is high, generating 2 marks. Difficulty is low to moderate, with low AIR separation power. Time requirement is typically 2.5 minutes for pairwise calculation.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">11. Clustering Merge Decisions</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Provides a distance matrix and asks the candidate to execute single, complete, or average linkage agglomerative clustering manually. It has an absolute frequency, yielding 2 marks. Difficulty is moderate, and AIR separation power is moderate. It requires 3 minutes of careful matrix updating.</p>
+                </div>
+
+                <div class="neo-card p-6 border-accent-cyan shadow-neo-cyan">
+                    <h3 class="font-heading font-bold text-xl text-accent-cyan mb-2">12. Regression Regularization</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Tests the mathematical and geometric impact of $L_1$ (Lasso) and $L_2$ (Ridge) penalties on weight vectors. It has absolute frequency, generating 2 marks. Difficulty is high. AIR separation power is extreme, as MSQs frequently target the misconception that Ridge drives weights exactly to zero. Time requirement is 2 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">13. Bias-Variance Tradeoff</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Evaluates how hyperparameter tuning (e.g., k in k-NN, depth in Decision Trees) shifts the model along the error curves. Frequency is high, yielding 1 to 2 marks. Difficulty is moderate, with high AIR separation power when formulated as an MSQ. Time requirement is 1 minute.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">14. Neural Network Parameter Counting</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Describes a Multi-Layer Perceptron architecture and demands the exact count of learnable weights and biases. It appears with high frequency, producing 2 marks. Difficulty is low, with low AIR separation power, requiring only 1.5 minutes of arithmetic.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">15. Graph Reachability</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Tests the fundamental traversal order and connected component discovery of BFS and DFS on directed and undirected graphs. Frequency is high, yielding 2 marks. Difficulty is moderate, with moderate AIR separation power. Execution requires 2.5 minutes of visual tracing.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">16. DFS Properties</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Specifically targets back edges, cross edges, and tree edges in depth-first forests, as well as topological sorting validity. Frequency is moderate, yielding 2 marks. Difficulty is high, granting it high AIR separation power. Time requirement is 3 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">17. BFS Properties</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Evaluates shortest path guarantees in unweighted graphs and queue state at specific iteration depths. Frequency is moderate, generating 1 to 2 marks. Difficulty is moderate, with moderate AIR separation power, taking 2 minutes to execute.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">18. Binary Search Depth</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Tests the maximum or minimum number of comparisons required to locate an element or establish its absence in a sorted array of size $N$. Frequency is moderate, yielding 1 mark. Difficulty is low, with low AIR separation power, requiring 1 minute to compute $\lceil \log_2(N+1) \rceil$.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">19. Recurrence Relations</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Presents a recursive pseudo-code and demands the derivation of its Big-O time complexity via substitution or the Master Theorem. Frequency is high, producing 2 marks. Difficulty is high, with extreme AIR separation power when probabilities are introduced. Execution requires 3 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">20. Sorting Behaviour Analysis</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Evaluates the number of swaps, comparisons, or pass iterations required by Bubble, Insertion, or Selection sort on a specifically ordered input array. Frequency is high, yielding 2 marks. Difficulty is moderate, with high AIR separation power due to counting errors. Time requirement is 2.5 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6 border-accent-amber shadow-[6px_6px_0px_0px_#F59E0B]">
+                    <h3 class="font-heading font-bold text-xl text-accent-amber mb-2">21. Python Closure Behaviour</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Tests nested functions, the nonlocal keyword, and scope resolution within Python environments. Frequency is moderate, producing 2 marks. Difficulty is high, with extreme AIR separation power as it targets non-programmers. Execution requires 2 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6 border-accent-amber shadow-[6px_6px_0px_0px_#F59E0B]">
+                    <h3 class="font-heading font-bold text-xl text-accent-amber mb-2">22. Python Mutable Argument Trap</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Exploits the persistence of mutable default arguments (like lists or dictionaries) across consecutive function calls in Python. Frequency is high, yielding 2 marks. Difficulty is moderate, but AIR separation power is extremely high due to widespread syntactic ignorance. Time requirement is 1.5 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">23. SQL Query Reasoning</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Demands the mental execution of nested subqueries, EXISTS clauses, and aggregate GROUP BY functions on provided table instances. Frequency is absolute, generating 2 to 4 marks. Difficulty is moderate, with moderate AIR separation power. Execution requires 3 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">24. Functional Dependency Inference</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Provides a set of functional dependencies and asks the candidate to determine candidate keys, extraneous attributes, or closure sets. Frequency is absolute, yielding 2 marks. Difficulty is moderate, with high AIR separation power. Time requirement is 2.5 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">25. Normalization</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Tests the identification of the highest normal form (1NF, 2NF, 3NF, BCNF) a given relational schema satisfies based on functional dependencies. Frequency is absolute, producing 2 marks. Difficulty is high, with extreme AIR separation power. Execution takes 3.5 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">26. ER to Relational Conversion</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Requires the candidate to determine the minimum number of tables required to map an Entity-Relationship diagram containing weak entities and multi-valued attributes. Frequency is moderate, yielding 1 to 2 marks. Difficulty is high, with high AIR separation power, requiring 2 minutes of rule application.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">27. Predicate Logic</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Involves translating complex natural language constraints (e.g., "All humans are mortal") into First-Order Logic or determining the validity of quantified inferences. Frequency is absolute, generating 2 to 4 marks. Difficulty is high, with high AIR separation power. Time requirement is 3 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">28. Minimax Reasoning</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Presents an adversarial game tree and asks for the optimal root move or the final utility value propagating upwards. Frequency is high, producing 2 marks. Difficulty is moderate, with moderate AIR separation power. Execution requires 2.5 minutes of meticulous state tracking.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">29. Search Heuristic Analysis</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Evaluates the admissibility, consistency, and expansion order of the A* search algorithm given specific heuristic functions. Frequency is high, yielding 2 marks. Difficulty is high, with extreme AIR separation power. Time requirement is 3.5 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">30. Gradient Descent Mechanics</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Asks the candidate to compute weight updates given a learning rate, a loss function gradient, and a specific input vector. Frequency is absolute, producing 2 marks. Difficulty is moderate, with high AIR separation power due to matrix dimension alignment errors. Execution takes 2.5 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">31. Markov Chain Transitions</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Tests steady-state probabilities or multi-step transition likelihoods given a transition probability matrix. Frequency is moderate, generating 2 marks. Difficulty is high, with high AIR separation power. Execution requires 3.5 minutes of matrix multiplication or equation solving.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">32. Hashing Collision Resolution</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Evaluates the final index positions of keys inserted into a hash table using linear probing, quadratic probing, or chaining. Frequency is high, yielding 2 marks. Difficulty is moderate, with moderate AIR separation power. Time requirement is 2 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">33. Loss Function Geometry</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Asks candidates to identify the mathematical properties (convexity, derivatives) of loss functions like Hinge Loss, Log Loss, or Mean Absolute Error. Frequency is moderate, producing 2 marks. Difficulty is extreme, with extreme AIR separation power. Execution takes 2 minutes.</p>
+                </div>
+
+                <div class="neo-card p-6 border-accent-cyan shadow-[6px_6px_0px_0px_#06B6D4]">
+                    <h3 class="font-heading font-bold text-xl text-accent-cyan mb-2">34. Support Vector Margins</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Requires the geometric or algebraic computation of the maximum margin separating two classes in a Hard-Margin SVM. Frequency is absolute, generating 2 marks. Difficulty is extreme, with extreme AIR separation power. Time requirement is 4 minutes via algebra or 1.5 minutes geometrically.</p>
+                </div>
+
+                <div class="neo-card p-6">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">35. Decision Tree Entropy</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">Involves calculating Information Gain, Gini Impurity, or Entropy for a given dataset split. Frequency is high, producing 2 marks. Difficulty is moderate, with high AIR separation power due to logarithmic calculation errors. Execution requires 3.5 minutes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Navigation -->
+        <div class="border-t-2 border-border pt-12 pb-20 flex justify-between items-center">
+            <div>
+                <p class="font-mono text-sm text-gray-500 uppercase tracking-widest">Document 1 of 5</p>
+            </div>
+            <a href="solutions_1.html" class="inline-flex items-center gap-4 bg-white text-black px-8 py-4 font-heading font-bold text-xl uppercase tracking-wider shadow-[6px_6px_0px_0px_#2563EB] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#2563EB] transition-all">
+                Access Document 2: Solutions 24-25 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>

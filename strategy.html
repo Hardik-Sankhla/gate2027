@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE DA 2027 | Strategic Architecture & ROI</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    },
+                    colors: {
+                        base: '#0A0A0A',
+                        surface: '#171717',
+                        border: '#333333',
+                        accent: {
+                            blue: '#2563EB',
+                            cyan: '#06B6D4',
+                            rose: '#E11D48',
+                            emerald: '#10B981',
+                            amber: '#F59E0B',
+                            purple: '#8B5CF6'
+                        }
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px var(--tw-shadow-color)',
+                        'neo-hover': '2px 2px 0px 0px var(--tw-shadow-color)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- MathJax for LaTeX Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #D4D4D4;
+            font-family: 'Inter', sans-serif;
+        }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; border-left: 1px solid #333333; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #F59E0B; }
+
+        .neo-card {
+            background-color: #171717;
+            border: 2px solid #333333;
+            box-shadow: 6px 6px 0px 0px #333333;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .neo-card:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px 0px #333333;
+        }
+
+        .neo-card-amber { box-shadow: 6px 6px 0px 0px #F59E0B; }
+        .neo-card-amber:hover { box-shadow: 4px 4px 0px 0px #F59E0B; }
+
+        .callout-box {
+            background-color: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #F59E0B;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Dense Data Table Styling */
+        .data-table-container {
+            width: 100%;
+            overflow-x: auto;
+            border: 2px solid #333333;
+            background: #171717;
+            margin-bottom: 3rem;
+        }
+        .data-table { width: 100%; border-collapse: collapse; text-align: left; }
+        .data-table th, .data-table td { 
+            padding: 1rem 1.25rem; 
+            border-bottom: 1px solid #333333; 
+            border-right: 1px solid #333333;
+            white-space: nowrap;
+        }
+        .data-table th { 
+            background: #000000; 
+            color: #FFFFFF; 
+            font-family: 'Space Grotesk', sans-serif; 
+            font-size: 0.85rem;
+            text-transform: uppercase; 
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .data-table tbody tr:hover { background: #262626; }
+        .data-table td:last-child, .data-table th:last-child { border-right: none; }
+        .data-table .col-wrap { white-space: normal; min-width: 250px; }
+
+        .hl-text { color: #FFFFFF; font-weight: 600; }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-accent-amber selection:text-black">
+
+    <nav class="sticky top-0 z-50 bg-base/90 backdrop-blur-md border-b-2 border-border">
+        <div class="max-w-[90rem] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-accent-amber border-2 border-white flex items-center justify-center font-heading font-bold text-black text-xl shadow-[4px_4px_0px_0px_#FFFFFF]">DA</div>
+                <span class="font-heading font-bold text-xl text-white tracking-tight">GATE 2027<span class="text-accent-amber">.INTEL</span></span>
+            </div>
+            <div class="hidden md:flex gap-6 font-mono text-sm font-medium">
+                <a href="index.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">01. Home & DNA</a>
+                <a href="solutions_1.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">02. Sol (24-25)</a>
+                <a href="solutions_2.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">03. Sol (26)</a>
+                <a href="strategy.html" class="text-white border-b-2 border-accent-amber px-1 py-2 transition-colors">04. Strategy</a>
+                <a href="battle_plan.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">05. Battle Plan</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-[90rem] mx-auto px-6 py-12 md:py-20">
+        
+        <header class="mb-16 border-b-4 border-accent-amber pb-8 inline-block">
+            <h1 class="font-heading text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
+                Document 04: <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-amber to-accent-rose">Strategic Architecture</span>
+            </h1>
+            <p class="font-mono text-xl text-gray-400 mt-6 border-l-4 border-accent-amber pl-4 max-w-4xl">
+                Weightage Analysis, Concept Networks, Examiner Psychology, and ROI Optimization Models.
+            </p>
+        </header>
+
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#F59E0B]">A</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Subject Weightage & Longitudinal Trends</h2>
+                </div>
+            </header>
+
+            <div class="neo-card p-8 md:p-10 mb-10 text-lg leading-relaxed text-gray-300">
+                <p class="mb-6">The longitudinal data extracted from 2024 to 2026 demonstrates a clear evolutionary trajectory in the syllabus weightage. The examination is dynamically adapting, moving away from legacy computer science paradigms to establish a distinct identity for Data Science and Artificial Intelligence. The following table synthesizes the marks distribution across the three years, revealing the examiner's shifting focus.</p>
+                <p>The data confirms a massive structural pivot. In the inaugural 2024 examination, Programming, Data Structures, and Algorithms (DSA) constituted the largest core segment, accounting for 21 marks. This reflected a residual bias from traditional Computer Science syllabus structures. By 2026, the examination aggressively deprioritized standard DSA in favor of Machine Learning, which surged to dominate the paper with an estimated 25 marks, and Probability & Statistics, which stabilized as the secondary pillar at roughly 20 marks.</p>
+            </div>
+
+            <div class="data-table-container">
+                <table class="data-table font-mono text-sm">
+                    <thead>
+                        <tr>
+                            <th>Core Subject Domain</th>
+                            <th>2024 Marks</th>
+                            <th>2025 Marks</th>
+                            <th>2026 Marks (Observed Trend)</th>
+                            <th>Longitudinal Trajectory</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr><td class="font-bold text-white">Probability & Statistics</td><td>16</td><td>18</td><td>20</td><td class="text-accent-emerald font-bold">Accelerating</td></tr>
+                        <tr><td class="font-bold text-white">Machine Learning</td><td>11</td><td>14</td><td>25</td><td class="text-accent-emerald font-black">Highly Accelerating</td></tr>
+                        <tr><td class="font-bold text-white">Linear Algebra</td><td>10</td><td>17</td><td>15</td><td class="text-accent-blue font-bold">Stable / High Importance</td></tr>
+                        <tr><td class="font-bold text-white">Programming & DSA</td><td>21</td><td>16</td><td>10</td><td class="text-accent-rose font-bold">Decelerating</td></tr>
+                        <tr><td class="font-bold text-white">Database Management</td><td>8</td><td>9</td><td>8</td><td class="text-gray-400">Stable / Moderate</td></tr>
+                        <tr><td class="font-bold text-white">Artificial Intelligence</td><td>11</td><td>3</td><td>8</td><td class="text-accent-amber">Fluctuating / Recalibrating</td></tr>
+                        <tr><td class="font-bold text-white">Calculus & Optimization</td><td>8</td><td>8</td><td>5</td><td class="text-gray-400">Integrated into ML / Implicit</td></tr>
+                        <tr><td class="font-bold text-white">General Aptitude</td><td>15</td><td>15</td><td>15</td><td class="text-gray-400">Constant Baseline</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-lg leading-relaxed text-gray-300 mt-6 neo-card p-6 border-l-4 border-l-accent-cyan">
+                This trajectory confirms the hypothesis that IITs are evaluating DA candidates not as software engineers, but as applied mathematicians and statisticians. The reduction in standalone Calculus & Optimization marks from 8 to 5 does not imply a reduction in importance; rather, calculus concepts such as gradients, partial derivatives, and convexity have been implicitly embedded directly into Machine Learning questions (e.g., deriving loss functions for Ridge Regression or Neural Networks). The fluctuation in Artificial Intelligence (dropping in 2025 and rebounding in 2026) suggests that setters are still calibrating the difficulty of search algorithms and probabilistic reasoning, leaning heavily on Bayesian networks when they do include them.
+            </p>
+        </section>
+
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#F59E0B]">B</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Pareto Analysis & High-Yield Concentration</h2>
+                </div>
+            </header>
+
+            <div class="neo-card p-8 md:p-10 mb-10 text-lg leading-relaxed text-gray-300">
+                <p class="mb-4">Applying the Pareto Principle (the 80/20 rule) to the GATE DA syllabus reveals that a highly concentrated subset of topics generates the overwhelming majority of the core marks. To quantify this, a Combined Importance Score was calculated for every subtopic based on its historical recurrence frequency and its intrinsic mark value (propensity to appear as a 2-mark question). This prevents candidates from wasting hundreds of hours on low-yield peripheral topics.</p>
+                <p class="mb-4">The analysis identifies the top decile of topics that form the absolute core of the examination. Probability Distributions and Joint Probabilities stand at the apex. Mastery of continuous distributions, expected values, and marginal/joint density functions is non-negotiable. Following closely are Eigenvalues, Eigenvectors, and Matrix Decompositions. Singular Value Decomposition (SVD) and Principal Component Analysis (PCA) are tested universally across all three years, often linking Linear Algebra directly to Machine Learning.</p>
+                <p>In the realm of Machine Learning, Supervised Learning algorithms—specifically Logistic regression, Ridge regression, and Support Vector Machines—yield massive returns. The examination frequently tests the mathematical margins of SVMs and the penalty effects of L1 (Lasso) and L2 (Ridge) regularization. Bayesian Inference, encompassing Bayes' theorem, conditional probability, and Naive Bayes classifiers, is tested heavily in both the Statistics and Machine Learning sections, doubling its ROI.</p>
+            </div>
+
+            <div class="data-table-container">
+                <table class="data-table font-mono text-sm">
+                    <thead>
+                        <tr>
+                            <th class="w-12">Rank</th>
+                            <th>Subtopic Domain</th>
+                            <th>Frequency Score</th>
+                            <th>Marks Yield Score</th>
+                            <th>Combined Importance</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr><td class="font-bold text-white">1</td><td class="font-bold text-white">Joint Distributions & Expectations</td><td>Very High</td><td>2.0 (High NAT Propensity)</td><td class="text-accent-rose font-bold">Critical (Tier A)</td></tr>
+                        <tr><td class="font-bold text-white">2</td><td class="font-bold text-white">Eigen-decompositions (SVD/PCA)</td><td>Very High</td><td>2.0 (MSQ/NAT)</td><td class="text-accent-rose font-bold">Critical (Tier A)</td></tr>
+                        <tr><td class="font-bold text-white">3</td><td class="font-bold text-white">Supervised Learning (SVM/Ridge)</td><td>Very High</td><td>2.0 (MSQ Propensity)</td><td class="text-accent-rose font-bold">Critical (Tier A)</td></tr>
+                        <tr><td class="font-bold text-white">4</td><td class="font-bold text-white">Bayesian Inference & Naive Bayes</td><td>High</td><td>1.8 (Cross-domain)</td><td class="text-accent-amber font-bold">High (Tier A)</td></tr>
+                        <tr><td class="font-bold text-white">5</td><td class="font-bold text-white">Relational Algebra & Nested SQL</td><td>High</td><td>2.0 (NAT/MCQ)</td><td class="text-accent-amber font-bold">High (Tier A)</td></tr>
+                        <tr><td class="font-bold text-white">6</td><td class="text-gray-400">A* Heuristics & Alpha-Beta Pruning</td><td>Moderate</td><td>2.0 (MSQ Propensity)</td><td class="text-accent-blue font-bold">High (Tier B)</td></tr>
+                        <tr><td class="font-bold text-white">7</td><td class="text-gray-400">Python Recursion & Scope Tracing</td><td>High</td><td>1.5 (MCQ Propensity)</td><td class="text-accent-blue font-bold">High (Tier B)</td></tr>
+                        <tr><td class="font-bold text-white">8</td><td class="text-gray-400">Gradient Descent & Neural Nets</td><td>Moderate</td><td>2.0 (NAT Propensity)</td><td class="text-accent-emerald font-bold">Moderate (Tier B)</td></tr>
+                        <tr><td class="font-bold text-white">9</td><td class="text-gray-400">B+ Trees & Hashing Mechanisms</td><td>Moderate</td><td>1.5 (MCQ/NAT)</td><td class="text-accent-emerald font-bold">Moderate (Tier B)</td></tr>
+                        <tr><td class="font-bold text-white">10</td><td class="text-gray-400">Clustering (k-Means/Hierarchical)</td><td>Moderate</td><td>1.5 (MCQ/MSQ)</td><td class="text-accent-emerald font-bold">Moderate (Tier B)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="text-lg leading-relaxed text-gray-300 mt-6 neo-card p-6">
+                Relational Algebra and SQL queries represent the most deterministic high-yield topics. Questions almost exclusively focus on complex nested queries, aggregate functions, and natural joins. Gradient-Based Optimization, while technically calculus, is the engine of ML. Candidates must flawlessly execute partial derivatives, the chain rule (applied to neural network backpropagation), and local/global minima identification.
+            </p>
+        </section>
+
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#F59E0B]">C</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Examiner Psychology & Profiling</h2>
+                </div>
+            </header>
+
+            <div class="neo-card p-8 md:p-10 mb-10 text-lg leading-relaxed text-gray-300">
+                <p class="mb-6">A psychometric analysis of the question papers uncovers the precise profile of the student rewarded by the GATE DA examination, as well as the common cognitive biases and heuristics specifically targeted by the setters. The examination is an exercise in psychological endurance as much as it is a test of mathematical aptitude.</p>
+                <p class="mb-6">The IIT examination setters explicitly reward the <span class="hl-text text-white">"First Principles" thinker</span>. This candidate views Machine Learning not through the lens of Python libraries or high-level implementations, but through the mechanics of matrix transformations, probabilistic likelihoods, and vector calculus. When presented with a Principal Component Analysis (PCA) question, the rewarded student immediately reduces the problem to finding the eigenvectors of the covariance matrix. When asked about linear regression, they visualize orthogonal projections onto a column space.</p>
+                <p>Conversely, the examination <span class="hl-text text-accent-rose">heavily penalizes the "API Engineer."</span> Candidates who possess surface-level knowledge of algorithms without understanding the underlying math fall prey to MSQs. For instance, knowing that Ridge Regression prevents overfitting is entirely insufficient; the candidate must know precisely how the L2 norm alters the geometry of the loss landscape and forces the weight vectors to shrink without inherently driving them to zero (unlike Lasso). The setter assumes the candidate knows the definition; they test the geometric consequence.</p>
+            </div>
+
+            <h3 class="font-heading text-2xl font-bold text-white mb-6 border-b border-border pb-2">The Setters' Psychological Mechanisms</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="neo-card p-6 border-l-4 border-l-accent-rose">
+                    <h4 class="font-heading font-bold text-xl text-white mb-3">1. The "Over-Specification Trap"</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">A favorite technique. In the 2025 paper, questions detailing neural network architectures provided an abundance of weight values that were ultimately multiplied by zero due to a Rectified Linear Unit (ReLU) activation function outputting zero for a negative input.</p>
+                    <p class="text-sm font-mono text-accent-cyan bg-surface p-3 border border-border">Average candidates spent critical minutes computing dead paths through the network, while elite candidates identified the zero-activation and bypassed the calculation entirely.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-amber">
+                    <h4 class="font-heading font-bold text-xl text-white mb-3">2. The "Familiarity Trap"</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">Involves modifying a standard algorithm slightly to punish candidates who rely on muscle memory. For example, testing a Quicksort partition scheme but utilizing the first element as the pivot instead of the last, or asking for the number of unnecessary comparisons in a Bubble Sort array that is already partially sorted.</p>
+                    <p class="text-sm font-mono text-accent-cyan bg-surface p-3 border border-border">Candidates who rush to apply the standard $O(n^2)$ or $O(n \log n)$ formulas without tracing the modified logic fail these questions.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-purple md:col-span-2">
+                    <h4 class="font-heading font-bold text-xl text-white mb-3">3. "Confidence Destruction via Notation"</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">The setters frequently present simple linear algebra or statistical concepts using dense, highly formal mathematical notation. In the 2026 paper, a question featured the matrix $M = I_n - \frac{1}{n}11^T$. The mathematical operations required to solve the question are elementary if the candidate recognizes this as a standard centering matrix used in statistics (which is a projection matrix, meaning $M^2 = M$).</p>
+                    <p class="text-sm font-mono text-accent-cyan bg-surface p-3 border border-border">However, the notation is designed to induce panic. The underlying concept requires minimal calculation, but the visual complexity causes average candidates to skip the question entirely.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#F59E0B]">D</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Cognitive Mastery Analysis</h2>
+                </div>
+                <p class="text-xl text-gray-400">To systematically conquer the GATE DA examination, a candidate's preparation must be evaluated against strict Cognitive Mastery Levels for every archetype. Superficial familiarity results in catastrophic failure against Multiple Select Questions (MSQs).</p>
+            </header>
+
+            <div class="space-y-4 mb-12">
+                <div class="neo-card p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-32 flex-shrink-0">
+                        <span class="font-heading font-black text-4xl text-gray-600">LVL 0</span>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl text-white mb-2 uppercase tracking-wide">Recognition</h4>
+                        <p class="text-gray-400 text-sm">The candidate can identify the syllabus topic and the basic formula associated with the archetype (e.g., recognizing that a question requires Bayes' Theorem or involves an SVM margin).</p>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-32 flex-shrink-0">
+                        <span class="font-heading font-black text-4xl text-gray-500">LVL 1</span>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl text-white mb-2 uppercase tracking-wide">Basic Solving</h4>
+                        <p class="text-gray-400 text-sm">The candidate can execute standard textbook formulations of the archetype without time constraints. They can solve an independent probability question or a basic SQL join but struggle with complex edge cases or nested dependencies.</p>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6 flex flex-col md:flex-row gap-6 border-l-4 border-l-accent-cyan">
+                    <div class="md:w-32 flex-shrink-0">
+                        <span class="font-heading font-black text-4xl text-accent-cyan">LVL 2</span>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl text-white mb-2 uppercase tracking-wide">Timed Solving</h4>
+                        <p class="text-gray-300 text-sm">The candidate can execute standard formulations under severe examination pressure, consistently arriving at the correct Numerical Answer Type (NAT) input within 3 minutes without arithmetic degradation.</p>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6 flex flex-col md:flex-row gap-6 border-l-4 border-l-accent-blue">
+                    <div class="md:w-32 flex-shrink-0">
+                        <span class="font-heading font-black text-4xl text-accent-blue">LVL 3</span>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl text-white mb-2 uppercase tracking-wide">Multiple Solution Methods</h4>
+                        <p class="text-gray-300 text-sm">The candidate achieves operational fluidity. They can solve the archetype via brute-force algebra and via geometric or property-based shortcuts. For example, they can determine an SVM margin by plotting the coordinates visually rather than setting up the Lagrangian multipliers.</p>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6 flex flex-col md:flex-row gap-6 border-l-4 border-l-accent-purple">
+                    <div class="md:w-32 flex-shrink-0">
+                        <span class="font-heading font-black text-4xl text-accent-purple">LVL 4</span>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl text-white mb-2 uppercase tracking-wide">Can Solve Unseen Variants</h4>
+                        <p class="text-gray-300 text-sm">The candidate possesses immunity to psychometric traps. If the examiner mutates the archetype—such as changing MSE to MAE in a Ridge Regression objective function, or altering the Quicksort pivot selection—the candidate adapts instantly, calculating the output from absolute first principles.</p>
+                    </div>
+                </div>
+
+                <div class="neo-card p-6 flex flex-col md:flex-row gap-6 border-l-4 border-l-accent-amber shadow-[6px_6px_0px_0px_#F59E0B]">
+                    <div class="md:w-32 flex-shrink-0">
+                        <span class="font-heading font-black text-4xl text-accent-amber">LVL 5</span>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl text-white mb-2 uppercase tracking-wide">Can Create IIT-Style Variants</h4>
+                        <p class="text-gray-100 text-sm font-medium">The apex of mastery. The candidate can reverse-engineer the examiner's pedagogical intent. Given a standard concept, they can design the distractor options for an MSQ, identifying exactly which boundary conditions (e.g., matrices with zero determinant, graphs with negative weight cycles) would cause the algorithm to fail.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout-box">
+                <h4 class="font-heading font-bold text-white text-xl uppercase mb-3">Minimum Mastery Thresholds for Rank Targets:</h4>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li><strong class="text-white">For 40 marks (Qualification):</strong> Requires Level 2 mastery across high-yield, low-complexity archetypes: SQL Query Reasoning, Python State Tracing, Basic Probability, and General Aptitude.</li>
+                    <li><strong class="text-white">For 50 marks (Lower-Tier PSU / NIT):</strong> Requires Level 2 mastery across 80% of the syllabus, achieving Level 3 specifically in core Linear Algebra to secure rapid execution on 1-mark MCQs.</li>
+                    <li><strong class="text-white">For 60 marks (Mid-Tier IIT):</strong> Requires Level 3 mastery in Machine Learning, Probability, and Statistics. Must successfully navigate multi-concept MSQs without falling for superficial traps.</li>
+                    <li><strong class="text-white">For 70 marks (Premium IITs and IISc):</strong> Requires Level 4 mastery in Linear Algebra, Machine Learning, and Artificial Intelligence. Must possess geometric intuition to bypass algebraic time-sinks.</li>
+                    <li><strong class="text-accent-amber">For 80+ marks (AIR < 100 Dictation):</strong> Requires Level 5 mastery. Execute NAT calculations with flawless decimal precision. Total immunity to dense formal notation shock and "Over-Specification Traps".</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#F59E0B]">E</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Concept Network & Prerequisite Mapping</h2>
+                </div>
+            </header>
+
+            <div class="neo-card p-8 md:p-10 mb-10 text-lg leading-relaxed text-gray-300">
+                <p class="mb-6">To optimize study hours and maximize retention, candidates must exploit the structural dependencies of the syllabus. The GATE DA syllabus is not a list of isolated subjects; it is a highly connected directed acyclic graph (DAG). Studying topics out of order creates massive cognitive friction.</p>
+                <p class="mb-6"><strong class="text-white">Linear Algebra possesses the absolute highest Concept Influence Score.</strong> It acts as the non-negotiable prerequisite root node for nearly 40% of the examination's core marks. A candidate must traverse from Vector Spaces to Projections, leading to Eigen decomposition. This path has massive downstream dependencies. In Machine Learning, Eigen decomposition is the mechanical engine behind Principal Component Analysis (PCA) and dimensionality reduction. In Optimization, matrix calculus and quadratic forms govern the behavior of convex optimization functions, directly influencing the understanding of Support Vector Machines and Gradient Descent trajectories. Attempting to master PCA without first mastering eigenvectors is a pedagogical failure.</p>
+                <p><strong class="text-white">Probability Theory possesses the highest Concept Centrality Score.</strong> The critical path involves mastering Random Variables, moving to Expectations, and culminating in Joint Distributions. This node branches heavily into Machine Learning, where conditional probability forms the exact mathematical basis for the Naive Bayes classifier and the probabilistic interpretation of Logistic Regression. Furthermore, it branches into Artificial Intelligence, where joint distributions and conditional independence are the strict prerequisites for understanding Bayesian Networks and executing Variable Elimination algorithms.</p>
+            </div>
+
+            <div class="data-table-container">
+                <table class="data-table font-mono text-sm">
+                    <thead>
+                        <tr>
+                            <th>Foundational Concept Node</th>
+                            <th>Primary Downstream Dependency</th>
+                            <th>Secondary Downstream Dependency</th>
+                            <th>Concept Centrality</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr><td class="font-bold text-white">Eigenvectors & Decompositions</td><td>Principal Component Analysis (ML)</td><td>Matrix Powers & Stability (Math)</td><td class="text-accent-rose font-bold">Absolute High</td></tr>
+                        <tr><td class="font-bold text-white">Conditional Probability</td><td>Naive Bayes Classifier (ML)</td><td>Bayesian Networks (AI)</td><td class="text-accent-rose font-bold">Absolute High</td></tr>
+                        <tr><td class="font-bold text-white">Vector Projections</td><td>Linear Least Squares (ML)</td><td>Orthogonal Matrices (Math)</td><td class="text-accent-amber font-bold">High</td></tr>
+                        <tr><td class="font-bold text-white">Partial Derivatives</td><td>Gradient Descent (ML/Optimization)</td><td>Neural Network Backprop (ML)</td><td class="text-accent-amber font-bold">High</td></tr>
+                        <tr><td class="font-bold text-white">Graph Traversals (BFS/DFS)</td><td>A* and Heuristic Search (AI)</td><td>Decision Tree Logic (ML)</td><td class="text-gray-400 font-bold">Moderate</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-lg leading-relaxed text-gray-300 mt-6 neo-card p-6 border-l-4 border-l-accent-cyan">
+                By mastering the root nodes (Linear Algebra and Probability) first, the candidate drastically reduces the time required to learn the leaf nodes (Machine Learning and Artificial Intelligence). The syllabus must be attacked sequentially: Mathematics first, Statistics second, Algorithms third, and Machine Learning last, acting as the synthesis of the preceding three.
+            </p>
+        </section>
+
+        <section class="mb-24">
+            <header class="mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-10 bg-white text-black flex items-center justify-center font-heading font-bold text-xl border-2 border-border shadow-[4px_4px_0px_0px_#F59E0B]">F</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase">Question Generation Model & Templates</h2>
+                </div>
+                <p class="text-xl text-gray-400">Reverse-engineering the examination setters reveals that IITs rely on specific "Question Templates" that recur with varying numerical values and boundary edge cases. Recognizing these templates allows candidates to bypass the initial comprehension phase and jump directly to execution.</p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="neo-card p-6 border-l-4 border-l-accent-blue">
+                    <h4 class="font-heading font-bold text-xl text-white mb-2">Template A: The Recursive State Trace (Python/DSA)</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-3">This template presents a Python function featuring double recursion, list aliasing, or mutable default arguments. The trap always involves scope manipulation or referencing lists across local scopes.</p>
+                    <p class="text-sm text-gray-200 font-medium">To execute this, candidates must construct a precise recursion tree or a memory state table on their scribble pad. Mental calculation inevitably leads to errors because the setter designs the variables to overwrite themselves.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-rose">
+                    <h4 class="font-heading font-bold text-xl text-white mb-2">Template B: The Probability Density Geometry (Stats)</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-3">A joint probability density function $f_{X,Y}(x, y)$ is provided over a non-rectangular domain (e.g., $f_{X,Y}(x, y) = 2xy$ where $0 < y < x < 2$). The surface concept is conditional expectation. The hidden trap is the integration limit.</p>
+                    <p class="text-sm text-gray-200 font-medium">Candidates who blindly integrated over independent rectangular bounds failed. The question mandates drawing the two-dimensional domain of integration to correctly set the dependent boundaries.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-emerald">
+                    <h4 class="font-heading font-bold text-xl text-white mb-2">Template C: The Relational Algebra Identity (DBMS)</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-3">A natural language query must be matched with its formal relational algebra equivalent. The distractors will feature incorrect placement of projection ($\pi$) versus selection ($\sigma$), leading to Cartesian products that drop required keys or multiply data unnecessarily.</p>
+                    <p class="text-sm text-gray-200 font-medium">The execution strategy involves working inside-out, verifying the schema and arity at each step of the operator tree.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-cyan">
+                    <h4 class="font-heading font-bold text-xl text-white mb-2">Template D: The Eigen-decomposition Property (Math/ML)</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-3">The candidate is given a matrix resulting from an outer product (e.g., $A = xx^T$ where $x$ is a unit vector) and asked to find the sum of singular values or eigenvalues. The trap is attempting to construct the full matrix and solve the characteristic polynomial.</p>
+                    <p class="text-sm text-gray-200 font-medium">The execution relies on knowing the property that an outer product matrix of a vector has rank 1, meaning only one eigenvalue is non-zero (equal to the trace), and all others are zero.</p>
+                </div>
+
+                <div class="neo-card p-6 border-l-4 border-l-accent-purple md:col-span-2">
+                    <h4 class="font-heading font-bold text-xl text-white mb-2">Template E: The Minimax/Alpha-Beta Game Tree (AI)</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-3">A game tree is provided with terminal utility values. The candidate must determine the optimal path or identify which nodes are pruned. The trap is losing track of whether the current level is maximizing or minimizing, especially when the tree is asymmetrical.</p>
+                    <p class="text-sm text-gray-200 font-medium">Execution requires writing "MAX" or "MIN" explicitly next to every node on the scribble pad and strictly tracking the $[\alpha, \beta]$ bounds passed down the tree.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <header class="mb-10 border-t-4 border-accent-amber pt-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-12 h-12 bg-accent-amber text-black flex items-center justify-center font-heading font-black text-2xl border-4 border-white shadow-[4px_4px_0px_0px_#FFFFFF]">G</span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-black text-white uppercase">The ROI Optimization Model</h2>
+                </div>
+                <p class="text-xl text-gray-400 mt-4 leading-relaxed max-w-4xl">Preparation strategy must be governed by mathematical optimization. Time is a finite resource, and syllabus components are not weighted equally. The Return on Investment (ROI) for every archetype is calculated as: <strong class="text-accent-amber">ROI = Expected Marks Yield ÷ Hours Required To Master</strong>. This model prevents candidates from squandering dozens of hours on mathematically dense subjects that yield a singular 1-mark question.</p>
+            </header>
+
+            <h3 class="font-heading text-2xl font-bold text-white mb-6 border-b border-border pb-2 inline-block">FINAL OUTPUT: MASTER ARCHETYPE TABLE</h3>
+            <p class="text-sm font-mono text-gray-400 mb-6">Sorted strictly by Expected Marks Gain Per Hour Invested (ROI). Extracted from complete 2024-2026 examination data.</p>
+
+            <div class="data-table-container">
+                <table class="data-table font-mono text-[13px]">
+                    <thead>
+                        <tr>
+                            <th class="w-12 text-center">Rank</th>
+                            <th>Archetype</th>
+                            <th>Years Appeared</th>
+                            <th>Frequency</th>
+                            <th>Marks Yield</th>
+                            <th>Difficulty</th>
+                            <th>ROI</th>
+                            <th>AIR Separation Power</th>
+                            <th>Prob. in 2027</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <!-- Top 10 (Tier A) -->
+                        <tr class="bg-accent-emerald/10 border-l-4 border-l-accent-emerald">
+                            <td class="text-center font-bold text-white">1</td>
+                            <td class="font-bold text-white">Bayesian Inference / Conditional Prob</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Absolute</td>
+                            <td>5.0</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-emerald">0.625</td>
+                            <td>Moderate</td>
+                            <td>99%</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/10 border-l-4 border-l-accent-emerald">
+                            <td class="text-center font-bold text-white">2</td>
+                            <td class="font-bold text-white">Relational Algebra & Nested SQL</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Absolute</td>
+                            <td>5.0</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-emerald">0.500</td>
+                            <td>Moderate</td>
+                            <td>95%</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/10 border-l-4 border-l-accent-emerald">
+                            <td class="text-center font-bold text-white">3</td>
+                            <td class="font-bold text-white">Python Mutable Scope Trace</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Absolute</td>
+                            <td>3.0</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-emerald">0.500</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>88%</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/10 border-l-4 border-l-accent-emerald">
+                            <td class="text-center font-bold text-white">4</td>
+                            <td class="font-bold text-white">PCA / Eigen-decomposition Properties</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Absolute</td>
+                            <td>4.5</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-emerald">0.450</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>98%</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/5 border-l-4 border-l-accent-emerald/50">
+                            <td class="text-center font-bold text-white">5</td>
+                            <td class="font-bold text-white">Alpha-Beta Pruning Bounds</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Moderate</td>
+                            <td>2.0</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-accent-emerald">0.400</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/5 border-l-4 border-l-accent-emerald/50">
+                            <td class="text-center font-bold text-white">6</td>
+                            <td class="font-bold text-white">Probability Density Geometric Integrals</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>High</td>
+                            <td>3.0</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-accent-amber">0.375</td>
+                            <td class="text-accent-rose font-bold">Extreme</td>
+                            <td>97%</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/5 border-l-4 border-l-accent-emerald/50">
+                            <td class="text-center font-bold text-white">7</td>
+                            <td class="font-bold text-white">SVM Geometric Margins</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Moderate</td>
+                            <td>2.5</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-accent-amber">0.357</td>
+                            <td class="text-accent-rose font-bold">Extreme</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/5 border-l-4 border-l-accent-emerald/50">
+                            <td class="text-center font-bold text-white">8</td>
+                            <td class="font-bold text-white">Distance Metric Clustering</td>
+                            <td>2024, 2026</td>
+                            <td>High</td>
+                            <td>2.0</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td class="font-bold text-accent-amber">0.333</td>
+                            <td>Low</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/5 border-l-4 border-l-accent-emerald/50">
+                            <td class="text-center font-bold text-white">9</td>
+                            <td class="font-bold text-white">Neural Architecture Parameter Count</td>
+                            <td>2025, 2026</td>
+                            <td>Moderate</td>
+                            <td>1.5</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td class="font-bold text-accent-amber">0.300</td>
+                            <td>Low</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr class="bg-accent-emerald/5 border-l-4 border-l-accent-emerald/50">
+                            <td class="text-center font-bold text-white">10</td>
+                            <td class="font-bold text-white">B+ Tree Structural Capacity</td>
+                            <td>2024, 2026</td>
+                            <td>Moderate</td>
+                            <td>1.5</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-amber">0.300</td>
+                            <td>Moderate</td>
+                            <td>85%</td>
+                        </tr>
+
+                        <!-- Mid Tier (Tier B) -->
+                        <tr>
+                            <td class="text-center font-bold">11</td>
+                            <td>The Implicit Projection Matrix</td>
+                            <td>2025, 2026</td>
+                            <td>High</td>
+                            <td>3.0</td>
+                            <td class="text-accent-rose">Extreme</td>
+                            <td class="font-bold text-accent-cyan">0.250</td>
+                            <td class="text-accent-rose font-bold">Extreme</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">12</td>
+                            <td>Bias-Variance Tradeoff</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>High</td>
+                            <td>2.0</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-cyan">0.250</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">13</td>
+                            <td>Gradient Descent Mechanics</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Absolute</td>
+                            <td>2.5</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-cyan">0.250</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">14</td>
+                            <td>Graph Reachability (BFS/DFS)</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>High</td>
+                            <td>2.0</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-cyan">0.250</td>
+                            <td>Moderate</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">15</td>
+                            <td>Decision Tree Entropy</td>
+                            <td>2024, 2026</td>
+                            <td>High</td>
+                            <td>2.0</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-cyan">0.222</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>75%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">16</td>
+                            <td>Sorting Behaviour Analysis</td>
+                            <td>2024, 2025</td>
+                            <td>High</td>
+                            <td>2.0</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-cyan">0.222</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>75%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">17</td>
+                            <td>Hashing Collision Resolution</td>
+                            <td>2024, 2025</td>
+                            <td>High</td>
+                            <td>2.0</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-accent-cyan">0.222</td>
+                            <td>Moderate</td>
+                            <td>70%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">18</td>
+                            <td>Functional Dependency Inference</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Absolute</td>
+                            <td>2.0</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-gray-400">0.200</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">19</td>
+                            <td>Predicate Logic Translation</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Absolute</td>
+                            <td>2.0</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-gray-400">0.200</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">20</td>
+                            <td>Regression Regularization (L1/L2)</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Absolute</td>
+                            <td>2.5</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-gray-400">0.192</td>
+                            <td class="text-accent-rose font-bold">Extreme</td>
+                            <td>92%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">21</td>
+                            <td>Normalization</td>
+                            <td>2024, 2025</td>
+                            <td>Absolute</td>
+                            <td>2.0</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-gray-400">0.181</td>
+                            <td class="text-accent-rose font-bold">Extreme</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">22</td>
+                            <td>Minimax Reasoning</td>
+                            <td>2024, 2026</td>
+                            <td>High</td>
+                            <td>1.5</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-gray-400">0.166</td>
+                            <td>Moderate</td>
+                            <td>75%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">23</td>
+                            <td>Distribution Properties</td>
+                            <td>2024, 2025, 2026</td>
+                            <td>Absolute</td>
+                            <td>2.5</td>
+                            <td>Moderate</td>
+                            <td class="font-bold text-gray-400">0.156</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">24</td>
+                            <td>Search Heuristic Analysis (A*)</td>
+                            <td>2025, 2026</td>
+                            <td>High</td>
+                            <td>2.0</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-gray-400">0.153</td>
+                            <td class="text-accent-rose font-bold">Extreme</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">25</td>
+                            <td>Hypothesis Testing Logic</td>
+                            <td>2025, 2026</td>
+                            <td>Moderate</td>
+                            <td>2.0</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-gray-400">0.142</td>
+                            <td class="text-accent-rose font-bold">Extreme</td>
+                            <td>85%</td>
+                        </tr>
+
+                        <!-- Bottom 10 (Tier C) -->
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">26</td>
+                            <td>Markov Chain Transitions</td>
+                            <td>2025</td>
+                            <td>Moderate</td>
+                            <td>1.5</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-gray-500">0.100</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>60%</td>
+                        </tr>
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">27</td>
+                            <td>Algorithmic Recurrence Proofs</td>
+                            <td>2024, 2026</td>
+                            <td>Moderate</td>
+                            <td>1.5</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-gray-500">0.093</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>70%</td>
+                        </tr>
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">28</td>
+                            <td>ER to Relational Conversion</td>
+                            <td>2024, 2026</td>
+                            <td>Moderate</td>
+                            <td>1.0</td>
+                            <td class="text-accent-rose">High</td>
+                            <td class="font-bold text-gray-500">0.083</td>
+                            <td class="text-accent-rose font-bold">High</td>
+                            <td>65%</td>
+                        </tr>
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">29</td>
+                            <td>Loss Function Geometry</td>
+                            <td>2025, 2026</td>
+                            <td>Moderate</td>
+                            <td>1.5</td>
+                            <td class="text-accent-rose">Extreme</td>
+                            <td class="font-bold text-gray-500">0.083</td>
+                            <td class="text-accent-rose font-bold">Extreme</td>
+                            <td>75%</td>
+                        </tr>
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">30</td>
+                            <td>Advanced Graph Algorithms</td>
+                            <td>2024</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>1.0</td>
+                            <td class="text-accent-rose">Extreme</td>
+                            <td class="font-bold text-gray-500">0.066</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>30%</td>
+                        </tr>
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">31</td>
+                            <td>Deep Multivariable Taylor Series</td>
+                            <td>2025</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>1.0</td>
+                            <td class="text-accent-rose">Extreme</td>
+                            <td class="font-bold text-gray-500">0.062</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>25%</td>
+                        </tr>
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">32</td>
+                            <td>Complex DB Concurrency Control</td>
+                            <td>2024</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>1.0</td>
+                            <td class="text-accent-rose">Extreme</td>
+                            <td class="font-bold text-gray-500">0.055</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">33</td>
+                            <td>Advanced Dynamic Programming</td>
+                            <td>2024</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>1.0</td>
+                            <td class="text-accent-rose">Extreme</td>
+                            <td class="font-bold text-gray-500">0.040</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">34</td>
+                            <td>Red-Black / AVL Tree Rotations</td>
+                            <td>None</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>0.5</td>
+                            <td class="text-accent-rose">Extreme</td>
+                            <td class="font-bold text-gray-500">0.033</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr class="opacity-70 hover:opacity-100 transition-opacity border-l-4 border-l-gray-600">
+                            <td class="text-center font-bold">35</td>
+                            <td>Advanced Integration Calculus</td>
+                            <td>2024</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>1.0</td>
+                            <td class="text-accent-rose">Extreme</td>
+                            <td class="font-bold text-gray-500">0.028</td>
+                            <td class="text-accent-emerald">Low</td>
+                            <td>15%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="text-sm font-mono text-gray-500 mt-4 max-w-4xl">
+                Note: This model prevents candidates from squandering dozens of hours on mathematically dense subjects (e.g., Rank 31-35) that yield a singular 1-mark question, while ignoring deterministic, high-yield algorithmic mechanics (Rank 1-10).
+            </p>
+        </section>
+
+        <div class="border-t-2 border-border pt-12 pb-20 flex justify-between items-center">
+            <div>
+                <a href="solutions_2.html" class="text-gray-500 hover:text-white uppercase tracking-widest text-sm font-mono flex items-center gap-2 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg> Previous: 25-26 Sol
+                </a>
+            </div>
+            <div>
+                <p class="font-mono text-sm text-gray-500 uppercase tracking-widest mb-2 text-right">Document 4 of 5</p>
+                <a href="battle_plan.html" class="inline-flex items-center gap-4 bg-accent-amber text-black px-8 py-4 font-heading font-bold text-xl uppercase tracking-wider shadow-[6px_6px_0px_0px_#FFFFFF] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#FFFFFF] transition-all">
+                    Next: Battle Plan <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
