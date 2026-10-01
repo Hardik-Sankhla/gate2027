@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — GATE DA 2027</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    },
+                    colors: {
+                        base: '#0A0A0A',
+                        surface: '#171717',
+                        border: '#333333',
+                        accent: {
+                            blue: '#2563EB',
+                            cyan: '#06B6D4',
+                            rose: '#E11D48',
+                            emerald: '#10B981',
+                            amber: '#F59E0B',
+                            purple: '#8B5CF6'
+                        }
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px var(--tw-shadow-color)',
+                        'neo-hover': '2px 2px 0px 0px var(--tw-shadow-color)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0A0A0A; color: #D4D4D4; font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; border-left: 1px solid #333333; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #8B5CF6; }
+        .neo-card { background-color: #171717; border: 2px solid #333333; box-shadow: 6px 6px 0px 0px #333333; transition: all 0.2s ease-in-out; }
+        .neo-card:hover { transform: translate(2px, 2px); box-shadow: 4px 4px 0px 0px #333333; }
+        .neo-card-purple { box-shadow: 6px 6px 0px 0px #8B5CF6; border-color: #8B5CF6; }
+        .neo-card-purple:hover { box-shadow: 4px 4px 0px 0px #8B5CF6; }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent-purple selection:text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-base/90 backdrop-blur-md border-b-2 border-border">
+        <div class="max-w-[90rem] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-accent-purple border-2 border-white flex items-center justify-center font-heading font-bold text-white text-xl shadow-[4px_4px_0px_0px_#FFFFFF]">DA</div>
+                <span class="font-heading font-bold text-xl text-white tracking-tight">GATE 2027<span class="text-accent-purple">.INTEL</span></span>
+            </div>
+            <div class="hidden md:flex gap-6 font-mono text-sm font-medium">
+                <a href="/gate2027/index.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">01. Home & DNA</a>
+                <a href="/gate2027/solutions_1.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">02. Sol (24-25)</a>
+                <a href="/gate2027/solutions_2.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">03. Sol (26)</a>
+                <a href="/gate2027/strategy.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">04. Strategy</a>
+                <a href="/gate2027/battle_plan.html" class="text-gray-500 hover:text-white px-1 py-2 transition-colors">05. Battle Plan</a>
+                <a href="/gate2027/research/methodology.html" class="text-white border-b-2 border-accent-purple px-1 py-2 transition-colors">06. Research</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-[90rem] mx-auto px-6 py-12 md:py-20">
+        <header class="mb-16 border-b-4 border-accent-purple pb-8 inline-block">
+            <h1 class="font-heading text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
+                Research Center
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-purple to-accent-cyan">GATE DA 2027</span>
+            </h1>
+            <p class="font-mono text-xl text-gray-400 mt-6 border-l-4 border-accent-purple pl-4 max-w-4xl">
+                Forensic research methodology, validation reports, and source registry for GATE DA 2027 preparation.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <a href="/gate2027/research/methodology.html" class="neo-card neo-card-purple p-8 group">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-purple/20 border-2 border-accent-purple flex items-center justify-center">
+                        <svg class="w-6 h-6 text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-xl font-bold text-white">Methodology</h3>
+                        <p class="text-gray-400 text-sm">Research methodology & rules</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">Source hierarchy, classification rules, ROI formula, trend methodology, and reproducibility standards.</                <div class="flex gap-4 mt-4">
+                    <a href="/gate2027/research/methodology.html" class="text-accent-purple hover:text-white text-sm font-mono flex items-center gap-1">View HTML <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+                    <a href="/gate2027/research/methodology.md" class="text-accent-cyan hover:text-white text-sm font-mono flex items-center gap-1">Raw MD <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+                </div>
+            </a>
+
+            <a href="/gate2027/data/validation_report.json" target="_blank" class="neo-card p-8 group border-l-4 border-l-accent-blue">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-blue/20 border-2 border-accent-blue flex items-center justify-center">
+                        <svg class="w-6 h-6 text-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-xl font-bold text-white">Validation Report</h3>
+                        <p class="text-gray-400 text-sm">47-claim forensic audit</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">47 claims audited: 18 CONFIRMED, 12 PLAUSIBLE, 9 WEAKLY_SUPPORTED, 5 UNSUPPORTED, 3 FALSE.</p>
+            </a>
+
+            <a href="/gate2027/data/errors.json" target="_blank" class="neo-card p-8 group border-l-4 border-l-accent-rose">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-rose/20 border-2 border-accent-rose flex items-center justify-center">
+                        <svg class="w-6 h-6 text-accent-rose" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-xl font-bold text-white">Error Log</h3>
+                        <p class="text-gray-400 text-sm">11-entry correction log</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">Every correction with OLD value, NEW value, REASON, SOURCE, and SEVERITY (CRITICAL/MAJOR/MINOR).</p>
+            </a>
+
+            <a href="/gate2027/data/errors.json" target="_blank" class="neo-card p-8 group border-l-4 border-l-accent-emerald">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-emerald/20 border-2 border-accent-emerald flex items-center justify-center">
+                        <svg class="w-6 h-6 text-accent-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-xl font-bold text-white">Source Registry</h3>
+                        <p class="text-gray-400 text-sm">All sources catalogued</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">14 Tier 1 official sources, 1 Tier 2, 4 Tier 4 corroboration sources.</p>
+            </a>
+
+            <a href="/gate2027/research/methodology.html" class="neo-card p-8 group border-l-4 border-l-accent-cyan">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-cyan/20 border-2 border-accent-cyan flex items-center justify-center">
+                        <svg class="w-6 h-6 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-xl font-bold text-white">Methodology (HTML)</h3>
+                        <p class="text-gray-400 text-sm">Full styled methodology</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">Complete methodology with source hierarchy, classification rules, ROI formula, trend methodology, and reproducibility checklist.</            </a>
+
+            <a href="/gate2027/research/methodology.md" class="neo-card p-8 group border-l-4 border-l-accent-amber">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-accent-amber/20 border-2 border-accent-amber flex items-center justify-center">
+                        <svg class="w-6 h-6 text-accent-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-xl font-bold text-white">Methodology (Raw MD)</h3>
+                        <p class="text-gray-400 text-sm">Raw markdown source</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">Raw markdown version of the methodology document for version control and editing.</            </a>
+        </div>
+
+        <!-- Quick Links -->
+        <section class="mt-16">
+            <h2 class="font-heading text-2xl font-bold text-white mb-6 border-b border-border pb-2">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="/gate2027/index.html" class="neo-card p-4 hover:border-accent-blue transition-colors">
+                    <p class="font-mono text-xs text-gray-500 uppercase">01</p>
+                    <p class="font-heading font-bold text-white">Home & DNA</p>
+                </a>
+                <a href="/gate2027/solutions_1.html" class="neo-card p-4 hover:border-accent-blue transition-colors">
+                    <p class="font-mono text-xs text-gray-500 uppercase">02</p>
+                    <p class="font-heading font-bold text-white">Solutions 24-25</p>
+                </a>
+                <a href="/gate2027/solutions_2.html" class="neo-card p-4 hover:border-accent-blue transition-colors">
+                    <p class="font-mono text-xs text-gray-500 uppercase">03</p>
+                    <p class="font-heading font-bold text-white">Solutions 26</p>
+                </a>
+                <a href="/gate2027/strategy.html" class="neo-card p-4 hover:border-accent-blue transition-colors">
+                    <p class="font-mono text-xs text-gray-500 uppercase">04</p>
+                    <p class="font-heading font-bold text-white">Strategy</p>
+                </a>
+                <a href="/gate2027/battle_plan.html" class="neo-card p-4 hover:border-accent-blue transition-colors">
+                    <p class="font-mono text-xs text-gray-500 uppercase">05</p>
+                    <p class="font-heading font-bold text-white">Battle Plan</p>
+                </a>
+                <a href="/gate2027/research/methodology.html" class="neo-card p-4 hover:border-accent-purple transition-colors border-l-4 border-l-accent-purple">
+                    <p class="font-mono text-xs text-gray-500 uppercase">06</p>
+                    <p class="font-heading font-bold text-white">Research</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t-2 border-border mt-16 pt-8">
+        <div class="max-w-[90rem] mx-auto px-6 text-center text-gray-500 text-sm font-mono">
+            GATE DA 2027 Research Center — Forensic Intelligence Dossier
+        </div>
+    </footer>
+</body>
+</html>
