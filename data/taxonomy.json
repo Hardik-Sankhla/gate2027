@@ -10,17 +10,18 @@
   "domains": {
     "General Aptitude": {
       "code": "GA",
-      "marks_target": 15,
+      "marks_target": "15 (fixed)",
       "subtopics": [
         "Verbal Ability",
         "Quantitative Aptitude",
         "Analytical Reasoning",
         "Spatial Aptitude"
-      ]
+      ],
+      "marks_target_note": "Fixed by GATE pattern: always 15 marks / 10 questions"
     },
     "Probability & Statistics": {
       "code": "PS",
-      "marks_target": -4,
+      "marks_target": "18-22",
       "subtopics": [
         "Probability Axioms & Counting",
         "Conditional Probability & Bayes Theorem",
@@ -32,11 +33,12 @@
         "Central Limit Theorem",
         "Estimation & Hypothesis Testing (z-test, t-test, chi-square test)",
         "Confidence Intervals"
-      ]
+      ],
+      "marks_target_note": "Verified 2025=19, 2026=20; 2024 partial=16"
     },
     "Linear Algebra": {
       "code": "LA",
-      "marks_target": -5,
+      "marks_target": "8-15",
       "subtopics": [
         "Vector Spaces & Subspaces",
         "Linear Dependence/Independence",
@@ -52,11 +54,12 @@
         "Rank, Nullity, Determinant, Trace",
         "LU Decomposition",
         "Matrix Powers & Periodicity"
-      ]
+      ],
+      "marks_target_note": "Verified 2025=12, 2026=8; 2024 partial=10"
     },
     "Calculus & Optimization": {
       "code": "CO",
-      "marks_target": -3,
+      "marks_target": "2-9 (explicit; concepts embedded in ML)",
       "subtopics": [
         "Limits, Continuity, Differentiability",
         "Taylor Series",
@@ -65,11 +68,12 @@
         "Partial Derivatives (Implicit in ML)",
         "Gradient Descent (Implicit in ML)",
         "Convexity & Convex Optimization (Implicit in ML)"
-      ]
+      ],
+      "marks_target_note": "Verified 2025=9, 2026=2 (explicit); 2024 partial=8; calculus embedded in ML"
     },
     "Programming & DSA": {
       "code": "PD",
-      "marks_target": -4,
+      "marks_target": "10-14",
       "subtopics": [
         "Python Semantics (Scope, Closures, Mutable Defaults, Recursion)",
         "Basic Data Structures (Stacks, Queues, Lists, Trees, Hash Tables)",
@@ -79,11 +83,12 @@
         "Recurrence Relations & Complexity Analysis",
         "Hashing (Collision Resolution)",
         "B+ Trees"
-      ]
+      ],
+      "marks_target_note": "Verified 2025=14, 2026=14; 2024 partial=21"
     },
     "Database Management": {
       "code": "DB",
-      "marks_target": -10,
+      "marks_target": "8-18",
       "subtopics": [
         "ER Model & Relational Model",
         "Relational Algebra",
@@ -96,11 +101,12 @@
         "B+ Trees",
         "Data Warehousing (OLAP, Cuboids, Rollup/Drill-down)",
         "Data Transformation (Normalization, Discretization, Sampling, Compression)"
-      ]
+      ],
+      "marks_target_note": "Verified 2025=11, 2026=18; 2024 partial=8"
     },
     "Machine Learning": {
       "code": "ML",
-      "marks_target": -11,
+      "marks_target": "14-16",
       "subtopics": [
         "Supervised Learning: Linear/Logistic Regression",
         "Regularization (Ridge/Lasso) & Bias-Variance Tradeoff",
@@ -114,11 +120,12 @@
         "Unsupervised: k-Means/k-Medoid, Hierarchical Clustering",
         "Dimensionality Reduction (PCA, SVD)",
         "Loss Functions (MSE, MAE, Hinge, Log Loss) Geometry"
-      ]
+      ],
+      "marks_target_note": "Verified 2025=14, 2026=14; 2024 partial=11"
     },
     "Artificial Intelligence": {
       "code": "AI",
-      "marks_target": -5,
+      "marks_target": "5-10",
       "subtopics": [
         "Search: Uninformed (BFS, DFS, DLS), Informed (A*, Heuristics)",
         "Adversarial Search (Minimax, Alpha-Beta Pruning)",
@@ -127,7 +134,8 @@
         "Conditional Independence & D-separation",
         "Exact Inference (Variable Elimination)",
         "Approximate Inference (Sampling, Gibbs)"
-      ]
+      ],
+      "marks_target_note": "Verified 2025=5, 2026=8; 2024 partial=11"
     }
   },
   "question_types": {
@@ -183,5 +191,11 @@
     "2-mark MSQ": "3-5 min",
     "1-mark NAT": "2-4 min",
     "2-mark NAT": "3-6 min"
+  },
+  "validation_status": {
+    "2024": "INCOMPLETE - 17/65 questions verified",
+    "2025": "COMPLETE - 65/65 questions verified",
+    "2026": "COMPLETE - 65/65 questions verified",
+    "note": "Only 2025 and 2026 domains have verified marks ranges. 2024 marked as partial."
   }
 }

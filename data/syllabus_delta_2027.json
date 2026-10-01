@@ -26,6 +26,84 @@
           "Central limit theorem",
           "confidence interval",
           "z-test, t-test, chi-squared test"
+        ],
+        "topics_classified": [
+          {
+            "topic": "Counting (permutation and combinations)",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "probability axioms",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "Sample space, events, independent events, mutually exclusive events",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "marginal, conditional and joint probability",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "Bayes Theorem",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "conditional expectation and variance",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "mean, median, mode and standard deviation",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "correlation, and covariance",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "random variables",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "discrete random variables and probability mass functions",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "uniform, Bernoulli, binomial distribution",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "Continuous random variables and probability distribution function",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "uniform, exponential, Poisson, normal, standard normal, t distribution",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "chi-squared distributions",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "cumulative distribution function",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "Conditional PDF",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "Central limit theorem",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "confidence interval",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "z-test, t-test, chi-squared test",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          }
         ]
       },
       "2": {
@@ -42,6 +120,52 @@
           "projections",
           "LU decomposition",
           "singular value decomposition"
+        ],
+        "topics_classified": [
+          {
+            "topic": "Vector space, subspaces",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "linear dependence and independence of vectors",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "matrices",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "projection matrix, orthogonal matrix, idempotent matrix, partition matrix and their properties",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "quadratic forms",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "systems of linear equations and solutions; Gaussian elimination",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "eigenvalues and eigenvectors",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "determinant, rank, nullity",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "projections",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "LU decomposition",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "singular value decomposition",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          }
         ]
       },
       "3": {
@@ -52,6 +176,28 @@
           "Taylor series",
           "maxima and minima",
           "optimization involving a single variable"
+        ],
+        "topics_classified": [
+          {
+            "topic": "Functions of a single variable",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "limit, continuity and differentiability",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "Taylor series",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "maxima and minima",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "optimization involving a single variable",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          }
         ]
       },
       "4": {
@@ -64,6 +210,36 @@
           "divide and conquer: mergesort, quicksort",
           "introduction to graph theory",
           "basic graph algorithms: traversals and shortest path"
+        ],
+        "topics_classified": [
+          {
+            "topic": "Programming in Python",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "basic data structures: stacks, queues, linked lists, trees, hash tables",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "Search algorithms: linear search and binary search",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "basic sorting algorithms: selection sort, bubble sort and insertion sort",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "divide and conquer: mergesort, quicksort",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "introduction to graph theory",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "basic graph algorithms: traversals and shortest path",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          }
         ]
       },
       "5": {
@@ -78,6 +254,44 @@
           "data warehouse modelling: schema for multidimensional data models",
           "concept hierarchies",
           "measures: categorization and computations"
+        ],
+        "topics_classified": [
+          {
+            "topic": "ER-model",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "relational model: relational algebra, tuple calculus, SQL",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "integrity constraints, normal form",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "file organization, indexing",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "data types",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "data transformation such as normalization, discretization, sampling, compression",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "data warehouse modelling: schema for multidimensional data models",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "concept hierarchies",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "measures: categorization and computations",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          }
         ]
       },
       "6": {
@@ -100,6 +314,64 @@
             "hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage",
             "dimensionality reduction, principal component analysis"
           ]
+        },
+        "topics_classified": {
+          "Supervised Learning": [
+            {
+              "topic": "regression and classification problems",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "simple linear regression, multiple linear regression",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "ridge regression, logistic regression",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "k-nearest neighbour, naive Bayes classifier",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "linear discriminant analysis",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "support vector machine",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "decision trees",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "bias-variance trade-off",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "cross-validation methods such as leave-one-out (LOO) cross-validation, k-folds cross-validation",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "multi-layer perceptron, feed-forward neural network",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            }
+          ],
+          "Unsupervised Learning": [
+            {
+              "topic": "clustering algorithms, k-means/k-medoid",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            },
+            {
+              "topic": "dimensionality reduction, principal component analysis",
+              "source": "OFFICIAL_2027_SYLLABUS"
+            }
+          ]
         }
       },
       "7": {
@@ -110,6 +382,28 @@
           "reasoning under uncertainty topics \u2014 conditional independence representation",
           "exact inference through variable elimination",
           "approximate inference through sampling"
+        ],
+        "topics_classified": [
+          {
+            "topic": "Search: informed, uninformed, adversarial",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "logic, propositional, predicate",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "reasoning under uncertainty topics \u2014 conditional independence representation",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "exact inference through variable elimination",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          },
+          {
+            "topic": "approximate inference through sampling",
+            "source": "OFFICIAL_2027_SYLLABUS"
+          }
         ]
       }
     },
@@ -178,5 +472,35 @@
         "notes": "Official syllabus has 5 explicit topics. Historical papers cover equivalent concepts."
       }
     }
+  },
+  "derived_topics": {
+    "Machine Learning": {
+      "Ensemble Methods": {
+        "source": "DERIVED_SUPPORTING",
+        "reason": "Common in ML practice; not explicit in 2027 syllabus but relevant for bias-variance, decision trees, MLP"
+      },
+      "Loss Functions (MSE, MAE, Hinge, Log Loss)": {
+        "source": "DERIVED_SUPPORTING",
+        "reason": "Explicit in 2026 Q55 (MAE vs MSE in Ridge); implicit in regression, SVM, NN"
+      }
+    },
+    "Artificial Intelligence": {
+      "D-separation": {
+        "source": "DERIVED_SUPPORTING",
+        "reason": "Explicit in 2027 syllabus under 'conditional independence representation'"
+      },
+      "Gibbs Sampling": {
+        "source": "DERIVED_SUPPORTING",
+        "reason": "Falls under 'approximate inference through sampling' in 2027 syllabus"
+      },
+      "Variable Elimination Details": {
+        "source": "DERIVED_SUPPORTING",
+        "reason": "Explicit in 2027 syllabus as 'exact inference through variable elimination'"
+      }
+    }
+  },
+  "classification_legend": {
+    "OFFICIAL_2027_SYLLABUS": "Explicitly listed in GATE 2027 DA syllabus PDF",
+    "DERIVED_SUPPORTING": "Not explicit in syllabus but: (a) historically tested in 2024-2026, or (b) mathematically necessary to understand official topics"
   }
 }

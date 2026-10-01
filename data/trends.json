@@ -12,7 +12,7 @@
       "2025_marks": 19,
       "2026_marks": 20,
       "trajectory": "Accelerating",
-      "confidence": "HIGH",
+      "confidence": "MODERATE",
       "notes": "Consistent increase. Core pillar alongside ML."
     },
     "Machine Learning": {
@@ -20,15 +20,15 @@
       "2025_marks": 14,
       "2026_marks": 14,
       "trajectory": "Highly Accelerating (2024->2025), Stable (2025->2026)",
-      "confidence": "HIGH",
+      "confidence": "MODERATE",
       "notes": "Surged from 11 to 14, then held. Mathematical ML (not API-based)."
     },
     "Linear Algebra": {
       "2024_marks": 10,
       "2025_marks": 12,
-      "2026_marks": 8,
-      "trajectory": "Stable / High Importance (fluctuation within range)",
-      "confidence": "MODERATE",
+      "2026_marks": 9,
+      "trajectory": "Fluctuating (10->12->9)",
+      "confidence": "LOW",
       "notes": "Essential foundation. 2026 dip may be sampling noise."
     },
     "Programming & DSA": {
@@ -36,7 +36,7 @@
       "2025_marks": 14,
       "2026_marks": 14,
       "trajectory": "Decelerating (sharp drop 2024->2025, then stable)",
-      "confidence": "HIGH",
+      "confidence": "LOW",
       "notes": "Legacy CS bias removed. Now tests logic/tracing, not algorithm design."
     },
     "Database Management": {
@@ -58,17 +58,18 @@
     "Calculus & Optimization": {
       "2024_marks": 8,
       "2025_marks": 9,
-      "2026_marks": 2,
-      "trajectory": "Integrated into ML / Implicit",
-      "confidence": "HIGH",
-      "notes": "Explicit calculus questions declining. Concepts embedded in ML (gradients, convexity)."
+      "2026_marks": 1,
+      "trajectory": "Declining explicit (8->9->1); concepts embedded in ML",
+      "confidence": "LOW",
+      "notes": "Explicit calculus questions declining. Concepts embedded in ML (gradients, convexity).",
+      "note": "Explicit calculus questions dropped to 1 mark in 2026; calculus concepts (gradients, partial derivatives, convexity) embedded in ML questions"
     },
     "General Aptitude": {
       "2024_marks": 15,
       "2025_marks": 15,
       "2026_marks": 15,
       "trajectory": "Constant Baseline",
-      "confidence": "MAXIMUM",
+      "confidence": "LOW",
       "notes": "Fixed by GATE pattern: 10 questions, 15 marks always."
     }
   },
@@ -113,5 +114,13 @@
     "Probability + AI": "High (Bayesian Networks, Variable Elimination)",
     "DBMS + Algorithms": "Moderate (Relational Algebra optimization, B+ Trees)",
     "Programming + DSA": "High (Python tracing IS the DSA test)"
+  },
+  "caveats": {
+    "sample_size": "3 years x 65 questions = 195 data points. Statistical significance is LOW.",
+    "2024_incomplete": "2024 data is PARTIAL (17/65 questions). 2024 trends are SPECULATIVE.",
+    "no_prediction": "Trajectory labels describe OBSERVED 2024-2026 patterns only. Do NOT extrapolate to 2027.",
+    "syllabus_revised": "GATE 2027 syllabus revised. Historical patterns may not transfer.",
+    "roi_disclaimer": "ROI scores are preparation aids, NOT mark predictors. Probability of appearance in 2027 is NOT established.",
+    "absolute_frequency": "'Absolute frequency' = observed in 2024, 2025, AND 2026. Does NOT guarantee 2027 appearance."
   }
 }

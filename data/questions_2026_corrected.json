@@ -964,14 +964,15 @@
     "Mks": "2",
     "Type": "NAT",
     "Subject": "Linear Algebra",
-    "Topic": "Optimization",
-    "Subtopic": "Max x^TAx over unit sphere",
+    "Topic": "Eigenvalues & Eigenvectors",
+    "Subtopic": "Rayleigh Quotient / Max x^TAx over unit sphere",
     "Diff": "6",
     "Concept Tested": "A = I - (1/n)11^T, max eigenvalue = 1",
     "Hidden Concept": "Rayleigh quotient = max eigenvalue",
     "Thinking Type": "Multi Concept",
     "Category": "Multi Concept",
     "Domain": "Linear Algebra",
-    "Standardized_Subtopic": "Linear Algebra - Other"
+    "Standardized_Subtopic": "Eigenvalues & Eigenvectors",
+    "classification_note": "CHANGED: Originally classified as Calculus & Optimization -> Optimization. Reclassified to Linear Algebra because: (1) Official 2027 syllabus places quadratic forms, eigenvalues/eigenvectors under Linear Algebra; (2) Solution uses Rayleigh quotient = max eigenvalue; (3) Consistent with 2026 Q52 (centering matrix eigenvalue)."
   }
 ]

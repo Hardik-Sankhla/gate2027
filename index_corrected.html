@@ -156,6 +156,22 @@
             </p>
         </header>
 
+        <!-- AUDIT CAVEAT BANNER -->
+        <div class="neo-card neo-card-rose p-6 border-l-4 border-l-accent-rose bg-accent-rose/5 mb-10" id="audit-caveat">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <svg class="w-6 h-6 text-accent-rose flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                    <span class="font-mono text-sm text-white"><strong>AUDIT STATUS:</strong> Post-forensic re-audit (2026-10-02). Critical corrections applied. See <a href="#audit-details" class="text-accent-cyan underline">details</a>.</span>
+                </div>
+                <div class="flex gap-4 text-xs font-mono text-gray-400">
+                    <span>2024: <span class="text-accent-rose">PARTIAL (17/65)</span></span>
+                    <span>2025: <span class="text-accent-emerald">COMPLETE (65/65)</span></span>
+                    <span>2026: <span class="text-accent-emerald">COMPLETE (65/65)</span></span>
+                    <span>2027 Syllabus: <span class="text-accent-cyan">REVISED</span></span>
+                </div>
+            </div>
+        </div>
+
         <!-- PHASE 1: PAPER DNA ANALYSIS -->
         <section class="mb-24">
             <div class="flex items-center gap-4 mb-8">
@@ -462,16 +478,77 @@
             </div>
             
             <div class="neo-card neo-card-rose p-6 border-l-4 border-l-accent-rose bg-accent-rose/5">
-                <h4 class="font-heading font-bold text-xl text-accent-rose mb-4">Critical Corrections Applied</h4>
+                <h4 class="font-heading font-bold text-xl text-accent-rose mb-4">Critical Corrections Applied (Post-Audit 2026-10-02)</h4>
                 <ul class="space-y-2 font-mono text-sm text-gray-300">
-                    <li><strong>2026 ML:</strong> 25 → <span class="text-accent-emerald">14 marks</span> (verified from question database)</li>
+                    <li><strong>2026 ML:</strong> 25 → <span class="text-accent-emerald">14 marks</span> (verified from 65Q database)</li>
                     <li><strong>2026 DBMS:</strong> 8 → <span class="text-accent-emerald">18 marks</span> (major correction)</li>
                     <li><strong>2026 PD:</strong> 10 → <span class="text-accent-emerald">14 marks</span></li>
-                    <li><strong>2026 LA:</strong> 15 → <span class="text-accent-emerald">8 marks</span></li>
-                    <li><strong>2026 CO:</strong> 5 → <span class="text-accent-emerald">2 marks</span> (explicit; calculus embedded in ML)</li>
+                    <li><strong>2026 LA:</strong> 15 → <span class="text-accent-emerald">9 marks</span> (incl. Q65 reclassified)</li>
+                    <li><strong>2026 CO:</strong> 5 → <span class="text-accent-emerald">1 mark</span> (explicit; calculus embedded in ML)</li>
                     <li><strong>2025 AI:</strong> 3 → <span class="text-accent-emerald">5 marks</span></li>
                     <li><strong>2024 DB:</strong> Marked <span class="text-accent-rose">INCOMPLETE</span> (17/65 questions)</li>
-                    <li><strong>Examiner psychology claims:</strong> Qualified — "deliberate panic" → "notation induces cognitive load"</li>
+                    <li><strong>Negative placeholders FIXED:</strong> taxonomy.json & archetypes.json negative values replaced with verified ranges</li>
+                    <li><strong>Q65 reclassified:</strong> Calculus → Linear Algebra (Rayleigh quotient)</li>
+                    <li><strong>Examiner psychology claims:</strong> Qualified — no unattributed intent</li>
+                </ul>
+            </div>
+
+            <div class="neo-card neo-card-amber p-6 border-l-4 border-l-accent-amber bg-accent-amber/5 mt-6">
+                <h4 class="font-heading font-bold text-xl text-accent-amber mb-4">Remaining Caveats</h4>
+                <ul class="space-y-2 font-mono text-sm text-gray-300">
+                    <li><strong>2024 INCOMPLETE:</strong> Only 17/65 verified. 2024 trends SPECULATIVE.</li>
+                    <li><strong>3-year sample small:</strong> 195 data points. "Absolute frequency" ≠ 2027 guarantee.</li>
+                    <li><strong>Syllabus revised:</strong> GATE 2027 syllabus changed. Historical patterns may not transfer.</li>
+                    <li><strong>ROI scores = preparation aids:</strong> NOT mark predictors. 2027 probability NOT established.</li>
+                    <li><strong>Archetype frequencies need verification:</strong> Use only descriptively.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- AUDIT DETAILS SECTION -->
+        <section id="audit-details" class="mb-24">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="w-12 h-12 bg-white text-black flex items-center justify-center font-heading font-bold text-2xl border-2 border-border shadow-[4px_4px_0px_0px_#8B5CF6]">📋</span>
+                <h2 class="font-heading text-4xl font-bold text-white uppercase">Audit Details — All Changes Traceable</h2>
+            </div>
+            
+            <div class="neo-card p-8 md:p-10 mb-10">
+                <h3 class="font-heading text-2xl font-bold text-white mb-6">Complete Change Log</h3>
+                <p class="text-gray-400 mb-6">Every correction documented with OLD value, NEW value, REASON, and SOURCE. Full audit log at <code class="text-accent-cyan">audit_fixes/AUDIT_LOG.json</code></p>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm font-mono">
+                        <thead>
+                            <tr class="border-b-2 border-border">
+                                <th class="text-left p-3 font-bold text-white">File</th>
+                                <th class="text-left p-3 font-bold text-white">Issue</th>
+                                <th class="text-left p-3 font-bold text-white">Fix</th>
+                                <th class="text-left p-3 font-bold text-white">Old → New</th>
+                                <th class="text-left p-3 font-bold text-white">Source</th>
+                                <th class="text-left p-3 font-bold text-white">Severity</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="border-b border-border/50"><td class="p-3 font-bold">taxonomy.json</td><td class="p-3">Negative placeholder marks_target</td><td class="p-3">Replaced with verified ranges</td><td class="p-3">-4,-5,-3,-11 → 18-22, 8-15, 2-9, 14-16</td><td class="p-3">2025/2026 65Q verified DB</td><td class="p-3 text-accent-rose">CRITICAL</td></tr>
+                            <tr class="border-b border-border/50"><td class="p-3 font-bold">archetypes.json</td><td class="p-3">Negative placeholder total_marks</td><td class="p-3">Replaced with verified marks</td><td class="p-3">-1,-2,-3 → 2-6 range</td><td class="p-3">2025/2026 65Q verified DB</td><td class="p-3 text-accent-rose">CRITICAL</td></tr>
+                            <tr class="border-b border-border/50"><td class="p-3 font-bold">questions_2026_corrected.json</td><td class="p-3">Q65: Calculus → Optimization</td><td class="p-3">Reclassified to Linear Algebra</td><td class="p-3">Calculus/Optimization → LA/Eigen/Rayleigh</td><td class="p-3">Official 2027 syllabus + Rayleigh quotient</td><td class="p-3 text-accent-amber">MAJOR</td></tr>
+                            <tr class="border-b border-border/50"><td class="p-3 font-bold">corrected_weightage.json</td><td class="p-3">2026 LA=8, CO=2</td><td class="p-3">LA=9, CO=1 (explicit)</td><td class="p-3">8,2 → 9,1</td><td class="p-3">Q65 reclassification</td><td class="p-3 text-accent-amber">MAJOR</td></tr>
+                            <tr class="border-b border-border/50"><td class="p-3 font-bold">trends.json</td><td class="p-3">False precision, missing caveats</td><td class="p-3">Added caveats; removed predictive language</td><td class="p-3">See caveats section</td><td class="p-3">Methodology</td><td class="p-3 text-accent-amber">MAJOR</td></tr>
+                            <tr class="border-b border-border/50"><td class="p-3 font-bold">syllabus_delta_2027.json</td><td class="p-3">No official vs derived distinction</td><td class="p-3">Added OFFICIAL/DERIVED classification</td><td class="p-3">topics_classified + derived_topics</td><td class="p-3">Official 2027 syllabus PDF</td><td class="p-3 text-accent-amber">MAJOR</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="neo-card neo-card-emerald p-6 border-l-4 border-l-accent-emerald">
+                <h4 class="font-heading font-bold text-xl text-accent-emerald mb-4">What This Means for Your Preparation</h4>
+                <ul class="space-y-2 font-mono text-sm text-gray-300">
+                    <li><strong>Use the DATABASES:</strong> <code>questions_2025_corrected.json</code>, <code>questions_2026_corrected.json</code> — these are solid.</li>
+                    <li><strong>Use the CONCEPT NETWORK:</strong> <code>concept_network.json</code> — prerequisite graph is sound.</li>
+                    <li><strong>Use the SYLLABUS MAP:</strong> <code>syllabus_delta_2027.json</code> — official topics clearly marked.</li>
+                    <li><strong>CAUTION on ROI/Archetypes:</strong> Use descriptively, not as 2027 predictions.</li>
+                    <li><strong>2024 INCOMPLETE:</strong> Don't rely on 2024 trends.</li>
+                    <li><strong>NO PREDICTIONS:</strong> Nothing here guarantees 2027 marks distribution.</li>
                 </ul>
             </div>
         </section>

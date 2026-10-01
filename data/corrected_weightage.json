@@ -29,8 +29,10 @@
     "Programming & DSA": 14,
     "Database Management": 18,
     "Probability & Statistics": 20,
-    "Linear Algebra": 8,
-    "Calculus & Optimization": 2,
-    "Discrete Mathematics": 1
+    "Linear Algebra": 9,
+    "Calculus & Optimization": 1,
+    "Discrete Mathematics": 1,
+    "note_calculus": "Explicit calculus questions = 1 mark; calculus concepts (gradients, convexity) embedded in ML questions",
+    "note_la": "Includes Q65 (Rayleigh quotient) reclassified from Calculus to Linear Algebra"
   }
 }

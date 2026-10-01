@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-02",
+  "auditor": "Gate Aspirant (post-ChatGPT critique)",
+  "trigger": "ChatGPT forensic review identifying critical data quality issues",
+  "changes": [
+    {
+      "file": "data/taxonomy.json",
+      "issue": "All domain marks_target were negative placeholder values (-4, -5, -3, -11, etc.)",
+      "fix": "Replaced with verified ranges from 2025/2026 question databases (17/65 for 2024 partial, 65/65 for 2025/2026)",
+      "old_values": {
+        "Probability & Statistics": -4,
+        "Machine Learning": -11,
+        "Linear Algebra": -5,
+        "Calculus & Optimization": -3,
+        "Programming & DSA": -4,
+        "Database Management": -10,
+        "Artificial Intelligence": -5
+      },
+      "new_values": {
+        "Probability & Statistics": "18-22",
+        "Machine Learning": "14-16",
+        "Linear Algebra": "8-15",
+        "Calculus & Optimization": "2-9",
+        "Programming & DSA": "10-14",
+        "Database Management": "8-18",
+        "Artificial Intelligence": "5-10",
+        "General Aptitude": "15 (fixed)"
+      },
+      "source": "questions_2025_corrected.json, questions_2026_corrected.json (verified 65/65 each)",
+      "severity": "CRITICAL"
+    },
+    {
+      "file": "data/archetypes.json",
+      "issue": "17 archetypes had negative total_marks (-1, -2, -3) as placeholder values",
+      "fix": "Replaced with actual verified marks from 2025/2026 question databases",
+      "source": "subtopic_marks_summary.json, questions_2025/2026_corrected.json",
+      "severity": "CRITICAL"
+    },
+    {
+      "file": "data/questions_2026_corrected.json",
+      "issue": "Q65 classified as Calculus & Optimization -> Optimization (max x^TAx over unit sphere)",
+      "fix": "Reclassified to Linear Algebra -> Eigenvalues & Eigenvectors -> Rayleigh Quotient",
+      "reason": "Official 2027 syllabus places quadratic forms, eigenvalues/eigenvectors under Linear Algebra. Solution uses Rayleigh quotient = max eigenvalue. Consistent with 2026 Q52 (centering matrix eigenvalue).",
+      "old_classification": "Calculus & Optimization / Optimization",
+      "new_classification": "Linear Algebra / Eigenvalues & Eigenvectors / Rayleigh Quotient",
+      "severity": "MAJOR"
+    },
+    {
+      "file": "data/subtopic_marks_summary.json",
+      "issue": "Q65 marks counted under Calculus & Optimization - Other",
+      "fix": "Moved 1 mark from Calculus & Optimization - Other to Eigenvalues & Eigenvectors",
+      "severity": "MAJOR"
+    },
+    {
+      "file": "data/corrected_weightage.json",
+      "issue": "2026 Linear Algebra=8, Calculus=2 (before Q65 fix)",
+      "fix": "2026 Linear Algebra=9, Calculus=1 (explicit)",
+      "severity": "MAJOR"
+    },
+    {
+      "file": "data/trends.json",
+      "issue": "False precision in trajectory labels, missing caveats about sample size, 2024 incomplete, no prediction guarantee",
+      "fix": "Added explicit caveats section; updated 2026 values; changed confidence to MODERATE/LOW; removed predictive language",
+      "severity": "MAJOR"
+    },
+    {
+      "file": "data/syllabus_delta_2027.json",
+      "issue": "No distinction between official syllabus topics and derived/supporting concepts",
+      "fix": "Added topics_classified with source=OFFICIAL_2027_SYLLABUS; added derived_topics section with DERIVED_SUPPORTING classification",
+      "severity": "MAJOR"
+    }
+  ]
+}
