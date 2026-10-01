@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE DA 2027 | Forensic Intelligence Dossier</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    },
+                    colors: {
+                        base: '#0A0A0A',
+                        surface: '#171717',
+                        border: '#333333',
+                        accent: {
+                            blue: '#2563EB',
+                            cyan: '#06B6D4',
+                            rose: '#E11D48',
+                            emerald: '#10B981',
+                            amber: '#F59E0B'
+                        }
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px var(--tw-shadow-color)',
+                        'neo-hover': '2px 2px 0px 0px var(--tw-shadow-color)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- MathJax for LaTeX Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #D4D4D4;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Dark Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; border-left: 1px solid #333333; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563EB; }
+
+        /* Neo-Brutalist Components */
+        .neo-card {
+            background-color: #171717;
+            border: 2px solid #333333;
+            box-shadow: 6px 6px 0px 0px #2563EB;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .neo-card:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px 0px #2563EB;
+        }
+
+        .neo-card-rose { box-shadow: 6px 6px 0px 0px #E11D48; }
+        .neo-card-rose:hover { box-shadow: 4px 4px 0px 0px #E11D48; }
+        
+        .neo-card-emerald { box-shadow: 6px 6px 0px 0px #10B981; }
+        .neo-card-emerald:hover { box-shadow: 4px 4px 0px 0px #10B981; }
+
+        /* Tables */
+        .neo-table-container {
+            border: 2px solid #333333;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #171717;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th { 
+            background: #000000; 
+            color: #FFFFFF; 
+            font-family: 'Space Grotesk', sans-serif; 
+            text-transform: uppercase; 
+            padding: 1rem; 
+            border-bottom: 2px solid #333333;
+            border-right: 2px solid #333333;
+            text-align: left;
+        }
+        td { 
+            padding: 1rem; 
+            border-bottom: 2px solid #333333; 
+            border-right: 2px solid #333333;
+            color: #D4D4D4;
+        }
+        tr:hover td { background-color: #262626; }
+
+        /* Highlighting */
+        .hl-text { color: #FFFFFF; font-weight: 600; }
+
+        /* Text colors for navigation */
+        .text-muted { color: #6B7280; }
+    </style>
+
+    <style>
+        /* Additional styles for methodology page */
+        .methodology-content {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+        .methodology-content h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+        }
+        .methodology-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        .methodology-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        .methodology-content code {
+            font-family: 'Roboto Mono', monospace;
+        }
+        .methodology-content pre {
+            background-color: #111111;
+            border: 1px solid #333333;
+        }
+        .methodology-content ul, .methodology-content ol {
+            margin-left: 1rem;
+        }
+        .methodology-content li {
+            margin-bottom: 0.5rem;
+        }
+        .methodology-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .methodology-content th, .methodology-content td {
+            border: 1px solid #333333;
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+        .methodology-content th {
+            background: #000000;
+            color: #FFFFFF;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+        .methodology-content tr:nth-child(even) td {
+            background-color: #1a1a1a;
+        }
+        .methodology-content a {
+            color: #06B6D4;
+            text-decoration: underline;
+        }
+        .methodology-content a:hover {
+            color: #2563EB;
+        }
+        .methodology-content hr {
+            border-color: #333333;
+        }
+        .methodology-content blockquote {
+            border-left: 4px solid #F59E0B;
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #FCD34D;
+        }
+        .methodology-content strong {
+            color: #FFFFFF;
+        }
+        .methodology-content em {
+            color: #9CA3AF;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+        }
+        .checklist-item input[type="checkbox"] {
+            width: 1.25rem;
+            height: 1.25rem;
+            accent-color: #10B981;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent-purple selection:text-white">
+    <nav class="sticky top-0 z-50 bg-base/90 backdrop-blur-md border-b-2 border-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-accent-blue border-2 border-white flex items-center justify-center font-heading font-bold text-white text-xl shadow-[4px_4px_0px_0px_#FFFFFF]">DA</div>
+                <span class="font-heading font-bold text-xl text-white tracking-tight">GATE 2027<span class="text-accent-blue">.INTEL</span></span>
+            </div>
+            <div class="hidden md:flex gap-6 font-mono text-sm font-medium">
+                <a href="index.html" class="text-white border-b-2 border-accent-blue px-1 py-2 transition-colors">01. Home & DNA</a>
+                <a href="solutions_1_corrected.html" class="text-muted hover:text-white px-1 py-2 transition-colors">02. Sol (24-25)</a>
+                <a href="solutions_2_corrected.html" class="text-muted hover:text-white px-1 py-2 transition-colors">03. Sol (26)</a>
+                <a href="strategy_corrected.html" class="text-muted hover:text-white px-1 py-2 transition-colors">04. Strategy</a>
+                <a href="battle_plan_corrected.html" class="text-muted hover:text-white px-1 py-2 transition-colors">05. Battle Plan</a>
+                <a href="research/methodology.md" class="text-accent-cyan hover:text-white px-1 py-2 transition-colors">06. Research</a>
+                <a href="research_methodology.html" class="text-muted hover:text-white px-1 py-2 transition-colors">06. Research</a></div>
+        </div>
+    </nav>
+
+    <main class="methodology-content py-12 md:py-20">
+        <!-- Hero Section -->
+        <header class="mb-16 border-b-4 border-accent-purple pb-8 inline-block">
+            <div class="inline-block px-3 py-1 mb-6 border-2 border-accent-purple bg-accent-purple/10 text-accent-purple font-mono text-sm font-bold uppercase tracking-widest">
+                Research Document
+            </div>
+            <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white tracking-tighter uppercase">
+                Research Methodology <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-purple to-accent-rose">GATE DA 2027</span>
+            </h1>
+            <p class="font-mono text-xl text-gray-400 mt-6 border-l-4 border-accent-purple pl-6 max-w-4xl">
+                Source hierarchy, classification rules, ROI formula, trend methodology, and reproducibility standards for the GATE DA 2027 forensic research system.
+            </p>
+        </header>
+
+        <div class="neo-card p-8 md:p-10 mb-10 border-l-4 border-l-accent-purple">
+            <h3 class="font-heading text-2xl font-bold text-white mb-4">Document Status</h3>
+            <div class="flex flex-wrap gap-4 text-sm font-mono">
+                <span class="px-3 py-1 bg-accent-emerald/20 border border-accent-emerald text-accent-emerald rounded-full">VALIDATED</span>
+                <span class="px-3 py-1 bg-accent-purple/20 border border-accent-purple text-accent-purple rounded-full">SOURCE HIERARCHY DEFINED</span>
+                <span class="px-3 py-1 bg-accent-amber/20 border border-accent-amber text-accent-amber rounded-full">ROI FORMULA DOCUMENTED</span>
+                <span class="px-3 py-1 bg-accent-rose/20 border border-accent-rose text-accent-rose rounded-full">CAVEATS EXPLICIT</span>
+            </div>
+            <p class="text-gray-400 mt-4 text-sm">
+                This methodology governs all research in this repository. Every claim in <code>data/*.json</code> and HTML documents traces to these rules.
+            </p>
+        </div>
+
+        <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white tracking-tighter uppercase mb-8">GATE DA 2027 Research Methodology</h1>
+
+<h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase mb-6">Source Hierarchy (Strict Priority Order)</h2>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">TIER 1 — PRIMARY / AUTHORITATIVE</h3>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE 2027 IIT Madras website (gate2027.iitm.ac.in)</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE 2027 DA Syllabus PDF</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE 2027 Question Paper Pattern</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE 2024 IISc website (gate2024.iisc.ac.in) — Question Papers, Answer Keys</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE 2025 IIT Roorkee website (gate2025.iitr.ac.in) — Question Papers, Answer Keys</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE 2026 IIT Guwahati website (gate2026.iitg.ac.in) — Question Papers, Answer Keys</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE Statistical/Performance Reports</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">TIER 2 — OFFICIAL SUPPLEMENTARY</h3>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE Information Brochures</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE Mock Tests</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Official GATE Announcements/Notifications</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">TIER 3 — REPUTABLE ACADEMIC</h3>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Peer-reviewed analysis of GATE patterns</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">IIT professor publications on exam design</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">TIER 4 — SECONDARY (Corroboration Only)</h3>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Coaching institute analysis (MadeEasy, GATE Academy, etc.)</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Blogs, YouTube, Reddit, Quora</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">NEVER</strong> used to override Tier 1/2 sources</li></ul>
+
+<hr class="border-border my-8">
+
+<h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase mb-6">Classification Rules</h2>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">Domain Classification</h3>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Primary Domain</strong>: The domain requiring the deepest knowledge to solve the question</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Secondary Domain</strong>: Domain providing context or auxiliary concepts</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">NO DOUBLE-COUNTING</strong>: Marks assigned to primary domain only</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Interdisciplinary Rule</strong>: If a question genuinely spans two domains (e.g., PCA = Linear Algebra + ML), assign primary based on the <em class="text-gray-300">core mathematical operation</em> required. PCA → Linear Algebra (eigen-decomposition is the engine). Naive Bayes → Probability (Bayes theorem is the engine).</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">Question Type Classification</h3>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">MCQ</strong>: Single correct option, negative marking (1/3 for 1-mark, 2/3 for 2-mark)</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">MSQ</strong>: One or more correct options, ALL must be selected, no partial credit, no negative marking</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">NAT</strong>: Numerical answer entered via virtual keypad, no negative marking</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">Difficulty Scale (1-7)</h3>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Trivial — Direct recall / single formula application</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Easy — Standard textbook problem, no twists</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Moderate — Multi-step, standard concept, ~2-3 min</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Moderate-High — Conceptual twist, requires insight</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">High — Non-standard variant, multi-concept synthesis</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Very High — Complex multi-domain, heavy computation</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Extreme — Novel variant, notation-heavy, trap-prone, ~4-6 min</li>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">Cognitive Level (Bloom's Taxonomy Adapted)</h3>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Recall</strong>: Definition, formula, fact retrieval</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Comprehension</strong>: Explain concept, identify applicable principle</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Application</strong>: Execute standard procedure on given input</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Analysis</strong>: Decompose problem, identify hidden structure, compare alternatives</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Synthesis</strong>: Combine concepts across domains, derive novel solution</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">Solving Time Estimation</h3>
+<p class="text-lg leading-relaxed text-gray-300 mb-4">| Type | Marks | Estimated Time | |------|-------|----------------| | MCQ | 1 | 0.5 - 2 min | | MCQ | 2 | 2 - 4 min | | MSQ | 1 | 2 - 3 min | | MSQ | 2 | 3 - 5 min | | NAT | 1 | 2 - 4 min | | NAT | 2 | 3 - 6 min |</p>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">ROI Formula</h3>
+<pre class="bg-[#111111] p-4 text-sm text-gray-300 font-mono mb-4 border border-[#333333] rounded overflow-x-auto"><code>ROI = (Expected Marks Yield) / (Hours Required to Master)</code></pre>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Expected Marks Yield = Historical frequency × Average marks per appearance × Probability of appearance in 2027</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Hours Required to Master = Estimated study hours for Level 3+ mastery (timed solving)</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Does NOT predict exact future marks</strong> — used only for preparation prioritization</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">Trend Methodology</h3>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Three years (2024-2026) is a VERY SMALL SAMPLE</strong></li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Trends reported as: "Observed in 2024-2026" NOT "GATE has permanently shifted"</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Trajectory labels: STABLE, INCREASING, DECREASING, VOLATILE, INSUFFICIENT DATA</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">No extrapolation beyond observed data</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Confidence levels: MAXIMUM, HIGH, MODERATE, LOW</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">Confidence Levels for Claims</h3>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">CONFIRMED</strong>: Verified against Tier 1 source directly</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">PLAUSIBLE</strong>: Consistent with Tier 1 evidence, minor discrepancies possible</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">WEAKLY_SUPPORTED</strong>: Based on repository's own methodology, not official classification</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">UNSUPPORTED</strong>: Asserted without evidence, or evidence contradicts</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">FALSE</strong>: Directly contradicted by Tier 1 evidence</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">INSUFFICIENT_EVIDENCE</strong>: Cannot determine with available data</li></ul>
+
+<hr class="border-border my-8">
+
+<h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase mb-6">Data Pipeline</h2>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">Single Source of Truth</h3>
+<p class="text-lg leading-relaxed text-gray-300 mb-4">All structured data lives in <code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">data/</code> as JSON:</p>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">questions_2024.json</code>, <code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">questions_2025.json</code>, <code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">questions_2026.json</code> — Complete question databases</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">taxonomy.json</code> — Classification system</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">trends.json</code> — Longitudinal analysis</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">archetypes.json</code> — Question archetype catalog</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">concept_network.json</code> — Prerequisite DAG</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">trap_taxonomy.json</code> — Psychometric trap catalog</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">syllabus_delta_2027.json</code> — 2027 syllabus comparison</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">validation_report.json</code> — Audit trail</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">HTML Generation</h3>
+<p class="text-lg leading-relaxed text-gray-300 mb-4">HTML files (<code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">index.html</code>, <code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">solutions_1.html</code>, etc.) should be <strong class="text-white">generated from structured data</strong> via templates, not hand-edited. This ensures:</p>
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Consistency across documents</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Reproducibility</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Single point of truth</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Easy updates when new data arrives</li></ul>
+
+<h3 class="font-heading text-2xl font-bold text-white mb-4 border-b border-border pb-2">Error Log</h3>
+<p class="text-lg leading-relaxed text-gray-300 mb-4">Every correction recorded in <code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">errors.json</code> with:</p>
+<pre class="bg-[#111111] p-4 text-sm text-gray-300 font-mono mb-4 border border-[#333333] rounded overflow-x-auto"><code>{
+<p class="text-lg leading-relaxed text-gray-300 mb-4">"date": "2026-10-02", "file": "strategy.html", "claim": "2026 ML = 25 marks", "old_claim": "25 marks", "new_claim": "14 marks", "evidence": "questions_2026.json extraction from repository's own question database", "problem": "Internal inconsistency: table contradicted own question data", "correction": "Updated to 14 marks", "source": "Tier 1: Official 2026 question paper (verified via repository's forensic database)", "severity": "CRITICAL", "status": "FIXED" }</code></pre></p>
+
+<hr class="border-border my-8">
+
+<h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase mb-6">Incorporating Future GATE Papers</h2>
+
+<p class="text-lg leading-relaxed text-gray-300 mb-4">When GATE 2027 paper is released:</p>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Download official question paper and answer key (Tier 1)</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Parse into <code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">questions_2027.json</code> using same schema</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Run validation against 2027 syllabus</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Update <code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">trends.json</code> with 2027 data point</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Recompute ROI model</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Update archetype frequencies</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Generate new strategy recommendations</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">Archive 2027 analysis in <code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">research/2027_analysis.md</code></li>
+
+<hr class="border-border my-8">
+
+<h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase mb-6">Limitations & Uncertainty Awareness</h2>
+
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Sample Size</strong>: 3 years × 65 questions = 195 data points. Statistical significance is LOW.</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Memory-Based Questions</strong>: 2024-2026 data in repository may contain memory-based reconstructions, not official papers.</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Classification Subjectivity</strong>: Domain/cognitive classification involves judgment. Inter-rater reliability not measured.</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">Syllabus Changes</strong>: 2027 syllabus revised. Historical patterns may not transfer.</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">No Predictive Validity</strong>: ROI scores and trend labels are preparation aids, not mark predictors.</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4"><strong class="text-white">GA Fixed</strong>: General Aptitude always 15 marks / 10 questions — not informative for DA-specific strategy.</li>
+
+<hr class="border-border my-8">
+
+<h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase mb-6">Reproducibility Checklist</h2>
+
+<ul class="space-y-2 mb-6"><li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">[ ] All claims cite Tier 1 source or explicitly state methodology</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">[ ] All numerical tables reproducible from <code class="bg-surface px-1.5 py-0.5 text-accent-cyan font-mono text-sm rounded border border-border">data/*.json</code></li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">[ ] All HTML generated from templates + data</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">[ ] Error log complete with OLD/NEW/WHY/SOURCE</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">[ ] Confidence levels assigned to every strategic claim</li>
+<li class="text-gray-300 mb-2 pl-4 border-l-2 border-border ml-4">[ ] Limitations section present in every output document</li></ul>
+
+
+        <!-- Navigation to other research docs -->
+        <section class="mt-16">
+            <h2 class="font-heading text-2xl font-bold text-white mb-6 border-b border-border pb-2">Related Research Documents</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="../data/validation_report.json" class="neo-card p-6 border-l-4 border-l-accent-blue hover:border-accent-cyan transition-colors" target="_blank">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">Validation Report</h3>
+                    <p class="text-gray-400 text-sm">47-claim audit with CONFIRMED/PLAUSIBLE/WEAKLY_SUPPORTED/UNSUPPORTED/FALSE classifications</p>
+                </a>
+                <a href="../data/errors.json" class="neo-card p-6 border-l-4 border-l-accent-rose hover:border-accent-rose transition-colors" target="_blank">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">Error Log</h3>
+                    <p class="text-gray-400 text-sm">11-entry error log with OLD/NEW/WHY/SOURCE for every correction</p>
+                </a>
+                <a href="../data/source_registry.json" class="neo-card p-6 border-l-4 border-l-accent-amber hover:border-accent-amber transition-colors" target="_blank">
+                    <h3 class="font-heading font-bold text-xl text-white mb-2">Source Registry</h3>
+                    <p class="text-gray-400 text-sm">All sources catalogued by tier (14 Tier 1, 1 Tier 2, 4 Tier 4)</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="border-t-2 border-border pt-12 pb-20 flex justify-between items-center">
+            <div>
+                <p class="font-mono text-sm text-gray-500 uppercase tracking-widest">Research Document</p>
+            </div>
+
+</body>
+</html>
