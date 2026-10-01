@@ -27,7 +27,17 @@ jobs:
         run: |
           mkdir -p _site
           cp *.html _site/ 2>/dev/null || true
+          cp research_methodology.html _site/research_methodology.html 2>/dev/null || true
+          cp -r research/ _site/research/ 2>/dev/null || true
+          cp -r data/ _site/data/ 2>/dev/null || true
           cp -r .github _site/ 2>/dev/null || true
+          cp -r audit_fixes/ _site/audit_fixes/ 2>/dev/null || true
+          cp *.md _site/ 2>/dev/null || true
+          cp *.json _site/ 2>/dev/null || true
+          cp *.txt _site/ 2>/dev/null || true
+          cp *.sh _site/ 2>/dev/null || true
+          cp *.toml _site/ 2>/dev/null || true
+          cp *.py _site/ 2>/dev/null || true
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
