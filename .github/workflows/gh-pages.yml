@@ -15,33 +15,32 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Create site directory
+        run: |
+          mkdir -p _site
+          cp *.html _site/ 2>/dev/null || true
+          cp -r .github _site/ 2>/dev/null || true
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+          
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    needs: build
     steps:
-      - uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload only site files (HTML, CSS, JS, images)
-          path: .
-          ignore-glob: |
-            .git/**
-            .github/**
-            data/**
-            research/**
-            *.json
-            *.md
-            *.py
-            *.toml
-            *.sh
-            *.txt
-            .gitignore
-            .python-version
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
