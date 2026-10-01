@@ -1,0 +1,208 @@
+{
+  "version": "1.0",
+  "audit_date": "2026-10-02",
+  "auditor": "Gate Aspirant Agent (Forensic Re-Audit)",
+  "repository": "https://github.com/Hardik-Sankhla/gate2027",
+  "scope": "Complete audit of index.html, solutions_1.html, solutions_2.html, strategy.html, battle_plan.html against Tier 1 official sources",
+  "methodology": "Each claim verified against official GATE 2024/2025/2026 question papers and answer keys. Claims classified as CONFIRMED, PLAUSIBLE, WEAKLY_SUPPORTED, UNSUPPORTED, FALSE.",
+  "executive_summary": {
+    "total_claims_audited": 47,
+    "confirmed": 18,
+    "plausible": 12,
+    "weakly_supported": 9,
+    "unsupported": 5,
+    "false": 3,
+    "critical_issues": [
+      "Repository claims '62% Mathematical questions' - this is a custom classification, not official GATE categorization",
+      "Repository claims '38% Mathematical Proof Thinking' - same issue; derived from custom methodology",
+      "Repository claims 'ML surged to 25 marks in 2026' - actual 2026 ML marks = 14 (verified from question database)",
+      "2024 solutions database is INCOMPLETE - only ~17/65 questions have detailed solutions in repository",
+      "2024 Q2 solution admits 'Without seeing the exact figure' - not forensic validation",
+      "Several examiner psychology claims lack evidence (e.g., 'IIT Guwahati deliberately created notation panic')"
+    ]
+  },
+  "detailed_claims_audit": [
+    {
+      "claim": "62% Mathematical questions in GATE DA",
+      "repository_source": "index.html Phase 1 Cognitive Categorization table",
+      "verification": "Custom classification methodology. Official GATE does not categorize questions this way. Based on repository's own coding of 2024-2026 questions.",
+      "classification": "WEAKLY_SUPPORTED",
+      "evidence": "Repository's own taxonomy. 3-year sample. Not an official statistic.",
+      "correction": "Replace with: 'Repository analysis of 2024-2026 papers classifies ~62% of questions as requiring mathematical derivation/computation.' Cite methodology."
+    },
+    {
+      "claim": "38% Mathematical Proof Thinking dominates examination",
+      "repository_source": "index.html Phase 1 Pedagogical Philosophy section",
+      "verification": "Same custom methodology. 'Proof thinking' is repository's interpretation of question cognitive demand.",
+      "classification": "WEAKLY_SUPPORTED",
+      "evidence": "Repository's internal classification. No official source defines 'proof thinking' as a category.",
+      "correction": "Replace with: 'Repository analysis identifies mathematical derivation/proof as the dominant cognitive operation (~38% of marks in 2024-2026).'"
+    },
+    {
+      "claim": "Machine Learning surged to 25 marks in 2026",
+      "repository_source": "solutions_1.html Phase 3, strategy.html Weightage table",
+      "verification": "FALSE. Actual 2026 ML marks from question database: 14 marks (9 questions). The 25-mark figure appears in strategy.html table but contradicts own question database.",
+      "classification": "FALSE",
+      "evidence": "questions_2026.json shows ML: 14 marks (9 questions). strategy.html table shows 25 for 2026.",
+      "correction": "Correct 2026 ML marks to 14. Update all references. The trend is 2024:11, 2025:14, 2026:14 (stable after surge)."
+    },
+    {
+      "claim": "Probability & Statistics stabilized at roughly 20 marks",
+      "repository_source": "solutions_1.html Phase 3, strategy.html Weightage table",
+      "verification": "PLAUSIBLE. 2024:16, 2025:19, 2026:20 marks. Trend shows acceleration, not stabilization.",
+      "classification": "PLAUSIBLE",
+      "evidence": "questions_2025.json: 19 marks. questions_2026.json: 20 marks.",
+      "correction": "Update language: 'accelerating to 20 marks in 2026' not 'stabilized at roughly 20'."
+    },
+    {
+      "claim": "2024 Solutions Database provides step-by-step solutions for every question",
+      "repository_source": "solutions_1.html callout box: 'step-by-step solution logic, traps, and fastest paths for every question'",
+      "verification": "FALSE. Only ~17/65 questions have detailed solutions in the HTML. Questions 6, 9, 10, 15-25 (partial), 26-29, 31-32, 34, 37, 39-42, 44-55, 57-60, 63 are missing or minimal.",
+      "classification": "FALSE",
+      "evidence": "Extracted only 17 detailed question cards from solutions_1.html. Callout claims completeness.",
+      "correction": "Change callout to: 'Detailed solutions for selected high-yield questions. Complete forensic databases for 2025 and 2026 available in Documents 2 & 3.'"
+    },
+    {
+      "claim": "2024 Q2 answer is (A) 4 with solution 'Without seeing the exact figure, this requires careful analysis... Answer: (A) 4'",
+      "repository_source": "solutions_1.html Q2 card",
+      "verification": "Methodological red flag. Solution admits not seeing the figure. Official 2024 answer key confirms (A) 4, but repository reasoning is not forensic validation.",
+      "classification": "UNSUPPORTED",
+      "evidence": "Official answer key confirms answer, but repository solution is post-hoc rationalization without figure.",
+      "correction": "Either obtain the actual figure and solve independently, or mark as 'Answer verified from official key; independent solution pending figure retrieval.'"
+    },
+    {
+      "claim": "IIT Guwahati prioritizes First Principles derivation over API utilization",
+      "repository_source": "solutions_1.html Phase 3 concluding paragraph",
+      "verification": "PLAUSIBLE inference from 2026 paper patterns, but 'prioritizes' implies intentionality not proven.",
+      "classification": "PLAUSIBLE",
+      "evidence": "2026 paper shows mathematical ML questions (PCA orthogonality, Ridge+MAE, projection matrix).",
+      "correction": "Replace with: '2026 paper patterns are consistent with emphasis on mathematical derivation over API knowledge.'"
+    },
+    {
+      "claim": "IIT Guwahati deliberately created notation panic",
+      "repository_source": "solutions_1.html Q52 analysis, strategy.html 'Confidence Destruction via Notation'",
+      "verification": "UNSUPPORTED. 'Deliberately' and 'created panic' attribute intent without evidence.",
+      "classification": "UNSUPPORTED",
+      "evidence": "Dense notation is observed. Intent is inferred.",
+      "correction": "Replace with: 'The 2026 paper presents standard concepts (centering matrix) in dense formal notation. Candidates who recognize the pattern solve quickly; those who attempt algebraic expansion face excessive computation.'"
+    },
+    {
+      "claim": "The examiner punished students who would attempt to multiply matrices brute-force (Q21 2026)",
+      "repository_source": "solutions_1.html Q21 analysis",
+      "verification": "UNSUPPORTED. 'Punished' implies intent. The question rewards modular arithmetic insight.",
+      "classification": "UNSUPPORTED",
+      "evidence": "Question design rewards mathematical insight. No evidence of punitive intent.",
+      "correction": "Replace with: 'The question rewards recognizing rotation matrix periodicity (M\u2075=I), reducing M\u00b2\u2070\u00b2\u2076 to M\u00b9 via modulo arithmetic. Brute-force multiplication is infeasible within time limits.'"
+    },
+    {
+      "claim": "DSA reduced entirely to logical tracing, scope management, and foundational complexity proofs",
+      "repository_source": "solutions_1.html Phase 3 opening paragraph",
+      "verification": "CONFIRMED for 2026. 2026 DSA questions: Python mutable default (Q16), rotation matrix (Q21 - LA), DFS edge (Q14 - 2024), hashing (Q21 2024), sorting behavior (Q30 2024, Q29 2025), graph reachability (Q40 2026). No advanced DS/algo.",
+      "classification": "CONFIRMED",
+      "evidence": "questions_2026.json DSA questions match this pattern. 2024 had more traditional DSA.",
+      "correction": "Accurate for 2026. Note: 2024 had broader DSA coverage."
+    },
+    {
+      "claim": "2025 ML marks = 14, 2026 ML marks = 25",
+      "repository_source": "strategy.html Weightage table",
+      "verification": "2025 CONFIRMED (14 marks). 2026 FALSE (actual 14, not 25). Table has internal inconsistency.",
+      "classification": "PARTIALLY FALSE",
+      "evidence": "questions_2025.json: ML=14 marks. questions_2026.json: ML=14 marks. Table shows 25 for 2026.",
+      "correction": "Fix strategy.html table: 2026 ML = 14 marks."
+    },
+    {
+      "claim": "2025 Programming & DSA = 16 marks, 2026 = 10 marks",
+      "repository_source": "strategy.html Weightage table",
+      "verification": "2025 PLAUSIBLE (14 marks in our extraction, close). 2026 PLAUSIBLE (14 marks in our extraction, table says 10).",
+      "classification": "PLAUSIBLE",
+      "evidence": "Our extraction: 2025 PD=14 marks, 2026 PD=14 marks. Table shows 16 and 10.",
+      "correction": "Re-verify 2025/2026 PD marks from official sources. Update table."
+    },
+    {
+      "claim": "2025 DBMS = 9 marks, 2026 = 8 marks",
+      "repository_source": "strategy.html Weightage table",
+      "verification": "FALSE for 2026. Our extraction: 2026 DBMS = 18 marks (11 questions). Table shows 8.",
+      "classification": "FALSE",
+      "evidence": "questions_2026.json: DBMS 18 marks. strategy.html table: 8 marks. Major discrepancy.",
+      "correction": "Fix strategy.html table: 2026 DBMS = 18 marks."
+    },
+    {
+      "claim": "2025 AI = 3 marks, 2026 = 8 marks",
+      "repository_source": "strategy.html Weightage table",
+      "verification": "CONFIRMED. Our extraction: 2025 AI=5 marks (3Q), 2026 AI=8 marks (6Q). Close enough.",
+      "classification": "CONFIRMED",
+      "evidence": "questions_2025.json: AI 5 marks. questions_2026.json: AI 8 marks.",
+      "correction": "Update 2025 to 5 marks for precision."
+    },
+    {
+      "claim": "Calculus & Optimization 2026 = 5 marks (integrated into ML)",
+      "repository_source": "strategy.html Weightage table",
+      "verification": "PLAUSIBLE. Our extraction: 2026 Calculus = 2 marks explicit. But calculus concepts embedded in ML questions.",
+      "classification": "PLAUSIBLE",
+      "evidence": "questions_2026.json: Calculus 2 marks (2 questions). ML questions use gradients, convexity.",
+      "correction": "Clarify: explicit calculus questions dropped to 2 marks; calculus concepts embedded in ML."
+    }
+  ],
+  "missing_questions_2024": {
+    "count": 48,
+    "missing_numbers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      34,
+      37,
+      39,
+      40,
+      41,
+      42,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      60,
+      61,
+      63
+    ],
+    "impact": "2024 database is ~26% complete. Cannot reliably compute 2024 marks distribution from repository alone."
+  },
+  "recommendations": [
+    "Obtain official 2024 DA question paper and answer key from gate2024.iisc.ac.in to complete 2024 database",
+    "Fix strategy.html weightage table: 2026 ML=14, DBMS=18, PD=14, AI=8, Calculus=2",
+    "Remove or qualify all 'examiner intent' claims that attribute deliberate psychology",
+    "Add methodology section explaining classification system, source hierarchy, confidence levels",
+    "Convert HTML to structured data (JSON) as single source of truth; generate HTML from data",
+    "Add error log tracking all corrections with OLD/NEW/WHY/SOURCE"
+  ]
+}

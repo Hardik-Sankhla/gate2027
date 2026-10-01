@@ -1,0 +1,689 @@
+{
+  "version": "1.0",
+  "description": "Recurring Question Archetypes in GATE DA 2024-2026 with frequency, marks, and solution patterns",
+  "archetypes": {
+    "A1_Bayesian_Inference": {
+      "name": "Bayesian Inference / Conditional Probability",
+      "frequency": "ABSOLUTE (every year)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "NAT",
+        "MCQ"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "Moderate-High",
+      "common_trap": "Confusing P(A|B) with P(B|A); forgetting denominator in Bayes",
+      "fastest_method": "Tree diagram or direct formula; compute P(evidence) via law of total probability",
+      "prerequisites": [
+        "Probability axioms",
+        "Conditional probability",
+        "Law of total probability"
+      ],
+      "example_questions": [
+        "2024 Q58 (Bayes NAT)",
+        "2025 Q31 (3-box Bayes NAT)",
+        "2026 Q57 (medical Bayes NAT)"
+      ]
+    },
+    "A2_Relational_Algebra_SQL": {
+      "name": "Relational Algebra & Nested SQL",
+      "frequency": "ABSOLUTE (every year)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -3,
+      "question_types": [
+        "MCQ",
+        "MSQ",
+        "NAT"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "Moderate",
+      "common_trap": "Wrong operator order (\u03c3 before \u03c0); Cartesian product explosion; correlated subquery scope",
+      "fastest_method": "Inside-out evaluation; push selections down; verify schema at each step",
+      "prerequisites": [
+        "Relational algebra operators",
+        "SQL semantics",
+        "Normalization concepts"
+      ],
+      "example_questions": [
+        "2024 Q17, Q23",
+        "2025 Q33, Q46, Q56, Q57",
+        "2026 Q41, Q42, Q51, Q59, Q60, Q61"
+      ]
+    },
+    "A3_Python_Mutable_Scope": {
+      "name": "Python Mutable Default Argument / Closure / Scope Tracing",
+      "frequency": "ABSOLUTE (every year)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "MCQ",
+        "MSQ"
+      ],
+      "difficulty": "Moderate-High",
+      "air_separation": "HIGH",
+      "common_trap": "Assuming default [] resets each call; missing nonlocal; aliasing across scopes",
+      "fastest_method": "Draw memory state table; trace each call explicitly; defaults evaluated ONCE at definition",
+      "prerequisites": [
+        "Python execution model",
+        "Scope rules (LEGB)",
+        "Mutable vs immutable"
+      ],
+      "example_questions": [
+        "2024 Q16 (mutable default)",
+        "2025 Q23 (extend vs append)",
+        "2026 Q16 (mutable default), Q50 (closure)"
+      ]
+    },
+    "A4_PCA_Eigen_Properties": {
+      "name": "PCA / Eigen-decomposition Properties",
+      "frequency": "ABSOLUTE (every year)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "MCQ",
+        "MSQ",
+        "NAT"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "HIGH",
+      "common_trap": "Computing full eigen-decomposition; forgetting PCs are orthogonal; confusing variance with eigenvalue",
+      "fastest_method": "Use properties: PCs orthogonal (90\u00b0); sum of eigenvalues = trace; rank-1 matrix has one non-zero eigenvalue",
+      "prerequisites": [
+        "Eigenvalues/eigenvectors",
+        "Symmetric matrix properties",
+        "Covariance matrix",
+        "SVD"
+      ],
+      "example_questions": [
+        "2024 Q35 (det), 2024 Q11 (if present)",
+        "2025 Q28 (I+xx^T MSQ), Q60 (PCA max variance)",
+        "2026 Q11 (PC orthogonality), Q52 (centering matrix)"
+      ]
+    },
+    "A5_Alpha_Beta_Pruning": {
+      "name": "Alpha-Beta Pruning Bounds",
+      "frequency": "MODERATE (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "MCQ",
+        "MSQ"
+      ],
+      "difficulty": "High",
+      "air_separation": "HIGH",
+      "common_trap": "Losing track of MAX/MIN levels; incorrect bound propagation; asymmetrical trees",
+      "fastest_method": "Write MAX/MIN at each node; track [\u03b1,\u03b2] passed down; prune when \u03b1 \u2265 \u03b2",
+      "prerequisites": [
+        "Minimax",
+        "Game trees",
+        "Bounds propagation"
+      ],
+      "example_questions": [
+        "2025 Q43 (alpha-beta ranges)",
+        "2026 Q30 (minimax NAT)"
+      ]
+    },
+    "A6_Probability_Density_Geometry": {
+      "name": "Probability Density Geometric Integrals (2D)",
+      "frequency": "HIGH (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "NAT",
+        "MCQ"
+      ],
+      "difficulty": "High",
+      "air_separation": "EXTREME",
+      "common_trap": "Integrating over rectangular bounds instead of dependent region (e.g., 0<y<x); wrong limits",
+      "fastest_method": "DRAW the region; set up dependent limits; integrate inner variable first",
+      "prerequisites": [
+        "Joint PDF",
+        "Double integration",
+        "Region sketching",
+        "Conditional expectation"
+      ],
+      "example_questions": [
+        "2024 Q56 (joint uniform P(X\u2265Y))",
+        "2024 Q59 (E[Y|X] with 0<y<x)",
+        "2026 Q63 (correlation with Y|X~Uniform)"
+      ]
+    },
+    "A7_SVM_Geometric_Margins": {
+      "name": "SVM Geometric Margins",
+      "frequency": "MODERATE (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "MCQ",
+        "MSQ",
+        "NAT"
+      ],
+      "difficulty": "High-Extreme",
+      "air_separation": "EXTREME",
+      "common_trap": "Using Lagrangian algebra instead of geometry; wrong support vector identification",
+      "fastest_method": "PLOT points; find separating hyperplane by inspection; margin = 2/||w||; SVs = closest points",
+      "prerequisites": [
+        "SVM formulation",
+        "Geometry of hyperplanes",
+        "Support vectors",
+        "KKT conditions"
+      ],
+      "example_questions": [
+        "2024 Q17 (SVM plot)",
+        "2025 Q53 (SVM from data MSQ)"
+      ]
+    },
+    "A8_Distance_Metric_Clustering": {
+      "name": "Distance Metric Clustering (k-Means / Hierarchical)",
+      "frequency": "HIGH (2024, 2026)",
+      "years": [
+        "2024",
+        "2026"
+      ],
+      "total_marks": -2,
+      "question_types": [
+        "MCQ",
+        "MSQ",
+        "NAT"
+      ],
+      "difficulty": "Low-Moderate",
+      "air_separation": "LOW-MODERATE",
+      "common_trap": "Confusing single vs complete linkage; wrong distance metric; Voronoi boundary errors",
+      "fastest_method": "Compute pairwise distances; for hierarchical, build merge tree step by step",
+      "prerequisites": [
+        "Distance metrics",
+        "k-means algorithm",
+        "Linkage criteria",
+        "Voronoi regions"
+      ],
+      "example_questions": [
+        "2024 Q19 (k-means necessary point)",
+        "2026 Q36 (hierarchical + Manhattan)"
+      ]
+    },
+    "A9_Neural_Architecture_Params": {
+      "name": "Neural Architecture Parameter Counting",
+      "frequency": "MODERATE (2025, 2026)",
+      "years": [
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "MCQ",
+        "NAT"
+      ],
+      "difficulty": "LOW",
+      "air_separation": "LOW",
+      "common_trap": "Forgetting biases; wrong layer multiplication order",
+      "fastest_method": "Sum of (n_i \u00d7 n_{i+1}) for weights + sum of n_{i+1} for biases; if no bias, just weights",
+      "prerequisites": [
+        "MLP architecture",
+        "Matrix dimensions"
+      ],
+      "example_questions": [
+        "2025 Q43 (NN equivalence)",
+        "2026 Q56 (MLP params NAT)"
+      ]
+    },
+    "A10_BPlus_Tree_Capacity": {
+      "name": "B+ Tree Structural Capacity",
+      "frequency": "MODERATE (2024, 2026)",
+      "years": [
+        "2024",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "NAT",
+        "MCQ"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "MODERATE",
+      "common_trap": "Wrong formula for order; confusing leaf vs internal node capacity",
+      "fastest_method": "Order = floor(BlockSize / (KeySize + PointerSize)) + 1; max pointers = order",
+      "prerequisites": [
+        "B+ tree structure",
+        "Node capacity calculation"
+      ],
+      "example_questions": [
+        "2026 Q32 (max node pointers NAT)"
+      ]
+    },
+    "A11_Implicit_Projection_Matrix": {
+      "name": "The Implicit Projection / Centering Matrix (I - 1/n 11^T)",
+      "frequency": "HIGH (2025, 2026)",
+      "years": [
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "MCQ",
+        "MSQ",
+        "NAT"
+      ],
+      "difficulty": "EXTREME (notation panic)",
+      "air_separation": "EXTREME",
+      "common_trap": "Attempting algebraic expansion; confusing M\u00b2=M (projection) with M\u00b2=I (involution); trace = n-1 not n",
+      "fastest_method": "RECOGNIZE the pattern: I - (1/n)11^T = centering matrix = projection \u2192 M\u00b2=M, symmetric, eigenvalues {0,1,1...}, trace=n-1",
+      "prerequisites": [
+        "Projection matrices",
+        "Idempotent matrices",
+        "Centering in statistics",
+        "Outer product properties"
+      ],
+      "example_questions": [
+        "2025 Q28 (I+xx^T MSQ)",
+        "2026 Q52 (centering MSQ), Q65 (Rayleigh quotient NAT)"
+      ]
+    },
+    "A12_Bias_Variance_Tradeoff": {
+      "name": "Bias-Variance Tradeoff (Hyperparameter Effects)",
+      "frequency": "HIGH (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "MCQ",
+        "MSQ"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "HIGH",
+      "common_trap": "Confusing direction: larger k in k-NN increases bias; larger depth decreases bias",
+      "fastest_method": "Memorize: complexity\u2191 \u2192 variance\u2191, bias\u2193; regularization\u2191 \u2192 bias\u2191, variance\u2193",
+      "prerequisites": [
+        "Bias/variance decomposition",
+        "Model complexity",
+        "Regularization"
+      ],
+      "example_questions": [
+        "2026 Q37 (Ridge: increases bias, reduces variance)"
+      ]
+    },
+    "A13_Gradient_Descent_Mechanics": {
+      "name": "Gradient Descent Mechanics (Weight Updates)",
+      "frequency": "ABSOLUTE (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "NAT",
+        "MCQ"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "HIGH",
+      "common_trap": "Matrix dimension mismatch; forgetting chain rule through ReLU; wrong learning rate application",
+      "fastest_method": "w_new = w - \u03b7 \u00d7 \u2207L; for ReLU, derivative is 1 if input>0 else 0; track dimensions carefully",
+      "prerequisites": [
+        "Partial derivatives",
+        "Chain rule",
+        "Matrix calculus",
+        "ReLU derivative"
+      ],
+      "example_questions": [
+        "2024 Q33 (sigmoid derivative NAT)",
+        "2025 Q42 (backprop trap)",
+        "2026 Q29 (SGD NAT)"
+      ]
+    },
+    "A14_Graph_Reachability": {
+      "name": "Graph Reachability (BFS/DFS/Reverse Graph)",
+      "frequency": "HIGH (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -2,
+      "question_types": [
+        "MCQ",
+        "MSQ",
+        "NAT"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "MODERATE",
+      "common_trap": "Confusing forward vs reverse reachability; missing directed edges",
+      "fastest_method": "Trace on paper; for reverse graph, flip all edges; BFS=shortest path in unweighted",
+      "prerequisites": [
+        "BFS/DFS",
+        "Directed graphs",
+        "Reachability",
+        "Reverse graph"
+      ],
+      "example_questions": [
+        "2024 Q14 (DFS edge type)",
+        "2025 Q18 (hashing), Q44 (A*)",
+        "2026 Q40 (BFS/DFS reverse)"
+      ]
+    },
+    "A15_Decision_Tree_Entropy": {
+      "name": "Decision Tree Entropy / Information Gain",
+      "frequency": "HIGH (2024, 2026)",
+      "years": [
+        "2024",
+        "2026"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "NAT",
+        "MCQ"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "HIGH",
+      "common_trap": "Log base 2 errors; weighted entropy calculation; splitting on wrong attribute",
+      "fastest_method": "H = -\u03a3 p log\u2082 p; IG = H(parent) - \u03a3 (|child|/|parent|) H(child); compute carefully",
+      "prerequisites": [
+        "Entropy",
+        "Information gain",
+        "Logarithms"
+      ],
+      "example_questions": [
+        "2024 Q62 (IG NAT)"
+      ]
+    },
+    "A16_Sorting_Behaviour_Analysis": {
+      "name": "Sorting Behaviour Analysis (Exact Counts)",
+      "frequency": "HIGH (2024, 2025)",
+      "years": [
+        "2024",
+        "2025"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "NAT",
+        "MCQ",
+        "MSQ"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "HIGH",
+      "common_trap": "Counting comparisons vs swaps; assuming standard case instead of specific input",
+      "fastest_method": "Trace the EXACT algorithm on the GIVEN input; don't use average-case formulas",
+      "prerequisites": [
+        "Bubble, Insertion, Selection, Quick, Merge sort mechanics"
+      ],
+      "example_questions": [
+        "2024 Q30 (QuickSort swaps NAT)",
+        "2025 Q29 (Insertion sort swaps MSQ)"
+      ]
+    },
+    "A17_Hashing_Collision_Resolution": {
+      "name": "Hashing Collision Resolution (Linear/Quadratic Probing)",
+      "frequency": "HIGH (2024, 2025)",
+      "years": [
+        "2024",
+        "2025"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "MCQ",
+        "NAT"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "MODERATE",
+      "common_trap": "Wrong probe sequence; off-by-one in modular arithmetic",
+      "fastest_method": "Simulate insertions step by step; track table state",
+      "prerequisites": [
+        "Hash functions",
+        "Linear probing",
+        "Quadratic probing",
+        "Load factor"
+      ],
+      "example_questions": [
+        "2024 Q21 (open addressing)",
+        "2025 Q18 (linear probing positions)"
+      ]
+    },
+    "A18_Functional_Dependency_Inference": {
+      "name": "Functional Dependency Inference (Keys, Closure, BCNF)",
+      "frequency": "ABSOLUTE (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "MCQ",
+        "MSQ",
+        "NAT"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "HIGH",
+      "common_trap": "Missing extraneous attributes; wrong closure computation; confusing candidate key with superkey",
+      "fastest_method": "Compute attribute closures systematically; check BCNF: every determinant must be superkey",
+      "prerequisites": [
+        "Armstrong axioms",
+        "Attribute closure",
+        "Candidate keys",
+        "Normal forms"
+      ],
+      "example_questions": [
+        "2024 Q16 (FD)",
+        "2025 Q16 (dep preservation), Q57 (keys+BCNF)",
+        "2026 Q17 (keys)"
+      ]
+    },
+    "A19_Predicate_Logic_Translation": {
+      "name": "Predicate Logic Translation (Natural Language \u2192 FOL)",
+      "frequency": "ABSOLUTE (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "MCQ",
+        "MSQ"
+      ],
+      "difficulty": "High",
+      "air_separation": "HIGH",
+      "common_trap": "Using \u2227 instead of \u2192 in universal quantification (\u2200x King(x) \u2227 Person(x) is WRONG); scope errors",
+      "fastest_method": "Template: 'All A are B' \u2192 \u2200x (A(x) \u2192 B(x)); 'Some A are B' \u2192 \u2203x (A(x) \u2227 B(x))",
+      "prerequisites": [
+        "Quantifiers",
+        "Implication vs conjunction",
+        "Negation normal form"
+      ],
+      "example_questions": [
+        "2025 Q15 (implication)",
+        "2025 Q26 (BN inference)",
+        "2026 Q14 (king/person), Q38 (creative+disciplined)"
+      ]
+    },
+    "A20_Regression_Regularization": {
+      "name": "Regression Regularization (L1/L2 Geometry)",
+      "frequency": "ABSOLUTE (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "MCQ",
+        "MSQ",
+        "NAT"
+      ],
+      "difficulty": "High",
+      "air_separation": "EXTREME",
+      "common_trap": "Ridge drives weights to ZERO (FALSE - that's Lasso); MAE vs MSE in Ridge loss (2026 Q55 DEADLY TRAP)",
+      "fastest_method": "L1 (Lasso) \u2192 sparsity (exact zeros); L2 (Ridge) \u2192 shrinkage (small but non-zero); READ the loss function GIVEN",
+      "prerequisites": [
+        "Ridge/Lasso closed forms",
+        "Geometry of L1 vs L2 balls",
+        "Loss function definitions"
+      ],
+      "example_questions": [
+        "2024 Q12 (Ridge/Lasso)",
+        "2026 Q55 (Ridge with MAE - DEADLY)"
+      ]
+    },
+    "A21_Normalization": {
+      "name": "Normalization (1NF to BCNF)",
+      "frequency": "ABSOLUTE (2024, 2025)",
+      "years": [
+        "2024",
+        "2025"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "MCQ",
+        "MSQ"
+      ],
+      "difficulty": "High",
+      "air_separation": "EXTREME",
+      "common_trap": "Confusing 2NF/3NF/BCNF boundaries; partial vs transitive dependency",
+      "fastest_method": "Find all candidate keys; check each FD: if LHS not superkey \u2192 violation; highest normal form = lowest satisfied",
+      "prerequisites": [
+        "Functional dependencies",
+        "Candidate keys",
+        "Normal form definitions"
+      ],
+      "example_questions": [
+        "2025 Q16 (dep preservation), Q57 (BCNF)"
+      ]
+    },
+    "A22_Minimax_Reasoning": {
+      "name": "Minimax Reasoning (Game Trees)",
+      "frequency": "HIGH (2024, 2026)",
+      "years": [
+        "2024",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "MCQ",
+        "NAT"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "MODERATE",
+      "common_trap": "Wrong MAX/MIN assignment at root; losing track of which player moves",
+      "fastest_method": "Label every node MAX/MIN; compute bottom-up; write values at each node",
+      "prerequisites": [
+        "Game trees",
+        "Minimax",
+        "Zero-sum games"
+      ],
+      "example_questions": [
+        "2026 Q30 (minimax NAT)"
+      ]
+    },
+    "A23_Distribution_Properties": {
+      "name": "Distribution Properties (Poisson, Exponential, Normal)",
+      "frequency": "ABSOLUTE (2024, 2025, 2026)",
+      "years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "total_marks": -1,
+      "question_types": [
+        "MCQ",
+        "NAT"
+      ],
+      "difficulty": "Moderate",
+      "air_separation": "LOW",
+      "common_trap": "Forgetting mean=variance for Poisson; memoryless property only for Exponential/Geometric",
+      "fastest_method": "Memorize: Poisson(\u03bb): \u03bc=\u03c3\u00b2=\u03bb; Exponential: memoryless P(X>s+t|X>s)=P(X>t); Normal: linear transform",
+      "prerequisites": [
+        "Standard distributions",
+        "Moment generating functions",
+        "Memoryless property"
+      ],
+      "example_questions": [
+        "2024 Q11 (Poisson/Normal)",
+        "2025 Q21 (Exponential \u03bb)",
+        "2026 Q34 (Exponential memoryless)"
+      ]
+    },
+    "A24_Search_Heuristic_Analysis": {
+      "name": "Search Heuristic Analysis (A* Admissibility/Consistency)",
+      "frequency": "HIGH (2025, 2026)",
+      "years": [
+        "2025",
+        "2026"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "MCQ",
+        "MSQ"
+      ],
+      "difficulty": "High",
+      "air_separation": "EXTREME",
+      "common_trap": "Confusing admissible (h \u2264 h*) with consistent (triangle inequality); expansion order errors",
+      "fastest_method": "Admissible: never overestimates; Consistent: h(n) \u2264 c(n,n') + h(n'); f(n)=g(n)+h(n) for expansion order",
+      "prerequisites": [
+        "A* algorithm",
+        "Heuristic properties",
+        "State space search"
+      ],
+      "example_questions": [
+        "2025 Q44 (A* expansion)",
+        "2026 Q13 (uninformed search)"
+      ]
+    },
+    "A25_Hypothesis_Testing_Logic": {
+      "name": "Hypothesis Testing Logic (Type I/II, p-value, CI)",
+      "frequency": "MODERATE (2025, 2026)",
+      "years": [
+        "2025",
+        "2026"
+      ],
+      "total_marks": 2,
+      "question_types": [
+        "MSQ",
+        "MCQ"
+      ],
+      "difficulty": "High",
+      "air_separation": "EXTREME",
+      "common_trap": "Confusing Type I (\u03b1) with Type II (\u03b2); p-value \u2260 P(H0 true); CI interpretation",
+      "fastest_method": "Type I = reject true H0; Type II = accept false H0; p-value = P(data | H0); 95% CI: if repeat, 95% contain true param",
+      "prerequisites": [
+        "Hypothesis testing framework",
+        "Error types",
+        "p-value definition",
+        "Confidence intervals"
+      ],
+      "example_questions": [
+        "2026 Q45 (Poisson CLT limit)"
+      ]
+    }
+  }
+}

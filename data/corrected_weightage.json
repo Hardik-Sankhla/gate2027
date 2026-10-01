@@ -1,0 +1,36 @@
+{
+  "2024": {
+    "note": "PARTIAL - Only 17/65 questions verified in repository. Numbers below from repository claims (unverified).",
+    "Probability & Statistics": 16,
+    "Machine Learning": 11,
+    "Linear Algebra": 10,
+    "Programming & DSA": 21,
+    "Database Management": 8,
+    "Artificial Intelligence": 11,
+    "Calculus & Optimization": 8,
+    "General Aptitude": 15,
+    "Discrete Mathematics": 0
+  },
+  "2025": {
+    "General Aptitude": 15,
+    "Probability & Statistics": 19,
+    "Linear Algebra": 12,
+    "Calculus & Optimization": 9,
+    "Discrete Mathematics": 1,
+    "Database Management": 11,
+    "Programming & DSA": 14,
+    "Machine Learning": 14,
+    "Artificial Intelligence": 5
+  },
+  "2026": {
+    "General Aptitude": 15,
+    "Machine Learning": 14,
+    "Artificial Intelligence": 8,
+    "Programming & DSA": 14,
+    "Database Management": 18,
+    "Probability & Statistics": 20,
+    "Linear Algebra": 8,
+    "Calculus & Optimization": 2,
+    "Discrete Mathematics": 1
+  }
+}

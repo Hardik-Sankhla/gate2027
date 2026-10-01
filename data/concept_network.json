@@ -1,0 +1,499 @@
+{
+  "version": "1.0",
+  "description": "GATE DA Concept Dependency Graph - Directed Acyclic Graph (DAG) of prerequisite relationships",
+  "nodes": {
+    "Probability_Axioms": {
+      "domain": "Probability & Statistics",
+      "level": "FOUNDATION",
+      "centrality": "MAXIMUM"
+    },
+    "Conditional_Probability": {
+      "domain": "Probability & Statistics",
+      "level": "CORE",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "Probability_Axioms"
+      ]
+    },
+    "Bayes_Theorem": {
+      "domain": "Probability & Statistics",
+      "level": "CORE",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "Conditional_Probability"
+      ]
+    },
+    "Random_Variables_Discrete": {
+      "domain": "Probability & Statistics",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Probability_Axioms"
+      ]
+    },
+    "Random_Variables_Continuous": {
+      "domain": "Probability & Statistics",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Probability_Axioms"
+      ]
+    },
+    "Joint_Distributions": {
+      "domain": "Probability & Statistics",
+      "level": "ADVANCED",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "Random_Variables_Discrete",
+        "Random_Variables_Continuous"
+      ]
+    },
+    "Conditional_Expectation": {
+      "domain": "Probability & Statistics",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Joint_Distributions"
+      ]
+    },
+    "Law_Total_Expectation": {
+      "domain": "Probability & Statistics",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Conditional_Expectation"
+      ]
+    },
+    "Estimation_Hypothesis_Testing": {
+      "domain": "Probability & Statistics",
+      "level": "APPLIED",
+      "centrality": "MODERATE",
+      "prereqs": [
+        "Random_Variables_Continuous",
+        "Central_Limit_Theorem"
+      ]
+    },
+    "Vector_Spaces": {
+      "domain": "Linear Algebra",
+      "level": "FOUNDATION",
+      "centrality": "HIGH"
+    },
+    "Eigenvalues_Eigenvectors": {
+      "domain": "Linear Algebra",
+      "level": "CORE",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "Vector_Spaces",
+        "Matrices"
+      ]
+    },
+    "SVD_PCA": {
+      "domain": "Linear Algebra",
+      "level": "ADVANCED",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "Eigenvalues_Eigenvectors"
+      ]
+    },
+    "Projection_Matrices": {
+      "domain": "Linear Algebra",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Eigenvalues_Eigenvectors",
+        "Orthogonality"
+      ]
+    },
+    "Orthogonal_Matrices": {
+      "domain": "Linear Algebra",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Vector_Spaces"
+      ]
+    },
+    "Idempotent_Matrices": {
+      "domain": "Linear Algebra",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Eigenvalues_Eigenvectors"
+      ]
+    },
+    "Quadratic_Forms": {
+      "domain": "Linear Algebra",
+      "level": "ADVANCED",
+      "centrality": "MODERATE",
+      "prereqs": [
+        "Eigenvalues_Eigenvectors"
+      ]
+    },
+    "Matrix_Powers": {
+      "domain": "Linear Algebra",
+      "level": "APPLIED",
+      "centrality": "MODERATE",
+      "prereqs": [
+        "Eigenvalues_Eigenvectors"
+      ]
+    },
+    "Single_Variable_Calculus": {
+      "domain": "Calculus & Optimization",
+      "level": "FOUNDATION",
+      "centrality": "MODERATE"
+    },
+    "Partial_Derivatives": {
+      "domain": "Calculus & Optimization",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Single_Variable_Calculus"
+      ]
+    },
+    "Gradient_Descent": {
+      "domain": "Calculus & Optimization",
+      "level": "APPLIED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Partial_Derivatives"
+      ]
+    },
+    "Convex_Optimization": {
+      "domain": "Calculus & Optimization",
+      "level": "ADVANCED",
+      "centrality": "MODERATE",
+      "prereqs": [
+        "Gradient_Descent",
+        "Quadratic_Forms"
+      ]
+    },
+    "Python_Semantics": {
+      "domain": "Programming & DSA",
+      "level": "FOUNDATION",
+      "centrality": "HIGH"
+    },
+    "Recursion_Tracing": {
+      "domain": "Programming & DSA",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Python_Semantics"
+      ]
+    },
+    "Data_Structures_Basics": {
+      "domain": "Programming & DSA",
+      "level": "FOUNDATION",
+      "centrality": "MODERATE"
+    },
+    "Graph_Traversals": {
+      "domain": "Programming & DSA",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Data_Structures_Basics"
+      ]
+    },
+    "Search_Algorithms": {
+      "domain": "Programming & DSA",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Data_Structures_Basics"
+      ]
+    },
+    "Sorting_Algorithms": {
+      "domain": "Programming & DSA",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Data_Structures_Basics"
+      ]
+    },
+    "Recurrence_Relations": {
+      "domain": "Programming & DSA",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Sorting_Algorithms"
+      ]
+    },
+    "Relational_Algebra": {
+      "domain": "Database Management",
+      "level": "CORE",
+      "centrality": "HIGH"
+    },
+    "SQL_Advanced": {
+      "domain": "Database Management",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Relational_Algebra"
+      ]
+    },
+    "Normalization": {
+      "domain": "Database Management",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Functional_Dependencies"
+      ]
+    },
+    "Functional_Dependencies": {
+      "domain": "Database Management",
+      "level": "FOUNDATION",
+      "centrality": "HIGH"
+    },
+    "BPlus_Trees": {
+      "domain": "Database Management",
+      "level": "APPLIED",
+      "centrality": "MODERATE",
+      "prereqs": [
+        "Data_Structures_Basics"
+      ]
+    },
+    "Data_Warehousing": {
+      "domain": "Database Management",
+      "level": "APPLIED",
+      "centrality": "MODERATE"
+    },
+    "Linear_Regression": {
+      "domain": "Machine Learning",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Least_Squares",
+        "Gradient_Descent"
+      ]
+    },
+    "Logistic_Regression": {
+      "domain": "Machine Learning",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Linear_Regression",
+        "Probability"
+      ]
+    },
+    "Ridge_Lasso": {
+      "domain": "Machine Learning",
+      "level": "CORE",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "Linear_Regression",
+        "Optimization"
+      ]
+    },
+    "SVM_Geometry": {
+      "domain": "Machine Learning",
+      "level": "ADVANCED",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "Quadratic_Forms",
+        "Convex_Optimization"
+      ]
+    },
+    "Naive_Bayes": {
+      "domain": "Machine Learning",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Bayes_Theorem",
+        "Conditional_Independence"
+      ]
+    },
+    "Decision_Trees": {
+      "domain": "Machine Learning",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Entropy_Information_Gain"
+      ]
+    },
+    "Neural_Networks": {
+      "domain": "Machine Learning",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Backpropagation",
+        "Gradient_Descent",
+        "Matrix_Calculus"
+      ]
+    },
+    "PCA": {
+      "domain": "Machine Learning",
+      "level": "ADVANCED",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "SVD_PCA",
+        "Projection_Matrices"
+      ]
+    },
+    "Clustering": {
+      "domain": "Machine Learning",
+      "level": "CORE",
+      "centrality": "MODERATE",
+      "prereqs": [
+        "Distance_Metrics"
+      ]
+    },
+    "Bias_Variance": {
+      "domain": "Machine Learning",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Probability",
+        "Expectation"
+      ]
+    },
+    "Propositional_Logic": {
+      "domain": "Artificial Intelligence",
+      "level": "FOUNDATION",
+      "centrality": "MODERATE"
+    },
+    "Predicate_Logic": {
+      "domain": "Artificial Intelligence",
+      "level": "CORE",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Propositional_Logic"
+      ]
+    },
+    "Search_Uninformed": {
+      "domain": "Artificial Intelligence",
+      "level": "CORE",
+      "centrality": "MODERATE",
+      "prereqs": [
+        "Graph_Traversals"
+      ]
+    },
+    "Search_Informed_AStar": {
+      "domain": "Artificial Intelligence",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Search_Uninformed",
+        "Heuristics"
+      ]
+    },
+    "Adversarial_Minimax": {
+      "domain": "Artificial Intelligence",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Search_Uninformed"
+      ]
+    },
+    "Alpha_Beta_Pruning": {
+      "domain": "Artificial Intelligence",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Adversarial_Minimax"
+      ]
+    },
+    "Bayesian_Networks": {
+      "domain": "Artificial Intelligence",
+      "level": "ADVANCED",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "Bayes_Theorem",
+        "Conditional_Independence",
+        "Joint_Distributions"
+      ]
+    },
+    "Variable_Elimination": {
+      "domain": "Artificial Intelligence",
+      "level": "ADVANCED",
+      "centrality": "HIGH",
+      "prereqs": [
+        "Bayesian_Networks"
+      ]
+    },
+    "D_Separation": {
+      "domain": "Artificial Intelligence",
+      "level": "ADVANCED",
+      "centrality": "MAXIMUM",
+      "prereqs": [
+        "Bayesian_Networks"
+      ]
+    }
+  },
+  "bridge_concepts": [
+    {
+      "concept": "Eigenvalues/Eigenvectors/SVD",
+      "bridges": [
+        "Linear Algebra",
+        "Machine Learning (PCA)",
+        "Optimization"
+      ],
+      "priority": "CRITICAL",
+      "exam_evidence": "Every year 2024-2026. Q11 2026 (PCA orthogonality), Q28 2025 (I+xx^T), Q61 2024 (uu^T SVD)"
+    },
+    {
+      "concept": "Conditional Probability / Bayes",
+      "bridges": [
+        "Probability",
+        "Machine Learning (Naive Bayes)",
+        "AI (Bayesian Networks)"
+      ],
+      "priority": "CRITICAL",
+      "exam_evidence": "Every year. 2024 Q58 (Bayes NAT), 2025 Q31 (Bayes NAT), 2026 Q57 (Bayes NAT)"
+    },
+    {
+      "concept": "Projection Matrices / Orthogonal Projection",
+      "bridges": [
+        "Linear Algebra",
+        "ML (PCA, Regression)",
+        "Statistics (Centering)"
+      ],
+      "priority": "CRITICAL",
+      "exam_evidence": "2024 Q35 (det), 2025 Q28 (I+xx^T), 2026 Q52 (centering), Q65 (Rayleigh)"
+    },
+    {
+      "concept": "Gradient Descent / Optimization",
+      "bridges": [
+        "Calculus",
+        "ML (Regression, NN)",
+        "SVM"
+      ],
+      "priority": "HIGH",
+      "exam_evidence": "2024 Q33 (sigmoid deriv), 2025 Q42 (backprop), 2026 Q29 (SGD)"
+    },
+    {
+      "concept": "Joint Distributions / Conditional Expectation",
+      "bridges": [
+        "Probability",
+        "ML (Bayesian)",
+        "AI (BN)"
+      ],
+      "priority": "HIGH",
+      "exam_evidence": "2024 Q56 (joint uniform), 2024 Q59 (cond expectation), 2026 Q64 (correlation)"
+    },
+    {
+      "concept": "Relational Algebra / SQL",
+      "bridges": [
+        "DBMS",
+        "Algorithms (optimization)"
+      ],
+      "priority": "HIGH",
+      "exam_evidence": "Every year. 2024 Q17, Q23; 2025 Q33, Q46, Q56, Q57; 2026 Q41, Q42, Q51, Q59, Q60, Q61"
+    },
+    {
+      "concept": "Python Scope / Closure / Mutable Defaults",
+      "bridges": [
+        "Programming",
+        "DSA (recursion tracing)"
+      ],
+      "priority": "HIGH",
+      "exam_evidence": "Every year. 2024 Q16 (mutable default), 2025 Q23 (extend vs append), 2026 Q16 (mutable default), Q50 (closure)"
+    }
+  ],
+  "study_order_recommendation": [
+    "1. Linear Algebra (Vector Spaces \u2192 Eigen \u2192 SVD \u2192 Projections)",
+    "2. Probability (Axioms \u2192 Conditional \u2192 Bayes \u2192 Joint Distributions \u2192 Expectation)",
+    "3. Calculus (Single Variable \u2192 Partial Derivatives \u2192 Optimization)",
+    "4. Programming & DSA (Python Semantics \u2192 Recursion \u2192 Data Structures \u2192 Graphs)",
+    "5. Database Management (Relational Algebra \u2192 SQL \u2192 Normalization \u2192 Warehousing)",
+    "6. Machine Learning (Regression \u2192 Regularization \u2192 SVM \u2192 Trees \u2192 NN \u2192 Clustering \u2192 PCA)",
+    "7. AI (Logic \u2192 Search \u2192 Adversarial \u2192 Bayesian Networks)"
+  ]
+}

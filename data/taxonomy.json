@@ -1,0 +1,187 @@
+{
+  "version": "1.0",
+  "description": "GATE DA 2027 Standardized Question Classification Taxonomy",
+  "source_hierarchy": {
+    "TIER_1": "Official GATE websites, question papers, answer keys",
+    "TIER_2": "Official GATE information brochures, mock tests",
+    "TIER_3": "Reputable academic/educational analysis",
+    "TIER_4": "Coaching websites, blogs, forums (used only for corroboration)"
+  },
+  "domains": {
+    "General Aptitude": {
+      "code": "GA",
+      "marks_target": 15,
+      "subtopics": [
+        "Verbal Ability",
+        "Quantitative Aptitude",
+        "Analytical Reasoning",
+        "Spatial Aptitude"
+      ]
+    },
+    "Probability & Statistics": {
+      "code": "PS",
+      "marks_target": -4,
+      "subtopics": [
+        "Probability Axioms & Counting",
+        "Conditional Probability & Bayes Theorem",
+        "Random Variables & Distributions (Discrete: Bernoulli, Binomial, Poisson, Geometric)",
+        "Random Variables & Distributions (Continuous: Uniform, Exponential, Normal, t, Chi-square)",
+        "Expectation, Variance, Covariance, Correlation",
+        "Joint Distributions & Conditional Expectation",
+        "Law of Total Expectation/Variance",
+        "Central Limit Theorem",
+        "Estimation & Hypothesis Testing (z-test, t-test, chi-square test)",
+        "Confidence Intervals"
+      ]
+    },
+    "Linear Algebra": {
+      "code": "LA",
+      "marks_target": -5,
+      "subtopics": [
+        "Vector Spaces & Subspaces",
+        "Linear Dependence/Independence",
+        "Matrices & Matrix Operations",
+        "Systems of Linear Equations",
+        "Eigenvalues & Eigenvectors",
+        "Diagonalization",
+        "SVD & PCA",
+        "Projection Matrices & Orthogonal Projections",
+        "Idempotent Matrices",
+        "Orthogonal Matrices",
+        "Quadratic Forms",
+        "Rank, Nullity, Determinant, Trace",
+        "LU Decomposition",
+        "Matrix Powers & Periodicity"
+      ]
+    },
+    "Calculus & Optimization": {
+      "code": "CO",
+      "marks_target": -3,
+      "subtopics": [
+        "Limits, Continuity, Differentiability",
+        "Taylor Series",
+        "Maxima/Minima (Single Variable)",
+        "Optimization (Single Variable)",
+        "Partial Derivatives (Implicit in ML)",
+        "Gradient Descent (Implicit in ML)",
+        "Convexity & Convex Optimization (Implicit in ML)"
+      ]
+    },
+    "Programming & DSA": {
+      "code": "PD",
+      "marks_target": -4,
+      "subtopics": [
+        "Python Semantics (Scope, Closures, Mutable Defaults, Recursion)",
+        "Basic Data Structures (Stacks, Queues, Lists, Trees, Hash Tables)",
+        "Search Algorithms (Linear, Binary)",
+        "Sorting Algorithms (Selection, Bubble, Insertion, Merge, Quick)",
+        "Graph Theory Basics (BFS, DFS, Shortest Path)",
+        "Recurrence Relations & Complexity Analysis",
+        "Hashing (Collision Resolution)",
+        "B+ Trees"
+      ]
+    },
+    "Database Management": {
+      "code": "DB",
+      "marks_target": -10,
+      "subtopics": [
+        "ER Model & Relational Model",
+        "Relational Algebra",
+        "Tuple Calculus",
+        "SQL (Nested Queries, Aggregates, Window Functions)",
+        "Integrity Constraints",
+        "Normalization (1NF-BCNF)",
+        "Functional Dependencies & Candidate Keys",
+        "File Organization & Indexing",
+        "B+ Trees",
+        "Data Warehousing (OLAP, Cuboids, Rollup/Drill-down)",
+        "Data Transformation (Normalization, Discretization, Sampling, Compression)"
+      ]
+    },
+    "Machine Learning": {
+      "code": "ML",
+      "marks_target": -11,
+      "subtopics": [
+        "Supervised Learning: Linear/Logistic Regression",
+        "Regularization (Ridge/Lasso) & Bias-Variance Tradeoff",
+        "SVM (Hard Margin, Geometric Margins, Kernels)",
+        "Naive Bayes & LDA",
+        "k-NN",
+        "Decision Trees (Entropy, Information Gain, Gini)",
+        "Ensemble Methods",
+        "Cross-Validation (LOO, k-fold)",
+        "Neural Networks (MLP, Forward/Backprop, ReLU, Parameter Counting)",
+        "Unsupervised: k-Means/k-Medoid, Hierarchical Clustering",
+        "Dimensionality Reduction (PCA, SVD)",
+        "Loss Functions (MSE, MAE, Hinge, Log Loss) Geometry"
+      ]
+    },
+    "Artificial Intelligence": {
+      "code": "AI",
+      "marks_target": -5,
+      "subtopics": [
+        "Search: Uninformed (BFS, DFS, DLS), Informed (A*, Heuristics)",
+        "Adversarial Search (Minimax, Alpha-Beta Pruning)",
+        "Logic: Propositional & Predicate (FOL) Logic",
+        "Reasoning Under Uncertainty: Bayesian Networks",
+        "Conditional Independence & D-separation",
+        "Exact Inference (Variable Elimination)",
+        "Approximate Inference (Sampling, Gibbs)"
+      ]
+    }
+  },
+  "question_types": {
+    "MCQ": {
+      "marks": [
+        1,
+        2
+      ],
+      "negative_marking": true,
+      "penalty": {
+        "1": "1/3",
+        "2": "2/3"
+      }
+    },
+    "MSQ": {
+      "marks": [
+        1,
+        2
+      ],
+      "negative_marking": false,
+      "penalty": "None (all-or-nothing)"
+    },
+    "NAT": {
+      "marks": [
+        1,
+        2
+      ],
+      "negative_marking": false,
+      "penalty": "None"
+    }
+  },
+  "cognitive_levels": [
+    "Recall",
+    "Comprehension",
+    "Application",
+    "Analysis",
+    "Synthesis"
+  ],
+  "difficulty_scale": {
+    "1": "Trivial (direct recall/formula)",
+    "2": "Easy (standard application)",
+    "3": "Moderate (multi-step, standard concept)",
+    "4": "Moderate-High (conceptual twist)",
+    "5": "High (non-standard, requires insight)",
+    "6": "Very High (complex multi-concept)",
+    "7": "Extreme (novel variant, notation-heavy, trap-prone)"
+  },
+  "interdisciplinary_classification_rule": "Primary domain = domain requiring deepest knowledge. Secondary domain = domain providing context or secondary concept. Marks assigned to primary only (no double-counting).",
+  "solving_time_estimation": {
+    "1-mark MCQ": "0.5-2 min",
+    "2-mark MCQ": "2-4 min",
+    "1-mark MSQ": "2-3 min",
+    "2-mark MSQ": "3-5 min",
+    "1-mark NAT": "2-4 min",
+    "2-mark NAT": "3-6 min"
+  }
+}

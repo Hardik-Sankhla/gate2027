@@ -1,0 +1,113 @@
+{
+  "version": "1.0",
+  "description": "Systematic Taxonomy of Psychometric Traps in GATE DA",
+  "trap_categories": {
+    "formula_substitution_trap": {
+      "description": "Blindly applying a memorized formula without checking if the question's conditions match",
+      "examples": [
+        "Using MSE formula when question explicitly states MAE (2026 Q55)",
+        "Using average-case QuickSort O(n log n) when pivot is fixed as first element (2026 Q15)",
+        "Using standard eigenvalue formula instead of trace/det shortcut"
+      ],
+      "countermeasure": "READ the question fully. Verify every assumption matches the formula's preconditions."
+    },
+    "definition_trap": {
+      "description": "Confusing similar-sounding definitions or using colloquial understanding instead of formal definition",
+      "examples": [
+        "Thinking Ridge drives weights to zero (Lasso does)",
+        "Confusing admissible vs consistent heuristic",
+        "Thinking 'orthonormal basis is unique' (false - not unique, but vectors are LI)",
+        "Confusing conditional independence with marginal independence"
+      ],
+      "countermeasure": "Know precise mathematical definitions. Distinguish: necessary vs sufficient conditions."
+    },
+    "sign_trap": {
+      "description": "Sign errors in derivatives, eigenvalues, or algebraic manipulations",
+      "examples": [
+        "Gradient descent: w_new = w - \u03b7\u2207L (not +)",
+        "Covariance: E[XY] - E[X]E[Y] (not +)",
+        "Rotation matrix: cos -sin; sin cos (sign pattern)"
+      ],
+      "countermeasure": "Calculate twice on scribble pad. Verify sign convention for each formula."
+    },
+    "quantifier_trap": {
+      "description": "Misinterpreting universal vs existential quantifiers, or quantifier scope",
+      "examples": [
+        "\u2200x (King(x) \u2227 Person(x)) vs \u2200x (King(x) \u2192 Person(x)) (2025 Q15, 2026 Q14)",
+        "\u2203x P(x) \u21d2 \u2200x P(x) is NOT valid (2026 Q48)"
+      ],
+      "countermeasure": "Translate to English explicitly. 'All kings are persons' = \u2200x (King(x) \u2192 Person(x))."
+    },
+    "boundary_condition_trap": {
+      "description": "Ignoring boundary conditions in optimization, integration limits, or closed intervals",
+      "examples": [
+        "Optimization on closed interval: must check endpoints (2025 Q49)",
+        "Integration limits for joint PDF with dependent bounds (0<y<x) (2024 Q56, Q59)",
+        "Binary search: \u2308log\u2082(n+1)\u2309 not \u2308log\u2082 n\u2309"
+      ],
+      "countermeasure": "Always check: closed interval? dependent bounds? inclusive/exclusive?"
+    },
+    "interpretation_trap": {
+      "description": "Misreading the question stem - missing 'NOT', 'EXCEPT', 'FALSE', 'maximum', 'minimum'",
+      "examples": [
+        "Which is NOT true? Which is FALSE? (2024 Q24, 2025 Q28, 2026 Q14)",
+        "Maximum variance direction vs minimum",
+        "Number of support vectors vs margin value"
+      ],
+      "countermeasure": "Circle/underline negation words. Re-read question before final answer."
+    },
+    "multi_concept_trap": {
+      "description": "Question spans multiple domains; candidate only sees one domain",
+      "examples": [
+        "Probability + Linear Algebra: X=aZ+b, find a,b from E[X], Var(X), Cov(X,Z) (2025 Q20)",
+        "ML + Calculus: Backprop through ReLU (2025 Q42, 2026 Q29)",
+        "DBMS + Algorithms: Push selection down before join (2026 Q42)"
+      ],
+      "countermeasure": "Identify ALL domains involved. Solve each component then combine."
+    },
+    "computational_trap": {
+      "description": "Excessive computation when a property/shortcut exists",
+      "examples": [
+        "Computing M^2026 via multiplication instead of M^5=I periodicity (2026 Q21)",
+        "Computing full characteristic polynomial instead of trace/det (2025 Q28)",
+        "Full backprop through dead ReLU neuron (2025 Q42)"
+      ],
+      "countermeasure": "STOP. Recognize pattern. Use property: periodicity, rank-1, dead neuron, projection matrix."
+    },
+    "time_trap": {
+      "description": "Question designed to consume excessive time; low marks/minute",
+      "examples": [
+        "Complex recursive Python tracing (2025 Q47, 2026 Q39, Q58)",
+        "B+ tree insertion with splits (2026 Q41)",
+        "Large game tree minimax (2025 Q43)"
+      ],
+      "countermeasure": "Set 3-minute limit for 2-mark MCQ. If exceeded, MARK and SKIP. Return in review phase."
+    },
+    "negative_marking_trap": {
+      "description": "Guessing on MCQs with low confidence, losing net marks",
+      "examples": [
+        "1-mark MCQ: -1/3 for wrong; need \u226570% confidence to attempt",
+        "2-mark MCQ: -2/3 for wrong; need \u226560% confidence to attempt",
+        "MSQ/NAT: NO negative marking \u2192 ALWAYS attempt"
+      ],
+      "countermeasure": "Strict confidence thresholds. Never guess blindly on MCQs."
+    },
+    "msq_completeness_trap": {
+      "description": "Selecting only some correct options in MSQ (all-or-nothing marking)",
+      "examples": [
+        "2025 Q28 (I+xx^T): Must select BOTH (A) and (B); selecting one = 0 marks",
+        "2026 Q52 (centering): Must select BOTH (A) and (D)"
+      ],
+      "countermeasure": "Treat EACH option as independent True/False. Prove/disprove each separately. If unsure on one, don't select it."
+    },
+    "notation_panic_trap": {
+      "description": "Dense mathematical notation (I - 1/n 11^T, \u03a3\u03a3, \u2207\u00b2) causes freeze response",
+      "examples": [
+        "2026 Q52: M = I - (1/n)11^T - looks complex but is standard centering matrix",
+        "2026 Q44: Var((2X-1)Y) - expand using independence",
+        "2025 Q38: Gram matrix Aij = xi^T xj - positive definite if LI"
+      ],
+      "countermeasure": "Recognize STANDARD NOTATION PATTERNS. I - 1/n 11^T = centering. xx^T = rank-1. xi^T xj = Gram."
+    }
+  }
+}

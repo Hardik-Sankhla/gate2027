@@ -1,0 +1,358 @@
+{
+  "2025": {
+    "Verbal: Analogy": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Verbal: Grammar (Tense)": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Data Interpretation: Pixel Counting": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Spatial: Venn Diagram Numbers": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Quantitative: Rectangle Property": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Verbal: Column Matching": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Quantitative: Function Properties": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Quantitative: Geometry (Dodecagon)": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Quantitative: Exponential Equations": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Data Interpretation: Expected Earnings": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Joint Distributions & Conditional Expectation": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Linear Algebra - Other": {
+      "questions": 6,
+      "marks": 9
+    },
+    "Higher-Order Derivatives": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Discrete Mathematics": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Database Management - Other": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Relational Algebra": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Hashing": {
+      "questions": 1,
+      "marks": 1
+    },
+    "CDF & Quantiles": {
+      "questions": 2,
+      "marks": 3
+    },
+    "Distribution Properties": {
+      "questions": 3,
+      "marks": 5
+    },
+    "Probability & Statistics - Other": {
+      "questions": 3,
+      "marks": 5
+    },
+    "Machine Learning - Other": {
+      "questions": 4,
+      "marks": 5
+    },
+    "Python Semantics & Scope": {
+      "questions": 3,
+      "marks": 5
+    },
+    "Calculus & Optimization - Other": {
+      "questions": 5,
+      "marks": 8
+    },
+    "Bayesian Networks & Probabilistic Reasoning": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Programming & DSA - Other": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Projection & Idempotent Matrices": {
+      "questions": 2,
+      "marks": 3
+    },
+    "Sorting Algorithms": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Clustering": {
+      "questions": 2,
+      "marks": 3
+    },
+    "Bayes Theorem & Conditional Probability": {
+      "questions": 1,
+      "marks": 1
+    },
+    "SQL Advanced": {
+      "questions": 2,
+      "marks": 3
+    },
+    "Variance & Moments": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Neural Networks": {
+      "questions": 2,
+      "marks": 4
+    },
+    "Adversarial Search (Minimax, Alpha-Beta)": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Search Algorithms (A*, Heuristics)": {
+      "questions": 1,
+      "marks": 2
+    },
+    "SVM Geometry & Margins": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Estimation Theory": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Integrity Constraints": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Normalization & Functional Dependencies": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Graph Algorithms": {
+      "questions": 2,
+      "marks": 4
+    },
+    "Relational Algebra Division": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Stacks": {
+      "questions": 1,
+      "marks": 2
+    }
+  },
+  "2026": {
+    "Verbal: Analogy (Antonym)": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Quantitative: Number Theory": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Spatial: Puzzle Assembly": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Quantitative: Logarithms": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Verbal: Conditional Reasoning": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Verbal: Prepositions": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Quantitative: Combinatorics + Stats": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Logical Reasoning: Logic Puzzle": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Quantitative: Number Squares": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Geometry: Circle Area": {
+      "questions": 1,
+      "marks": 2
+    },
+    "PCA & Dimensionality Reduction": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Model Evaluation & Bias-Variance": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Search Algorithms (A*, Heuristics)": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Logic (Propositional & Predicate)": {
+      "questions": 4,
+      "marks": 6
+    },
+    "Recurrence & Complexity": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Python Semantics & Scope": {
+      "questions": 4,
+      "marks": 7
+    },
+    "Normalization & Functional Dependencies": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Data Warehousing & OLAP": {
+      "questions": 2,
+      "marks": 3
+    },
+    "Probability & Statistics - Other": {
+      "questions": 5,
+      "marks": 8
+    },
+    "Matrix Powers & Periodicity": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Linear Algebra - Other": {
+      "questions": 2,
+      "marks": 3
+    },
+    "Machine Learning - Other": {
+      "questions": 2,
+      "marks": 3
+    },
+    "Trees & Traversals": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Integrity Constraints": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Calculus & Optimization - Other": {
+      "questions": 2,
+      "marks": 2
+    },
+    "Distribution Properties": {
+      "questions": 3,
+      "marks": 5
+    },
+    "Gradient Descent & Optimization": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Adversarial Search (Minimax, Alpha-Beta)": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Programming & DSA - Other": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Indexing & B+ Trees": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Discrete Mathematics": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Memoryless Property": {
+      "questions": 1,
+      "marks": 1
+    },
+    "Clustering": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Regularization (Ridge/Lasso)": {
+      "questions": 2,
+      "marks": 4
+    },
+    "Graph Algorithms": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Database Management - Other": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Relational Algebra": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Eigenvalues & Eigenvectors": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Sorting Algorithms": {
+      "questions": 1,
+      "marks": 2
+    },
+    "SQL Advanced": {
+      "questions": 2,
+      "marks": 4
+    },
+    "Projection & Idempotent Matrices": {
+      "questions": 1,
+      "marks": 2
+    },
+    "CDF & Quantiles": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Neural Networks": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Bayes Theorem & Conditional Probability": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Relational Calculus": {
+      "questions": 1,
+      "marks": 2
+    },
+    "ER Modeling": {
+      "questions": 1,
+      "marks": 2
+    },
+    "Variance & Moments": {
+      "questions": 1,
+      "marks": 2
+    }
+  }
+}

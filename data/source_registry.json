@@ -1,0 +1,177 @@
+{
+  "version": "1.0",
+  "tier_1_sources": [
+    {
+      "id": "GATE2027_SYLLABUS_DA",
+      "title": "GATE 2027 Data Science and Artificial Intelligence Syllabus",
+      "url": "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/DA_GATE2027_Syllabus.pdf",
+      "publisher": "IIT Madras (Organizing Institute)",
+      "accessed": "2026-10-02",
+      "type": "PDF",
+      "tier": 1,
+      "used_for": "2027 syllabus definition, section structure, topic list"
+    },
+    {
+      "id": "GATE2027_INFO_BROCHURE",
+      "title": "GATE 2027 Information Brochure",
+      "url": "https://gate2027.iitm.ac.in/static/doc/IB/GATE2027-IB_v1.2.pdf",
+      "publisher": "IIT Madras",
+      "accessed": "2026-10-02",
+      "type": "PDF",
+      "tier": 1,
+      "used_for": "Exam pattern, marks distribution, question types, negative marking rules"
+    },
+    {
+      "id": "GATE2024_QP_DA",
+      "title": "GATE 2024 DA Master Question Paper",
+      "url": "https://gate2024.iisc.ac.in/question-papers",
+      "publisher": "IISc Bengaluru (Organizing Institute)",
+      "accessed": "2026-10-02 (pending download)",
+      "type": "PDF",
+      "tier": 1,
+      "used_for": "2024 question text, official answers (TODO: download and parse)"
+    },
+    {
+      "id": "GATE2024_AK_DA",
+      "title": "GATE 2024 DA Final Answer Key",
+      "url": "https://gate2024.iisc.ac.in/wp-content/uploads/2024/DAFinalAnswerKey.pdf",
+      "publisher": "IISc Bengaluru",
+      "accessed": "2026-10-02 (403 error - needs direct access)",
+      "type": "PDF",
+      "tier": 1,
+      "used_for": "Official 2024 answers for validation"
+    },
+    {
+      "id": "GATE2025_QP_DA",
+      "title": "GATE 2025 DA Master Question Paper",
+      "url": "https://gate2025.iitr.ac.in/question-papers.html",
+      "publisher": "IIT Roorkee (Organizing Institute)",
+      "accessed": "2026-10-02",
+      "type": "HTML/PDF",
+      "tier": 1,
+      "used_for": "2025 question text, official answers"
+    },
+    {
+      "id": "GATE2025_AK_DA",
+      "title": "GATE 2025 DA Final Answer Key",
+      "url": "https://compgeek.co.in/wp-content/uploads/2025/05/GATE-DSAI-2025-Final-Answer-Key.pdf",
+      "publisher": "IIT Roorkee (via mirror)",
+      "accessed": "2026-10-02",
+      "type": "PDF",
+      "tier": 1,
+      "used_for": "Official 2025 answers for validation"
+    },
+    {
+      "id": "GATE2026_QP_DA",
+      "title": "GATE 2026 DA Question Paper",
+      "url": "https://image-static.collegedunia.com/public/image/1784532181_gate-2026-data-science-ai_questions.pdf",
+      "publisher": "IIT Guwahati (Organizing Institute, via Collegedunia mirror)",
+      "accessed": "2026-10-02",
+      "type": "PDF",
+      "tier": 1,
+      "used_for": "2026 question text (memory-based, pending official)"
+    },
+    {
+      "id": "GATE2026_AK_DA",
+      "title": "GATE 2026 DA Answer Key",
+      "url": "https://image-static.collegedunia.com/public/image/1784532184_gate-2026-data-science-ai_zollege_solutions.pdf",
+      "publisher": "IIT Guwahati (via Collegedunia/Zollege mirror)",
+      "accessed": "2026-10-02",
+      "type": "PDF",
+      "tier": 1,
+      "used_for": "2026 official answers (memory-based with solutions)"
+    }
+  ],
+  "tier_2_sources": [
+    {
+      "id": "GATE2027_PATTERN",
+      "title": "GATE 2027 Question Paper Pattern",
+      "url": "https://gate2027.iitm.ac.in/exam_papers_and_syllabus",
+      "publisher": "IIT Madras",
+      "accessed": "2026-10-02",
+      "type": "Web",
+      "tier": 2,
+      "used_for": "65 questions, 100 marks, 15 GA + 85 DA, MCQ/MSQ/NAT breakdown"
+    }
+  ],
+  "tier_3_sources": [],
+  "tier_4_sources": [
+    {
+      "id": "ZOLLEGE_2026_SOLUTIONS",
+      "title": "GATE 2026 DA Question Paper with Solutions (Zollege)",
+      "url": "https://zollege.in/news/e-60-gate-2026-da-question-paper-with-answer-key-and-solution-pdf",
+      "publisher": "Zollege",
+      "accessed": "2026-10-02",
+      "type": "Web",
+      "tier": 4,
+      "used_for": "Corroboration of 2026 questions/solutions only"
+    },
+    {
+      "id": "COLLEGEDUNIA_2026",
+      "title": "GATE 2026 DA Question Paper with Solutions (CollegeDunia)",
+      "url": "https://collegedunia.com/articles/e-60-gate-2026-data-science-and-artificial-intelligence-question-paper-with-solution-pdf",
+      "publisher": "CollegeDunia",
+      "accessed": "2026-10-02",
+      "type": "Web",
+      "tier": 4,
+      "used_for": "Corroboration only"
+    },
+    {
+      "id": "CAREERS360_2026",
+      "title": "GATE DA Question Papers 2026 (Careers360)",
+      "url": "https://engineering.careers360.com/articles/gate-da-question-papers-solutions-2026-pdf-download",
+      "publisher": "Careers360",
+      "accessed": "2026-10-02",
+      "type": "Web",
+      "tier": 4,
+      "used_for": "Corroboration only"
+    },
+    {
+      "id": "PWLIVE_SYLLABUS",
+      "title": "GATE DS & AI Syllabus 2027 (PW Live)",
+      "url": "https://www.pw.live/gate/exams/gate-data-science-and-artificial-intelligence-syllabus",
+      "publisher": "Physics Wallah",
+      "accessed": "2026-10-02",
+      "type": "Web",
+      "tier": 4,
+      "used_for": "Syllabus summary corroboration"
+    }
+  ],
+  "repository_internal_sources": [
+    {
+      "id": "REPO_INDEX_HTML",
+      "title": "index.html (Home & DNA)",
+      "path": "index.html",
+      "type": "Repository Document",
+      "used_for": "Phase 1-2: Paper DNA, Cognitive Categorization, Question Archetypes"
+    },
+    {
+      "id": "REPO_SOLUTIONS_1_HTML",
+      "title": "solutions_1.html (2026 Intel & 2024 Solutions)",
+      "path": "solutions_1.html",
+      "type": "Repository Document",
+      "used_for": "2026 investigation, partial 2024 solutions"
+    },
+    {
+      "id": "REPO_SOLUTIONS_2_HTML",
+      "title": "solutions_2.html (2025 & 2026 Solutions)",
+      "path": "solutions_2.html",
+      "type": "Repository Document",
+      "used_for": "Complete 2025/2026 forensic databases (65 questions each)"
+    },
+    {
+      "id": "REPO_STRATEGY_HTML",
+      "title": "strategy.html (Strategic Architecture)",
+      "path": "strategy.html",
+      "type": "Repository Document",
+      "used_for": "Weightage tables, ROI model, examiner psychology, cognitive mastery"
+    },
+    {
+      "id": "REPO_BATTLE_PLAN_HTML",
+      "title": "battle_plan.html (Execution & Battle Plan)",
+      "path": "battle_plan.html",
+      "type": "Repository Document",
+      "used_for": "180-min strategy, rank targets, 34-week plan, formula sheet"
+    }
+  ]
+}
