@@ -27,8 +27,21 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire directory including HTML files
+          # Upload only site files (HTML, CSS, JS, images)
           path: .
+          ignore-glob: |
+            .git/**
+            .github/**
+            data/**
+            research/**
+            *.json
+            *.md
+            *.py
+            *.toml
+            *.sh
+            *.txt
+            .gitignore
+            .python-version
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
